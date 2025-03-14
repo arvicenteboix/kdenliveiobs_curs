@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="generator" content="pandoc" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />        <title>1. Introducció. Conceptes inicials</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />        <title>1. Introducció i configuració</title>
     <style>
         code{white-space: pre-wrap;}
         span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,70 @@
           vertical-align: middle;
         }
         .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+        /* CSS for syntax highlighting */
+        pre > code.sourceCode { white-space: pre; position: relative; }
+        pre > code.sourceCode > span { line-height: 1.25; }
+        pre > code.sourceCode > span:empty { height: 1.2em; }
+        .sourceCode { overflow: visible; }
+        code.sourceCode > span { color: inherit; text-decoration: inherit; }
+        div.sourceCode { margin: 1em 0; }
+        pre.sourceCode { margin: 0; }
+        @media screen {
+        div.sourceCode { overflow: auto; }
+        }
+        @media print {
+        pre > code.sourceCode { white-space: pre-wrap; }
+        pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+        }
+        pre.numberSource code
+          { counter-reset: source-line 0; }
+        pre.numberSource code > span
+          { position: relative; left: -4em; counter-increment: source-line; }
+        pre.numberSource code > span > a:first-child::before
+          { content: counter(source-line);
+            position: relative; left: -1em; text-align: right; vertical-align: baseline;
+            border: none; display: inline-block;
+            -webkit-touch-callout: none; -webkit-user-select: none;
+            -khtml-user-select: none; -moz-user-select: none;
+            -ms-user-select: none; user-select: none;
+            padding: 0 4px; width: 4em;
+            color: #aaaaaa;
+          }
+        pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+        div.sourceCode
+          {   }
+        @media screen {
+        pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+        }
+        code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+        code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+        code span.at { color: #7d9029; } /* Attribute */
+        code span.bn { color: #40a070; } /* BaseN */
+        code span.bu { color: #008000; } /* BuiltIn */
+        code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+        code span.ch { color: #4070a0; } /* Char */
+        code span.cn { color: #880000; } /* Constant */
+        code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+        code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+        code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+        code span.dt { color: #902000; } /* DataType */
+        code span.dv { color: #40a070; } /* DecVal */
+        code span.er { color: #ff0000; font-weight: bold; } /* Error */
+        code span.ex { } /* Extension */
+        code span.fl { color: #40a070; } /* Float */
+        code span.fu { color: #06287e; } /* Function */
+        code span.im { color: #008000; font-weight: bold; } /* Import */
+        code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+        code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+        code span.op { color: #666666; } /* Operator */
+        code span.ot { color: #007020; } /* Other */
+        code span.pp { color: #bc7a00; } /* Preprocessor */
+        code span.sc { color: #4070a0; } /* SpecialChar */
+        code span.ss { color: #bb6688; } /* SpecialString */
+        code span.st { color: #4070a0; } /* String */
+        code span.va { color: #19177c; } /* Variable */
+        code span.vs { color: #4070a0; } /* VerbatimString */
+        code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
     </style>
         <link rel="stylesheet" href="aqua.css" />  
     <!--[if lt IE 9]>
@@ -32,7 +96,7 @@
 <body>
     <div id="content">
                  <header id="title-block-header">
-            <h1 class="title">1. Introducció. Conceptes inicials</h1>
+            <h1 class="title">1. Introducció i configuració</h1>
             <!---->
             <!--  -->
                     </header>
@@ -42,654 +106,920 @@
                  <ul>
 <li><a href="#introducció" id="toc-introducció"><span
 class="toc-section-number">1</span> Introducció</a></li>
-<li><a href="#que-és-i-què-no-és-la-intelligència-artificial"
-id="toc-que-és-i-què-no-és-la-intelligència-artificial"><span
-class="toc-section-number">2</span> Que és i què no és la intel·ligència
-artificial?</a>
+<li><a href="#installació-de-obs-studio"
+id="toc-installació-de-obs-studio"><span
+class="toc-section-number">2</span> Instal·lació de OBS Studio</a></li>
+<li><a href="#installació-de-kdenlive"
+id="toc-installació-de-kdenlive"><span
+class="toc-section-number">3</span> Instal·lació de Kdenlive</a></li>
+<li><a href="#interfície-de-obs" id="toc-interfície-de-obs"><span
+class="toc-section-number">4</span> Interfície de OBS</a></li>
+<li><a href="#interfície-de-kdenlive"
+id="toc-interfície-de-kdenlive"><span
+class="toc-section-number">5</span> Interfície de Kdenlive</a>
 <ul>
-<li><a href="#models-de-llenguatge-a-gran-escala"
-id="toc-models-de-llenguatge-a-gran-escala"><span
-class="toc-section-number">2.1</span> Models de llenguatge a gran
-escala</a></li>
-<li><a href="#models-de-difusió" id="toc-models-de-difusió"><span
-class="toc-section-number">2.2</span> Models de difusió</a></li>
-<li><a href="#exemples-dús-per-a-començar-a-experimentar"
-id="toc-exemples-dús-per-a-començar-a-experimentar"><span
-class="toc-section-number">2.3</span> Exemples d’ús per a començar a
-experimentar</a>
+<li><a href="#barra-de-ferrametes" id="toc-barra-de-ferrametes"><span
+class="toc-section-number">5.1</span> Barra de ferrametes</a></li>
+<li><a href="#conceptes-de-kdenlive"
+id="toc-conceptes-de-kdenlive"><span
+class="toc-section-number">5.2</span> Conceptes de Kdenlive</a></li>
+</ul></li>
+<li><a href="#configuracions-inicials"
+id="toc-configuracions-inicials"><span
+class="toc-section-number">6</span> Configuracions inicials</a>
 <ul>
-<li><a href="#teachable-machine-de-google"
-id="toc-teachable-machine-de-google"><span
-class="toc-section-number">2.3.1</span> Teachable Machine de
-Google</a></li>
-<li><a href="#autodraw" id="toc-autodraw"><span
-class="toc-section-number">2.3.2</span> Autodraw</a></li>
-<li><a href="#quickdraw" id="toc-quickdraw"><span
-class="toc-section-number">2.3.3</span> Quickdraw</a></li>
-<li><a href="#labs-google" id="toc-labs-google"><span
-class="toc-section-number">2.3.4</span> Labs Google</a></li>
+<li><a href="#obs" id="toc-obs"><span
+class="toc-section-number">6.1</span> OBS</a>
+<ul>
+<li><a href="#background-removal" id="toc-background-removal"><span
+class="toc-section-number">6.1.1</span> Background Removal</a></li>
+<li><a href="#v4l2loopback-linux" id="toc-v4l2loopback-linux"><span
+class="toc-section-number">6.1.2</span> v4l2loopback (Linux)</a></li>
+<li><a href="#localvocal" id="toc-localvocal"><span
+class="toc-section-number">6.1.3</span> LocalVocal</a></li>
+</ul></li>
+<li><a href="#kdenlive" id="toc-kdenlive"><span
+class="toc-section-number">6.2</span> Kdenlive</a>
+<ul>
+<li><a href="#whisper-i-vosk" id="toc-whisper-i-vosk"><span
+class="toc-section-number">6.2.1</span> Whisper i VOSK</a></li>
 </ul></li>
 </ul></li>
+<li><a href="#practiquem-un-poc" id="toc-practiquem-un-poc"><span
+class="toc-section-number">7</span> Practiquem un poc</a>
+<ul>
+<li><a href="#grabem-la-pantalla-amb-obs"
+id="toc-grabem-la-pantalla-amb-obs"><span
+class="toc-section-number">7.1</span> Grabem la pantalla amb
+OBS</a></li>
+<li><a href="#editem-el-nostre-vídeo-amb-kdenlive"
+id="toc-editem-el-nostre-vídeo-amb-kdenlive"><span
+class="toc-section-number">7.2</span> Editem el nostre vídeo amb
+Kdenlive</a></li>
+<li><a href="#aplicant-efectes-de-manera-bàsica"
+id="toc-aplicant-efectes-de-manera-bàsica"><span
+class="toc-section-number">7.3</span> Aplicant efectes de manera
+bàsica</a>
+<ul>
+<li><a href="#generació-de-clips" id="toc-generació-de-clips"><span
+class="toc-section-number">7.3.1</span> Generació de clips</a></li>
+<li><a href="#generació-de-vídeo" id="toc-generació-de-vídeo"><span
+class="toc-section-number">7.3.2</span> Generació de vídeo</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#guardar-projecte" id="toc-guardar-projecte"><span
+class="toc-section-number">8</span> Guardar projecte</a></li>
+<li><a href="#repositoris-de-vídeos"
+id="toc-repositoris-de-vídeos"><span class="toc-section-number">9</span>
+Repositoris de vídeos</a></li>
 </ul>
             </div>
         </nav>
                 <main>
             <!-- \awesomebox[violet]{2pt}{\faRocket}{violet}{Lorem ipsum…} -->
             <!-- \awesomebox[violet]{2pt}{\faRobot}{violet}{Lorem ipsum…} -->
-            <!-- IMATGE ![Pregunta inicial](./img/proxi/5b.png) -->
+            <!-- IMATGE ![Pregunta inicial](./img/proxi/5b.png){ width=50% } -->
             <!-- \textbf{greatest} -->
-            <p><img src="img/cc.png" height="50" /></p>
-            <p>Aquest document està subjecte a una llicència creative
-            commons que permet la seua difusió i ús comercial
-            reconeixent sempre l’autoria del seu creador. Aquest
-            document es troba per a ser modificat al següent repositori
-            de github: <!-- CANVIAR L'ENLLAÇ --> <a
-            href="https://github.com/arvicenteboix/AICurs25">https://github.com/arvicenteboix/AICurs25</a>
+            <p><img src="img/cc.png" style="width:30.0%" /> Aquest
+            document està subjecte a una llicència creative commons que
+            permet la seua difusió i ús comercial reconeixent sempre
+            l’autoria del seu creador. Aquest document es troba per a
+            ser modificat al següent repositori de github:
+            <!-- CANVIAR L'ENLLAÇ --> <a
+            href="https://github.com/arvicenteboix/kdenliveiobs_curs">https://github.com/arvicenteboix/kdenliveiobs_curs</a>
             </p>
             <h1 data-number="1" id="introducció"><span
             class="header-section-number">1</span> Introducció</h1>
-            <p>De segur que molts de vosaltres ja heu sentit parlar de
-            la intel·ligència artificial y de tot allò que pot fer,
-            alguns ja heu començat a utilitzar-lo en el vostre dia a dia
-            i cal distingir alguns conceptes sobre el que és la IA. En
-            aquest curs tractarem de fer-vos una introducció sobre les
-            diferents ferramentes que existeixen i com traure’ls
-            profit.</p>
-            <p>Cal tenir en compte que es tracta d’un curs d’iniciació i
-            és possible que us sentiu aclaparats de tota la informació
-            que aneu a veure, òbviament per la durada del curs no anem a
-            poder aprofundir en moltes de les utilitats que us
-            presentarem, això ja us ho deixarem a vosaltres i/o a futurs
-            cursos que pugueu fer.</p>
-            <p>Els mòduls seran breus però intensos, tractarem
-            d’ajudar-vos en tots els dubtes que se us plantegen,
-            pràcticament tot el text escrit està redactat i no s’ha
-            utilitzat la IA, algunes imatges són la excepció, en molts
-            casos us presentarem el prompt<a href="#fn1"
-            class="footnote-ref" id="fnref1"
-            role="doc-noteref"><sup>1</sup></a> i la resposta que ens
-            donarà, tractarem de limitar l’extensió al que realment
-            necessiteu. Us ho presentarem amb la següent icona.</p>
+            <!-- Mòdul 1: Introducció i Configuració
+            Instal·lació i configuració inicial de Kdenlive i OBS
+            Introducció a les interfícies i eines bàsiques d'ambdós programes
+            Configuració de projectes i ajustos bàsics<br>
+            Mòdul 2: Gravació i Producció
+            Tècniques de gravació de pantalla amb OBS
+            Configuració de fonts de vídeo i àudio
+            Producció de contingut en temps real i gestió d'escenes<br>
+            Mòdul 3: Edició i Publicació
+            Importació de material gravat en Kdenlive
+            Edició bàsica de vídeo: talls, transicions i efectes
+            Exportació de vídeos en diferents formats i publicació en plataformes en línia -->
+            <p>La creació de videotutorials es una ferramenta necessària
+            per a la realització de cursos en format semipresencial i
+            moltes vegades en presencial també ja que es queden com una
+            referència del que realment es vol realitzar.</p>
+            <p>En este mòdul començarem amb una introducció de los dos
+            eines que anem a utilitzar en este curs: Kdenlive i OBS. A
+            més, veurem com instal·lar-les i configurar-les per a
+            començar a treballar amb elles. Farem un repàs de les
+            interfícies i eines bàsiques de cada programa i veurem com
+            configurar projectes i ajustos bàsics.</p>
+            <p>En aquest curs no ens centrarem en tots els aspectes que
+            ens oferix OBS ni Kdenlive ja que són ferramentes molt
+            poderoses i presentem moltíssimes característiques. Ens
+            centrarem en com crear un videotutorial i en les ferramentes
+            necessàries que ens poden fer falta per a realizar-lo. No
+            espereu dominar el Kdenlive ni elk OBS de manera
+            profesional, este no és el propòsit d’este curs ja que
+            existeixen ofertes sobre estes ferramentes de manera
+            específica. Al final del curs simplement vos demanarem que
+            creeu un xicotet videotutorial que tracte algun aspecte de
+            la vostra especialitat i el compartiu als vostres
+            companys.</p>
+            <p>Hem de tenir en compte les característiques fonamental de
+            cadascun d’ells.</p>
+            <ul>
+            <li>OBS Studio: OBS Studio és un programari lliure i gratuït
+            que ens permet gravar i retransmetre en directe. És una eina
+            molt potent que ens permet gravar la pantalla del nostre
+            ordinador.</li>
+            <li>Kdenlive: Kdenlive és un editor de vídeo lliure i
+            gratuït que ens permet editar vídeos de manera senzilla i
+            intuïtiva. És una eina molt potent que ens permet editar
+            vídeos de manera professional.</li>
+            </ul>
+            <h1 data-number="2" id="installació-de-obs-studio"><span
+            class="header-section-number">2</span> Instal·lació de OBS
+            Studio</h1>
+            <p>El primer que hem de fer és instal·lar OBS. Per a
+            instal·lar-lo simplement anem a la seua <a
+            href="https://obsproject.com/es">pàgina web</a> i
+            descarreguem la versió que ens corresponga.</p>
+            <figure>
+            <img src="img/1.png" style="width:50.0%"
+            alt="Descarregar OBS" />
+            <figcaption aria-hidden="true">Descarregar OBS</figcaption>
+            </figure>
+            <p>En el cas d’una distribució Linux simplement podem
+            instal·lar-lo des dels repositoris de la nostra distribució.
+            Per exemple, en Ubuntu simplement hem d’executar la següent
+            comanda:</p>
+            <div class="sourceCode" id="cb1"><pre
+            class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install obs-studio</span></code></pre></div>
             <div class="note">
-            <p>Es tracta d’una resposta de inteligència artificial.
-            Òbviament crear models des de 0 é sun tasca molt complexa i
-            que requereix moltes hores de treball. Aquesta resposta és
-            una resposta estàndard que no s’ens hauria ocorregut
-            escriure.</p>
+            <p>Amb linux pots utilizar flathub per a instal·lar OBS
+            Studio. Simplement has d’executar la següent comanda:</p>
+            <div class="sourceCode" id="cb2"><pre
+            class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">flatpak</span> install flathub com.obsproject.Studio</span></code></pre></div>
+            </div>
+            <p>Si disposes d’un Mac has de tenir en compte que en funció
+            del processador que tingues hauràs de descarregar una versió
+            o una altra.</p>
+            <figure>
+            <img src="img/2.png" style="width:50.0%"
+            alt="Descarregar OBS" />
+            <figcaption aria-hidden="true">Descarregar OBS</figcaption>
+            </figure>
+            <p>Quan comence el procés d’instal·lació simplement hem de
+            seguir els passos que ens indica el programa. Com que es
+            tracta d’un programa on es poden realitzar tant sessions en
+            directe com gravar sessions ens farà una sèrie de qüestions.
+            En el nostra cas simplement hem de configurar-lo per a
+            gravar sessions.</p>
+            <figure>
+            <img src="img/5.png" style="width:50.0%"
+            alt="Configuració OBS" />
+            <figcaption aria-hidden="true">Configuració OBS</figcaption>
+            </figure>
+            <figure>
+            <img src="img/6.png" style="width:50.0%"
+            alt="Configuració OBS" />
+            <figcaption aria-hidden="true">Configuració OBS</figcaption>
+            </figure>
+            <figure>
+            <img src="img/7.png" style="width:50.0%"
+            alt="Configuració OBS" />
+            <figcaption aria-hidden="true">Configuració OBS</figcaption>
+            </figure>
+            <h1 data-number="3" id="installació-de-kdenlive"><span
+            class="header-section-number">3</span> Instal·lació de
+            Kdenlive</h1>
+            <p>Per a instal·lar Kdenlive simplement anem a la seua <a
+            href="https://kdenlive.org/">pàgina web</a> i descarreguem
+            la versió que ens corresponga. Fem clic en Download:</p>
+            <figure>
+            <img src="img/3.png" style="width:50.0%"
+            alt="Descarregar Kdenlive" />
+            <figcaption aria-hidden="true">Descarregar
+            Kdenlive</figcaption>
+            </figure>
+            <p>Opcions de descàrrega:</p>
+            <figure>
+            <img src="img/4.png" style="width:50.0%"
+            alt="Descarregar Kdenlive" />
+            <figcaption aria-hidden="true">Descarregar
+            Kdenlive</figcaption>
+            </figure>
+            <p>Tenim diferents opciones per a instal·lar Kdenlive als
+            diferents sistemes operatius. En Windows tenim dos
+            versions:</p>
+            <ul>
+            <li>Installable: És una versió que s’instal·la en el nostre
+            sistema operatiu.</li>
+            <li>Standalone: És una versió portable que no requereix
+            instal·lació.</li>
+            </ul>
+            <div class="caution">
+            <p>Standalone ens pot servir per a fer ús del programa en
+            aquells entorns que no s’ens permet instal·lar programari.
+            Sempre és recomanables instal·lar la versió installable. És
+            necessari disposar d’un Sistema Operatiu actualitzat
+            (Windows 10 o superior).</p>
+            </div>
+            <p>En el cas d’una distribució Linux simplement podem
+            instal·lar-lo des dels repositoris de la nostra distribució.
+            Per exemple, en Ubuntu simplement hem d’executar la següent
+            comanda:</p>
+            <div class="sourceCode" id="cb3"><pre
+            class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install kdenlive</span></code></pre></div>
+            <p>La versió portable per a linux s’anomena AppImage.
+            Simplement hem de descarregar l’arxiu i donar-li permisos
+            d’execució:</p>
+            <div class="sourceCode" id="cb4"><pre
+            class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> +x kdenlive-<span class="pp">*</span>.appimage</span></code></pre></div>
+            <p>Existeix la versió flatpak de Kdenlive. Simplement hem
+            d’executar la següent comanda:</p>
+            <div class="sourceCode" id="cb5"><pre
+            class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">flatpak</span> install flathub org.kde.kdenlive</span></code></pre></div>
+            <p>O fer clic en el botó Flatpak.</p>
+            <h1 data-number="4" id="interfície-de-obs"><span
+            class="header-section-number">4</span> Interfície de
+            OBS</h1>
+            <p>Quan iniciem OBS per primera vegada ens apareixerà una
+            pantalla com la següent:</p>
+            <figure>
+            <img src="img/8.png" style="width:80.0%"
+            alt="Interfície OBS" />
+            <figcaption aria-hidden="true">Interfície OBS</figcaption>
+            </figure>
+            <p>A la imatge podem distingir diversos elements, els que
+            anem a utilizar en aquest curs principalment seran:</p>
+            <ul>
+            <li>Escenes: Les escenes són conjunts de fonts de vídeo i
+            àudio que podem mostrar en directe o gravar. Podem
+            configurar diferents escenes per a mostrar diferents
+            elements en cada moment.</li>
+            <li>Fonts (elements de l’escena): Les fonts són els elements
+            que podem mostrar en una escena. Poden ser des de la
+            pantalla del nostre ordinador fins a una càmera web o un
+            vídeo.</li>
+            <li>Àudio: En aquesta secció podem configurar les fonts
+            d’àudio que volem utilitzar en la nostra gravació.</li>
+            <li>Previsualització: En aquesta secció podem veure com es
+            veurà la nostra gravació en directe o com es veurà el vídeo
+            que estem gravant.</li>
+            <li>Controls: Ací hem destacat dos botons que seran els que
+            utilitzarem principalment, <em>Iniciar gravació</em> i
+            <em>Iniciar càmera virtual</em>. El primer ens permetrà
+            començar a gravar la nostra pantalla i el segon ens permetrà
+            començar a utilitzar la càmera virtual.</li>
+            </ul>
+            <div class="tip">
+            <p>La càmera virtual ens permetrà afegir efectes en les
+            sessions que fem en directe. També ens és útil per a gravar
+            sessions, però en aquest cas la postedició ens pot facilitar
+            més les coses.</p>
+            </div>
+            <h1 data-number="5" id="interfície-de-kdenlive"><span
+            class="header-section-number">5</span> Interfície de
+            Kdenlive</h1>
+            <p>La interfície de Kdenlive és un poc més complexa que la
+            d’OBS. Quan obrim Kdenlive per primera vegada ens apareixerà
+            una pantalla com la següent:</p>
+            <figure>
+            <img src="img/15.png" style="width:80.0%"
+            alt="Interfície Kdenlive" />
+            <figcaption aria-hidden="true">Interfície
+            Kdenlive</figcaption>
+            </figure>
+            <p>A la imatge podem distingir diversos elements, els que
+            anem a utilitzar en aquest curs principalment seran:</p>
+            <ul>
+            <li>[1] Bandeja de projectes: Ací podem veure els elements
+            que tenim oberts i els que podem obrir.</li>
+            <li>[2] Monitor de clips: Visualitzes el clip
+            seleccionat.</li>
+            <li>[3] Monitor de projecte: Visualitzes el projecte que
+            estàs editant.</li>
+            <li>[4] Composicions i efectes: Ací podem veure les
+            composicions i efectes que podem afegir al nostre projecte.
+            En el seu momento veurem quines diferències hi ha en
+            cadascuna d’elles.</li>
+            <li>[5] Línia de temps: Ací és on realitzarem la majoria de
+            les nostres tasques. En la línia de temps podem afegir
+            clips, efectes, transicions, etc.</li>
+            <li>[6] Es tracta d’una panell on veurem els efectes i
+            composicions afegits a un element del nostre projecte. Podem
+            escollir elements com Àudio, efectes/composicions[7],
+            subtítols.</li>
+            <li>[8] Barra de ferramentes de la línia de temps: Ací tenim
+            les eines bàsiques per a editar la nostra línia de
+            temps.</li>
+            </ul>
+            <p>L’exemple mostrat està en anglès, pots canviar
+            l’interfície a l’idioma que desitges en el menú de
+            configuració.</p>
+            <figure>
+            <img src="img/16.png" style="width:50.0%"
+            alt="Interfície Kdenlive" />
+            <figcaption aria-hidden="true">Interfície
+            Kdenlive</figcaption>
+            </figure>
+            <h2 data-number="5.1" id="barra-de-ferrametes"><span
+            class="header-section-number">5.1</span> Barra de
+            ferrametes</h2>
+            <p>La barra de ferramentes de la línia de temps és una de
+            les eines més importants de Kdenlive. Ací tenim les eines
+            bàsiques per a editar la nostra línia de temps. Les eines
+            més importants són:</p>
+            <figure>
+            <img src="img/17.png" style="width:80.0%"
+            alt="Barra de ferramentes de la línia de temps" />
+            <figcaption aria-hidden="true">Barra de ferramentes de la
+            línia de temps</figcaption>
+            </figure>
+            <p>Per altra banda, és recomanable que actives la barra de
+            ferramentes general i addicional.</p>
+            <figure>
+            <img src="img/18.png" style="width:50.0%"
+            alt="Veure barra de ferramentes general" />
+            <figcaption aria-hidden="true">Veure barra de ferramentes
+            general</figcaption>
+            </figure>
+            <p>D’aquesta manera podrem veure la barra de ferramente
+            general:</p>
+            <figure>
+            <img src="img/47.png" style="width:70.0%"
+            alt="Barra de ferramentes general" />
+            <figcaption aria-hidden="true">Barra de ferramentes
+            general</figcaption>
+            </figure>
+            <p>Esta barra no té molt de misteri, però ens dona un accés
+            directe a Procesar… que és l’última part del procés de
+            creació d’un vídeo, renderitzar el projecte.</p>
+            <h2 data-number="5.2" id="conceptes-de-kdenlive"><span
+            class="header-section-number">5.2</span> Conceptes de
+            Kdenlive</h2>
+            <p>Hem vist ja un poc com és l’entorn del program, però hem
+            de tenir clars una sèrie de conceptes bàsics per a poder
+            realitzar les nostres tasques. Tots aquests cocneptes anireu
+            tenint-los cada vegada més clars a messura que treballeu amb
+            el programa.</p>
+            <ul>
+            <li>Composició: Es tracta d’efectes que afegim a la
+            composició de la nostra línia de temps. Generalment es veuen
+            implicats dos clips en estos efectes, necessiten d’un
+            element per a fer l’altre. Els veurem representats per
+            recuadres entre dos elements en un color morat:</li>
+            </ul>
+            <figure>
+            <img src="img/39.png" style="width:50.0%"
+            alt="Composició" />
+            <figcaption aria-hidden="true">Composició</figcaption>
+            </figure>
+            <ul>
+            <li>Efectes: Els efectes són transformacions que s’apliquen
+            sobre un vídeo en concret de la línea de temps, retallar,
+            difuminar, etc. Els veurem representats per una vareta amb
+            el nom de l’efecte al costat. Quan seleccionem un video
+            veurem que a la dreta ens apareixeran tots els efectes que
+            té aplicats el vídeo:</li>
+            </ul>
+            <figure>
+            <img src="img/40.png" style="width:50.0%" alt="Efectes" />
+            <figcaption aria-hidden="true">Efectes</figcaption>
+            </figure>
+            <p>Per a poder afegir efectes o composicions els seleccionem
+            de la llista de composicions i efectes i els arrossegem a la
+            línia de temps. Si volem afegir un efecte a un vídeo
+            simplement hem de seleccionar el vídeo i arrossegar l’efecte
+            a la línia de temps.</p>
+            <figure>
+            <img src="img/41.png" style="width:50.0%"
+            alt="Afegir efectes" />
+            <figcaption aria-hidden="true">Afegir efectes</figcaption>
+            </figure>
+            <h1 data-number="6" id="configuracions-inicials"><span
+            class="header-section-number">6</span> Configuracions
+            inicials</h1>
+            <p>En aquest punt anem a mostrar-vos com instal·lar una
+            sèrie de complements que anem a utiltizar tant en kdenlive
+            com en OBS. Hi ha moltíssima varietat de complements però
+            ací hem seleccionat uns poc que pode ser útils.</p>
+            <p>Al curs anem a fer ús d’una sèrie de complements que ens
+            permetran realitzar les nostres tasques de manera més
+            eficient. Aquests complements són necessaris per a poder
+            realitzar les tasques que ens proposem en el curs.</p>
+            <h2 data-number="6.1" id="obs"><span
+            class="header-section-number">6.1</span> OBS</h2>
+            <h3 data-number="6.1.1" id="background-removal"><span
+            class="header-section-number">6.1.1</span> Background
+            Removal</h3>
+            <p>OBS disposa d’una pàgina on dispsossem diferent plugins
+            que ens permeten realitzar tasques específiques. En el
+            nostre cas necessitem el plugin Background Removal. Per a
+            instal·lar-lo simplement hem de descarregar l’arxiu,
+            depenent del sistema operatiu caldrà fer-ho d’una manera o
+            altra. En primer lloc anem a la pàgina de <a
+            href="https://obsproject.com/forum/resources/background-removal-virtual-green-screen-low-light-enhance.1260/">descàrrega</a>
+            i tenim una pàgina que ens duu a un repositori de github on
+            teniu tota l’explicació del projecte i teniu un enllaç que
+            vos durà a la descarrega d’uns arxius ja precompilats <a
+            href="https://github.com/locaal-ai/obs-backgroundremoval/releases">ací</a>.</p>
+            <p>Si disposes del gestor de paqueteria flatpak simplement
+            has d’executar la següent comanda. Recorda que en este cas
+            has d’haver instal·lat el paquet de OBS Studio amb
+            flatpak.</p>
+            <div class="sourceCode" id="cb6"><pre
+            class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">flatpak</span> install com.obsproject.Studio.Plugin.BackgroundRemoval</span></code></pre></div>
+            <h3 data-number="6.1.2" id="v4l2loopback-linux"><span
+            class="header-section-number">6.1.2</span> v4l2loopback
+            (Linux)</h3>
+            <p>Si disposes d’un sistema operatiu Linux necessitaràs
+            instal·lar el paquet v4l2loopback. Aquest paquet ens
+            permetrà crear dispositius de vídeo virtuals. Això ens
+            permetrà utilitzar la càmera virtual en OBS.</p>
+            <div class="sourceCode" id="cb7"><pre
+            class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install v4l2loopback-dkms</span></code></pre></div>
+            <p>Si tens alguna altra distribució simplement has de buscar
+            el paquet en els repositoris de la teua distribució, per
+            exemple en arch:</p>
+            <div class="sourceCode" id="cb8"><pre
+            class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> pacman <span class="at">-S</span> v4l2loopback-dkms</span></code></pre></div>
+            <h3 data-number="6.1.3" id="localvocal"><span
+            class="header-section-number">6.1.3</span> LocalVocal</h3>
+            <p>LocalVocal és un plugin que ens permetrà realitzar la
+            transcripció de text en directe. És recomanable si teniu una
+            GPU NVIDIA ja que fa ús de la tecnologia CUDA. Per a
+            instal·lar-lo simplement anem a la pàgina de <a
+            href="https://obsproject.com/forum/resources/localvocal-local-live-captions-translation-on-the-go.1769/">descàrrega</a>
+            i descarreguem l’arxiu corresponent al nostre sistema
+            operatiu. Teniu l’enllaç en la mateixa pàgina.</p>
+            <div class="note">
+            <p>OBS disposa de nombrosos plugins que vos poden ajudar a
+            fer tasques concretes. Aquests plugins estan en constant
+            evolució, si els enllaços no funcionen simplement busqueu en
+            la pàgina de <a
+            href="https://obsproject.com/forum/resources/">recursos</a>
+            de OBS i els bsuque, ja que probablement els hagen
+            actualitzat.</p>
             </div>
             <div class="warning">
-            <p>Es recomana crear un compte de correu electrònic
-            específic per a experimentar amb aquestes eines i serveis.
-            Això permetrà mantenir el vostre compte principal lliure de
-            correu no desitjat i protegir la vostra privacitat. Podeu
-            utilitzar serveis com Gmail, Outlook o qualsevol altre
-            proveïdor de correu electrònic gratuït per a aquest
-            propòsit.</p>
+            <p>No recomanem la seua instal·lació si no es disposa d’un
+            ordinador veritablement potent amb targeta gràfica dedicada
+            i amb CUDA.</p>
             </div>
-            <h1 data-number="2"
-            id="que-és-i-què-no-és-la-intelligència-artificial"><span
-            class="header-section-number">2</span> Que és i què no és la
-            intel·ligència artificial?</h1>
-            <p>Podem pensar que tot el que fem a l’ordinador té a veure
-            amb la intel·ligència artificial i òbviament no és així, els
-            ordinadors utilitzen algoritmes amb llenguatges de
-            programació per a poder automatitzar tasques o realitzar
-            programes. Els algoritmes són una sèrie de passos a seguir
-            que automatitza alguna tasca. Ací teniu un digrama de flux
-            senzill que mostra un procés::</p>
-            <!-- DIAGRAMA FLUXE -->
-            <figure>
-            <img src="img/1.png" height="300"
-            alt="Diagrama de flux. Origen: Wikipedia" />
-            <figcaption aria-hidden="true">Diagrama de flux. Origen:
-            Wikipedia</figcaption>
-            </figure>
-            <p>Aquestes funcions porten una lògica enrere, en canvi les
-            IA utilitzen una manera de programar diferent que baralla
-            moltíssimes més possibilitats per a donar una resposta més
-            creativa basant-se en entrades més complexes que anomenem
-            xarxes neuronals. Ací tenim un exemple de xarxa neuronal</p>
-            <figure>
-            <img src="img/2.png" height="300"
-            alt="Xarxa neuronal. Origen: Wikipedia" />
-            <figcaption aria-hidden="true">Xarxa neuronal. Origen:
-            Wikipedia</figcaption>
-            </figure>
-            <p>Existeix una classe d’arquitectura anomenada
-            <strong>models de transformadors</strong> que es basen en
-            xarxes neuronals. Aquests models són capaços d’aprendre
-            patrons en les dades i generar respostes més complexes.
-            Encara que no aprofundirem en com funcionen, és important
-            que sapigueu que existeixen.</p>
-            <div class="note">
-            <p>La Intel·ligència Artificial (IA) és un camp ampli que
-            inclou diferents tècniques i algoritmes per a crear sistemes
-            que puguen simular la intel·ligència humana. Les xarxes
-            neuronals són una de les tècniques d’IA que imiten el
-            funcionament del cervell humà per a resoldre problemes</p>
-            </div>
-            <p>Dins de la mateixa intel·ligència artificial ens podem
-            trobar diferents categories que anirem veient al llarg dels
-            propers anys.</p>
-            <table>
-            <colgroup>
-            <col style="width: 33%" />
-            <col style="width: 33%" />
-            <col style="width: 33%" />
-            </colgroup>
-            <thead>
-            <tr>
-            <th>Tipus d’IA</th>
-            <th>Descripció</th>
-            <th>Exemples</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-            <td><strong>Intel·ligència Artificial Estreta
-            (IAE)</strong></td>
-            <td>La IAE està programada per a realitzar una sola tasca,
-            ja siga verificar el clima, jugar als escacs o analitzar
-            dades per a escriure informes periodístics. Els sistemes IAE
-            poden atendre una tasca en temps real, però extreuen
-            informació d’un conjunt de dades específic. No funcionen
-            fora de l’única tasca per a la qual estan dissenyats.</td>
-            <td>Assistents virtuals com Siri o Alexa, sistemes de
-            reconeixement facial, cotxes autònoms.</td>
-            </tr>
-            <tr>
-            <td><strong>Intel·ligència Artificial General
-            (IAG)</strong></td>
-            <td>La IAG és una forma d’IA que pot aprendre i entendre
-            qualsevol tasca intel·lectual que un ésser humà pot
-            realitzar. La IAG és capaç de raonar, planificar, aprendre,
-            comprendre llenguatges naturals i integrar diversos
-            coneixements per resoldre problemes complexos.</td>
-            <td>Encara en desenvolupament, objecte de recerca
-            acadèmica.</td>
-            </tr>
-            <tr>
-            <td><strong>Intel·ligència Artificial Superintelectual
-            (IAS)</strong></td>
-            <td>La IAS es refereix a una IA que supera la intel·ligència
-            i capacitats cognitives de tots els humans en pràcticament
-            tots els camps, incloent creativitat científica, saviesa
-            general i habilitats socials.</td>
-            <td>Teòricament possible, però encara no existeix; concepte
-            popularitzat per científics i futuristes com Nick Bostrom<a
+            <h2 data-number="6.2" id="kdenlive"><span
+            class="header-section-number">6.2</span> Kdenlive</h2>
+            <h3 data-number="6.2.1" id="whisper-i-vosk"><span
+            class="header-section-number">6.2.1</span> Whisper i
+            VOSK</h3>
+            <p>Un dels elements a tenir en compte a l’hora de generar
+            videotutorials és el de la creació de subtítols, la
+            generació de subtítols realitzats de manera automàtica ens
+            pot ajudar a la creació de contingut. Per a això farem ús de
+            dos complements: Whisper<a href="#fn1" class="footnote-ref"
+            id="fnref1" role="doc-noteref"><sup>1</sup></a> i VOSK<a
             href="#fn2" class="footnote-ref" id="fnref2"
-            role="doc-noteref"><sup>2</sup></a>.</td>
-            </tr>
-            </tbody>
-            </table>
-            <h2 data-number="2.1"
-            id="models-de-llenguatge-a-gran-escala"><span
-            class="header-section-number">2.1</span> Models de
-            llenguatge a gran escala</h2>
-            <p>Els Models de Llenguatge a Gran Escala (MLL, per les
-            seues sigles en anglès, Large Language Models) són models
-            d’intel·ligència artificial que han sigut entrenats amb
-            enormes quantitats de dades textuals per a aprendre patrons,
-            estructures i representacions del llenguatge natural. Estos
-            models són capaços de realitzar tasques relacionades amb el
-            processament del llenguatge, com entendre el significat de
-            frases, generar text coherent i respondre preguntes.</p>
-            <p>Exemples de MLL inclouen:</p>
-            <ol type="1">
-            <li><p><strong>RoBERTa (Robustly Optimized BERT
-            Approach)</strong>: Una variant de BERT desenvolupada per
-            Facebook AI, que està optimitzada per a obtenir millor
-            rendiment en diverses tasques de llenguatge
-            natural.</p></li>
-            <li><p><strong>XLNet</strong>: Creat per Google Brain,
-            aquest model combina els millors elements de BERT i
-            transformers autoregressius per millorar la comprensió de
-            contextos llargs en tasques de llenguatge natural.</p></li>
-            <li><p><strong>ALBERT (A Lite BERT)</strong>: Desenvolupat
-            per Google Research, és una versió més lleugera de BERT que
-            utilitza menys recursos computacionals mantenint el
-            rendiment.</p></li>
-            <li><p><strong>DistilBERT</strong>: Creat per Hugging Face,
-            aquest model és una versió més petita i eficient de BERT que
-            conserva el 97% del rendiment amb només el 60% del pes del
-            model original.</p></li>
-            <li><p><strong>Electra</strong>: També desenvolupat per
-            Google, aquest model utilitza una nova tècnica d’entrenament
-            per fer models més eficients i amb un rendiment millor en
-            tasques de llenguatge natural.</p></li>
-            <li><p><strong>GPT-Neo</strong>: Un model de codi obert
-            desenvolupat per EleutherAI com a alternativa a GPT-3,
-            disponible per a la comunitat de recerca i
-            desenvolupament.</p></li>
-            <li><p><strong>Megatron-LM</strong>: Desenvolupat per
-            NVIDIA, és un model de gran escala entrenat amb una versió
-            millorada de transformers, optimitzat per a GPU de
-            NVIDIA.</p></li>
-            <li><p><strong>Turing-NLG</strong>: Desenvolupat per
-            Microsoft, aquest model és un dels models de llenguatge
-            natural de gran escala més potents creats per a tasques
-            complexes d’IA.</p></li>
-            <li><p><strong>GPT-3 y 4</strong> (Generative Pre-trained
-            Transformer) d’OpenAI</p></li>
-            <li><p><strong>BERT</strong> (Bidirectional Encoder
-            Representations from Transformers) de Google</p></li>
-            <li><p><strong>T5</strong> (Text-to-Text Transfer
-            Transformer) de Google.</p></li>
-            <li><p><strong>Llama</strong> de Meta: Un model de
-            llenguatge a gran escala desenvolupat per Meta (anteriorment
-            Facebook) que se centra en l’eficiència i la
-            sostenibilitat.</p></li>
-            </ol>
-            <div class="note">
-            <p>No és important que conegueu aquests noms, però quan usem
-            diferents models en el proper mòdul veurem com
-            utilitzar-los.</p>
+            role="doc-noteref"><sup>2</sup></a>. Ambdós són bastant
+            exactes, perà la diferència més importannt que veig és que
+            en Vosk has de descarregat un model per a cada llengua, amb
+            Whisper no. Això sí, el model de Whisper és molt més
+            pesat.</p>
+            <p>Vos recomanem que instal·leu els dos models si és
+            possible, moltes vegades per temes de versions de python,
+            confiugració de l’ordinador, etc… pot donar problemes. Per a
+            instal·lar-los anem al següent menú:</p>
+            <figure>
+            <img src="img/11.png" style="width:50.0%"
+            alt="Instal·lació Whisper" />
+            <figcaption aria-hidden="true">Instal·lació
+            Whisper</figcaption>
+            </figure>
+            <p>Podràs veure la següent pantalla:</p>
+            <figure>
+            <img src="img/12.png" style="width:50.0%"
+            alt="Instal·lació Whisper" />
+            <figcaption aria-hidden="true">Instal·lació
+            Whisper</figcaption>
+            </figure>
+            <p>I farem clic en “Configure” i ens pareixerà la següent
+            pantalla:</p>
+            <figure>
+            <img src="img/13.png" style="width:50.0%"
+            alt="Speech-to-text" />
+            <figcaption aria-hidden="true">Speech-to-text</figcaption>
+            </figure>
+            <div class="tip">
+            <p>Si ja teniu instal·lat algun, cal que accediu a este menú
+            des de Preferencias&gt;Speech-to-text</p>
             </div>
-            <p>Aquestes són només algunes de les moltes versions de MLL
-            que estan ajudant a avançar la investigació i aplicacions en
-            el camp de la intel·ligència artificial.</p>
-            <p>Algunes aplicacions destacades dels MLL són:</p>
-            <ol type="1">
-            <li><p><strong>Generació de Text Creatiu</strong>: MLL com
-            GPT-3 poden ser utilitzats per a generar contingut textual
-            creatiu, des de poesia fins a narrativa.</p></li>
-            <li><p><strong>Assistents Virtuals Avançats</strong>: MLL
-            s’integren en assistents virtuals per a millorar la seua
-            capacitat de comprensió i generació de respostes en
-            llenguatge natural.</p></li>
-            <li><p><strong>Traducció Automàtica Millorada</strong>:
-            Models com T5 han demostrat millores significatives en
-            tasques de traducció automàtica.</p></li>
-            <li><p><strong>Generació de Resums Automàtics</strong>: MLL
-            són empleats per a resumir automàticament textos llargs,
-            facilitant l’extracció d’informació clau.</p></li>
-            <li><p><strong>Preguntes i Respostes</strong>: Models com
-            BERT són utilitzats en sistemes de preguntes i respostes per
-            a entendre i respondre consultes en llenguatge
-            natural.</p></li>
-            <li><p><strong>Anàlisi de Sentiment Avançat</strong>: MLL
-            poden millorar la capacitat d’analitzar el sentiment en
-            grans quantitats de text, beneficiant aplicacions en xarxes
-            socials i comentaris en línia.</p></li>
-            <li><p><strong>Autocompletat de Text Millorat</strong>:
-            Eines d’autocompletat, com les utilitzades en correus
-            electrònics o cerques en la web, es beneficien de la
-            capacitat predictiva dels MLL.</p></li>
-            <li><p><strong>Creació de Contingut Multimèdia</strong>: MLL
-            poden ser combinats amb altres models d’intel·ligència
-            artificial per a crear contingut multimèdia, com imatges,
-            vídeos o àudio, a partir de text.</p></li>
-            <li><p><strong>Creació de Contingut per a Xarxes
-            Socials</strong>: Els MLL són utilitzats per a generar
-            contingut rellevant i atractiu en plataformes de xarxes
-            socials.</p></li>
-            <li><p><strong>Reconeixement d’Entitats Millorat</strong>:
-            Models com GPT-3 poden ajudar en la identificació i
-            classificació precisa d’entitats en textos.</p></li>
-            <li><p><strong>Personalització de Recomanacions</strong>:
-            Els LLM contribueixen a millorar la personalització en
-            sistemes de recomanació en àrees com streaming i comerç
-            electrònic.</p></li>
-            </ol>
-            <p>Estes aplicacions ressalten com els MLL estan
-            transformant la forma en què les màquines interactuen amb el
-            llenguatge humà, obrint noves possibilitats en diverses
-            àrees.</p>
-            <h2 data-number="2.2" id="models-de-difusió"><span
-            class="header-section-number">2.2</span> Models de
-            difusió</h2>
-            <p>Els models de difusió, com DALL-E, són models generatius
-            avançats que utilitzen tècniques de difusió per a generar
-            imatges. Aquests models es basen en la difusió
-            probabilística, que és un procés estocàstic per a generar
-            dades complexes pas a pas. En lloc de generar directament
-            píxels d’una imatge, els models de difusió generen una
-            imatge al “difondre” gradualment informació a través de
-            múltiples passos, la qual cosa permet capturar patrons
-            complexos i estructures en les dades.</p>
-            <p>Exemples de models de difusió inclouen:</p>
-            <table>
-            <colgroup>
-            <col style="width: 50%" />
-            <col style="width: 50%" />
-            </colgroup>
-            <thead>
-            <tr>
-            <th>Model de Difusió</th>
-            <th>Descripció</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-            <td><strong>DALL-E</strong></td>
-            <td>Desenvolupat per OpenAI, DALL-E és conegut per generar
-            imatges creatives a partir de descripcions textuals. Pot
-            crear imatges realistes i úniques a partir de conceptes
-            específics.</td>
-            </tr>
-            <tr>
-            <td><strong>MidJourney</strong></td>
-            <td>Un altre model de difusió que es centra en la generació
-            d’imatges a través de processos de difusió probabilística.
-            Pot utilitzar-se per a crear imatges realistes i
-            detallades.</td>
-            </tr>
-            <tr>
-            <td><strong>Stable Diffusion</strong></td>
-            <td>Un enfocament de difusió que busca aconseguir una
-            difusió més estable i eficient en termes d’entrenament i
-            generació d’imatges.</td>
-            </tr>
-            <tr>
-            <td><strong>Imagen</strong></td>
-            <td>Desenvolupat per Google Research, és un model de difusió
-            que genera imatges a partir de descripcions textuals amb una
-            qualitat d’alta fidelitat. Utilitza tècniques de difusió
-            avançades per millorar la nitidesa i el detall de les
-            imatges generades.</td>
-            </tr>
-            <tr>
-            <td><strong>VQ-VAE-2</strong></td>
-            <td>Un model de difusió basat en VQ-VAE (Vector Quantized
-            Variational Autoencoder), utilitzat per a la generació de
-            dades visuals de gran qualitat. És conegut per la seua
-            capacitat de generar imatges amb detall fi i colors
-            vius.</td>
-            </tr>
-            <tr>
-            <td><strong>BigGAN</strong></td>
-            <td>Desenvolupat per Google, BigGAN és un model de xarxa
-            adversària generativa que utilitza tècniques de difusió per
-            generar imatges d’alta qualitat amb resolucions elevades. És
-            utilitzat per a aplicacions on es requereixen imatges
-            realistes i detallades.</td>
-            </tr>
-            <tr>
-            <td><strong>DDPM</strong></td>
-            <td>Denoising Diffusion Probabilistic Models (DDPM) són
-            models de difusió probabilística que eliminen el soroll de
-            manera progressiva per generar imatges nítides. S’utilitzen
-            en diverses aplicacions de generació d’imatges.</td>
-            </tr>
-            </tbody>
-            </table>
-            <p>Aquests models de difusió tenen aplicacions en diverses
-            àrees, incloent:</p>
-            <ol type="1">
-            <li><p><strong>Generació d’Imatges Artístiques i
-            Creatives</strong>: Els models de difusió com DALL-E
-            s’utilitzen per a generar imatges artístiques i creatives
-            basades en descripcions textuals.</p></li>
-            <li><p><strong>Reconstrucció i Millora d’Imatges</strong>:
-            Poden aplicar-se per a reconstruir o millorar imatges
-            existents, generant versions més detallades o
-            modificades.</p></li>
-            <li><p><strong>Generació de Contingut Visual
-            Personalitzat</strong>: Es poden emprar en la creació de
-            contingut visual personalitzat per a aplicacions de disseny
-            gràfic, publicitat i màrqueting.</p></li>
-            <li><p><strong>Simulació i Entrenament en Realitat
-            Virtual</strong>: Aquests models poden generar escenaris
-            visuals realistes per a aplicacions de realitat virtual,
-            simulació i entrenament.</p></li>
-            <li><p><strong>Síntesi de Dades per a la
-            Investigació</strong>: En àmbits com la recerca científica i
-            mèdica, els models de difusió poden sintetitzar dades
-            visuals per a fins experimentals.</p></li>
-            <li><p><strong>Generació de Contingut per a
-            Videojocs</strong>: Poden utilitzar-se en la creació de mons
-            i elements visuals en videojocs, oferint varietat i
-            realisme.</p></li>
-            <li><p><strong>Creació d’il·lustracions i Art
-            Digital</strong>: Els artistes digitals poden emprar models
-            de difusió per a crear il·lustracions i art digital
-            únic.</p></li>
-            </ol>
-            <p>Aquestes aplicacions destaquen la versatilitat dels
-            models de difusió en la generació de contingut visual, des
-            de la creació d’art fins a la simulació d’entorns complexos.
-            La seua capacitat per a manejar dades de manera
-            probabilística i generar resultats detallats els fa valuosos
-            en diverses disciplines creatives i tecnològiques.</p>
-            <h2 data-number="2.3"
-            id="exemples-dús-per-a-començar-a-experimentar"><span
-            class="header-section-number">2.3</span> Exemples d’ús per a
-            començar a experimentar</h2>
-            <h3 data-number="2.3.1"
-            id="teachable-machine-de-google"><span
-            class="header-section-number">2.3.1</span> Teachable Machine
-            de Google</h3>
-            <p>Teachable Machine de Google és una plataforma que permet
-            als usuaris crear models d’aprenentatge automàtic sense
-            necessitat d’escriure codi. Els usuaris poden entrenar
-            models de classificació d’imatges, sons o posicions
-            utilitzant una interfície amigable, facilitant la
-            incorporació d’intel·ligència artificial en projectes
-            creatius.</p>
-            <p>Aquesta ferramenta ens permet entrenar a xicoteta escala
-            el nostre model d’intel·ligència artificial per a un
-            propòsit, per exemple el de reconèixer objectes, sons o
-            postures. Només ens cal una webcam per a fer-ho. Podem
-            accedir a la plataforma des d’ací: <a
-            href="https://teachablemachine.withgoogle.com/">https://teachablemachine.withgoogle.com/</a></p>
+            <p>Vos apareixerà esta pantalla tant en VOSK com en Whisper
+            on vos demanarà que instal·leu les dependències necessàries.
+            Feu clic i el sistema ja vos instal·larà el que necessite
+            per a poder cofigurar (compte que no instal·larà el
+            model):</p>
             <figure>
-            <img src="img/24.png" style="width:13cm"
-            alt="Teachablemachine" />
-            <figcaption aria-hidden="true">Teachablemachine</figcaption>
+            <img src="img/14.png" style="width:50.0%"
+            alt="Instal·lació dependències" />
+            <figcaption aria-hidden="true">Instal·lació
+            dependències</figcaption>
             </figure>
-            <p>I creem el nostre primer projecte</p>
+            <p>En el cas de VOSK, el model l’heu de configurar a mà,
+            disposeu d’un enllaç que vos duu al lloc on podeu
+            descarregar el model corresponent a la vostra llengua.</p>
+            <h1 data-number="7" id="practiquem-un-poc"><span
+            class="header-section-number">7</span> Practiquem un
+            poc</h1>
+            <p>En aquest apartat no anem a realitzar cap projecte com a
+            tal, sino que anem a practicar un poc amb el kdenlive i
+            l’OBS.</p>
+            <h2 data-number="7.1" id="grabem-la-pantalla-amb-obs"><span
+            class="header-section-number">7.1</span> Grabem la pantalla
+            amb OBS</h2>
+            <p>Per a gravar la pantalla amb OBS el primer que fem es
+            crear un nova escena. Ho fem fent clic eal botó “+” de la
+            secció d’escenes:</p>
             <figure>
-            <img src="img/25.png" style="width:13cm"
-            alt="Model d’imatge" />
-            <figcaption aria-hidden="true">Model d’imatge</figcaption>
+            <img src="img/19.png" style="width:50.0%"
+            alt="Nova escena" />
+            <figcaption aria-hidden="true">Nova escena</figcaption>
             </figure>
-            <p>Nosaltres hem preparat un model per a distingir entre un
-            bolígraf i unes tisores, hem anant pujant imatges de
-            cadascun.</p>
+            <p>Després a l’apartat de fonts afegim una nova font. En el
+            nostre cas afegirem la pantalla del nostre ordinador:</p>
             <figure>
-            <img src="img/26.png" style="width:13cm"
-            alt="Model d’imatge creat" />
-            <figcaption aria-hidden="true">Model d’imatge
-            creat</figcaption>
+            <img src="img/20.png" style="width:50.0%" alt="Nova font" />
+            <figcaption aria-hidden="true">Nova font</figcaption>
             </figure>
-            <p>Aquest model el podem exportar i el podem compartir.
-            Òbviament el model que he creat no és massa interessant,
-            però pots entrenar millors models amb moltes fotografies,
-            d’objectes de la classe i crear el teu propi reconeixedor de
-            d’objectes. Podeu descarregar el model des <a
-            href="https://teachablemachine.withgoogle.com/models/9OqM8E4An/">d’ací</a></p>
-            <h3 data-number="2.3.2" id="autodraw"><span
-            class="header-section-number">2.3.2</span> Autodraw</h3>
-            <p>La funció principal d’AutoDraw és facilitar la creació de
-            dibuixos reconeixibles fins i tot per a aquells que no són
-            hàbils en el dibuix. La eina ofereix una varietat d’icones i
-            formes que coincideixen amb el contingut aproximat del
-            dibuix original, permetent als usuaris millorar i refinar
-            les seues creacions de manera intuitiva.</p>
-            <p><a
-            href="https://www.autodraw.com/">https://www.autodraw.com/</a></p>
-            <p>Per exemple, si dibuixem un vaixell de la millor manera
-            que sabem</p>
+            <p>Ens apareixerà una pantalla com la següent on podem donar
+            un nom a la font:</p>
             <figure>
-            <img src="img/3.png" style="width:13cm"
-            alt="Imatge dibuixada per nosaltres" />
-            <figcaption aria-hidden="true">Imatge dibuixada per
-            nosaltres</figcaption>
+            <img src="img/21.png" style="width:50.0%" alt="Nova font" />
+            <figcaption aria-hidden="true">Nova font</figcaption>
             </figure>
-            <p>La barra de menú superior de la plataforma canviarà
-            intentant descobrir què hem dibuixat i ens proporcionarà una
-            imatge un poc millor dibuixada del que hem fet.</p>
+            <p>Depenent de la quantitat de monitors que tingues pots
+            seleccionar un o altre. En el nostre cas tenim 3
+            monitors.</p>
             <figure>
-            <img src="img/4.png" style="width:13cm"
-            alt="Imatge del menú escollida" />
-            <figcaption aria-hidden="true">Imatge del menú
-            escollida</figcaption>
+            <img src="img/22.png" style="width:50.0%"
+            alt="Selecció de monitor" />
+            <figcaption aria-hidden="true">Selecció de
+            monitor</figcaption>
             </figure>
-            <h3 data-number="2.3.3" id="quickdraw"><span
-            class="header-section-number">2.3.3</span> Quickdraw</h3>
-            <p>Quick, Draw! és un joc en línia desenvolupat per Google
-            que utilitza intel·ligència artificial per a reconèixer i
-            classificar dibuixos realitzats pels usuaris en un temps
-            limitat. El funcionament bàsic del joc és el següent:</p>
-            <ol type="1">
-            <li><p><strong>Dibuix Ràpid</strong>: El jugador rep una
-            paraula suggerida i té un temps limitat (generalment 20
-            segons) per a dibuixar l’objecte o concepte associat en un
-            llenç digital.</p></li>
-            <li><p><strong>Reconeixement en Temps Real</strong>: Mentre
-            el jugador dibuixa, la intel·ligència artificial intenta
-            endevinar el que està representant en temps real. Utilitza
-            algoritmes d’aprenentatge automàtic i xarxes neuronals per a
-            analitzar el traç del dibuix.</p></li>
-            <li><p><strong>Retroalimentació Instantània</strong>: Una
-            vegada que es completa el temps de dibuix, el joc
-            proporciona retroalimentació instantània sobre si la
-            intel·ligència artificial ha reconegut correctament el
-            dibuix o no. A més, mostra exemples de com altres usuaris
-            han representat la mateixa paraula.</p></li>
-            <li><p><strong>Contribució a Conjunt de Dades
-            d’Entrenament</strong>: Els dibuixos realitzats pels usuaris
-            no només són part del joc, sinó que també contribueixen al
-            conjunt de dades utilitzat per a entrenar i millorar els
-            algoritmes de reconeixement de Google.</p></li>
-            </ol>
-            <p>En resum, Quick, Draw! a través de la diversió d’un joc
-            en línia recopila les nostres dades per a millorar els
-            models d’intel·ligència artificial de reconeixement de
-            patrons.</p>
-            <p><a
-            href="https://quickdraw.withgoogle.com/">https://quickdraw.withgoogle.com/</a></p>
-            <div class="note">
-            <p>Es tracta d’un joc senzill que ens permetrà experimentar
-            amb una xarxa neuronal. Aquesta tractarà d’esbrinar què és
-            el que estem dibuixant amb un temps de 20 segons.</p>
+            <div class="tip">
+            <p>Pot resultar un tema baladí però recomane tenir al menys
+            dos monitors per a treballar de manera adequada quan vas a
+            editar vídeos.</p>
             </div>
+            <p>Ens assegurem que el so està actiu i que la pantalla es
+            veu correctament. Si tot està correcte simplement hem de fer
+            clic en “Iniciar gravació”.</p>
             <figure>
-            <img src="img/5.png" style="width:13cm" alt="Joc" />
-            <figcaption aria-hidden="true">Joc</figcaption>
+            <img src="img/23.png" style="width:50.0%"
+            alt="Font d’àudio" />
+            <figcaption aria-hidden="true">Font d’àudio</figcaption>
             </figure>
             <figure>
-            <img src="img/6.png" style="width:13cm"
-            alt="Imatge a esbrinar" />
-            <figcaption aria-hidden="true">Imatge a
-            esbrinar</figcaption>
+            <img src="img/24.png" style="width:50.0%"
+            alt="Iniciar gravació" />
+            <figcaption aria-hidden="true">Iniciar gravació</figcaption>
+            </figure>
+            <p>El vídeo grabat es guardarà en la carpeta de vídeos de
+            l’usuari amb el nom que representa la data i l’hora de la
+            gravació.</p>
+            <h2 data-number="7.2"
+            id="editem-el-nostre-vídeo-amb-kdenlive"><span
+            class="header-section-number">7.2</span> Editem el nostre
+            vídeo amb Kdenlive</h2>
+            <p>Per a gravar amb kdenlive en primer lloc el qeu farem
+            serà escollir el perfil del vídeo que volem crear. Per a
+            això anem a “Opcions de projecte” i seleccionem el perfil
+            que més s’ajuste a les nostres necessitats. En el nostre cas
+            seleccionarem “HD 1080p 25fps”.</p>
+            <figure>
+            <img src="img/25.png" style="width:50.0%"
+            alt="Opcions de projecte" />
+            <figcaption aria-hidden="true">Opcions de
+            projecte</figcaption>
             </figure>
             <figure>
-            <img src="img/7.png" style="width:13cm"
-            alt="El nostre dibuix" />
-            <figcaption aria-hidden="true">El nostre dibuix</figcaption>
+            <img src="img/26.png" style="width:50.0%"
+            alt="Perfil de vídeo" />
+            <figcaption aria-hidden="true">Perfil de vídeo</figcaption>
             </figure>
-            <p>Així anirà fent durant 6 imatges. És un bon exercici per
-            a entendre com funcionen les xarxes neuronals.</p>
-            <figure>
-            <img src="img/8.png" style="width:13cm"
-            alt="Ens ha encertat els 6" />
-            <figcaption aria-hidden="true">Ens ha encertat els
-            6</figcaption>
-            </figure>
-            <h3 data-number="2.3.4" id="labs-google"><span
-            class="header-section-number">2.3.4</span> Labs Google</h3>
-            <p>Google ofereix <a href="https://labs.google/">Labs
-            Google</a>, una sèrie de laboratoris en línia per a
-            experimentar amb la intel·ligència artificial i altres
-            tecnologies. Aquests laboratoris proporcionen eines
-            interactives i guies pas a pas per a aprendre conceptes clau
-            i aplicar-los en projectes pràctics. Alguns dels laboratoris
-            per poder practicar són:</p>
-            <h4 data-number="2.3.4.1" id="gentype"><span
-            class="header-section-number">2.3.4.1</span> Gentype</h4>
-            <p>Gentype és un laboratori interactiu que permet als
-            usuaris explorar i experimentar amb la generació de textos
-            creatius utilitzant models de llenguatge a gran escala. El
-            laboratori ofereix eines per a generar textos, modificar-los
-            i compartir-los amb altres usuaris. A més, proporciona
-            informació sobre els models de llenguatge utilitzats i com
-            funcionen. Pots accedir a Gentype des <a
-            href="https://labs.google/gentype">d’ací</a></p>
-            <p>Hem de logar-nos amb un compte de google per a poder
-            accedir a la plataforma. Després podem donar-li una
-            descripció del tipus de text que volem generar:</p>
-            <figure>
-            <img src="img/27.png" style="width:13cm" alt="Descripció" />
-            <figcaption aria-hidden="true">Descripció</figcaption>
-            </figure>
-            <p>Després podrem generar un text amb la nova tipogrfia i
-            descarregar-lo amb una imatge que podrem utilitzat:</p>
-            <figure>
-            <img src="img/28.png" style="width:13cm"
-            alt="Text generat" />
-            <figcaption aria-hidden="true">Text generat</figcaption>
-            </figure>
-            <p>Imatge generada:</p>
-            <figure>
-            <img src="img/29.png" style="width:13cm"
-            alt="Imatge generada" />
-            <figcaption aria-hidden="true">Imatge generada</figcaption>
-            </figure>
-            <h4 data-number="2.3.4.2" id="say-what-you-see"><span
-            class="header-section-number">2.3.4.2</span> Say what you
-            see</h4>
-            <p><em>Say what you see</em> és un laboratori que posa a
-            prova la teua capacitat de descriure imatges amb paraules.
-            El laboratori mostra una sèrie d’imatges i et demana que les
-            descrius amb frases curtes i concises. A més, pots comparar
-            les teues descripcions amb les d’altres usuaris i veure com
-            la intel·ligència artificial interpreta les imatges. Pots
-            accedir a <em>Say what you see</em> des <a
-            href="https://artsandculture.google.com/experiment/say-what-you-see/jwG3m7wQShZngw">d’ací</a></p>
+            <div class="tip">
+            <p>Què significa HD 1080p 25fps? HD significa que la
+            resolució del vídeo serà de 1920x1080 píxels. 25fps
+            significa que el vídeo tindrà 25 fotogrames per segon. És
+            important modificar aquestes opcions en funció de les
+            nostres necessitats, una opció que recomane si vas a gravar
+            videotutorials és la de 16fps (a no ser que aparega algun
+            vídeo). Per a mostrar el que fas en la pantalla és suficient
+            i el pes del vídeo serà molt menor.</p>
+            </div>
             <div class="warning">
-            <p>Un dels principals inconvenients d’aquesta ferramnta és
-            que està en anglès, però és important practicar-la ja que
-            els prompts per a generar imatges és millor fer-los en
-            anglès. Aquesta ferramenta ens permetrà millorar la creació
-            dels nostres prompts per a generar imatges ja que ens dona
-            feedback del que estem fent bé i del que no.</p>
+            <p>És molt important que aneu guardant el vostre projecte de
+            manera regular. Els programes de edició de vídeo són molt
+            pesats i poden donar problemes si no els guardem de manera
+            regular.</p>
             </div>
-            <p>En aquest cas hem provat el nivell 1, on ens demanen
-            descriure algunes imatges, després nes dona un feedback del
-            prompt que hem creat:</p>
+            <p>Ara ja podem arrastrar i soltar el nostre vídeo en la
+            línea de temps:</p>
             <figure>
-            <img src="img/30.png" style="width:13cm"
-            alt="Say what you see" />
-            <figcaption aria-hidden="true">Say what you see</figcaption>
+            <img src="img/27.png" style="width:50.0%"
+            alt="Arrastrar i soltar" />
+            <figcaption aria-hidden="true">Arrastrar i
+            soltar</figcaption>
             </figure>
-            <p>Entrem al nivell 1:</p>
+            <p>Fixem-nos que moltes vegades ens apareixerà baix un
+            recuadre que ens pregunta si volem adaptar el projecte al
+            vídeo. En este cas OBS ha gravat el vídeo a 60 fps i ens
+            recomana cambiar el perfil del nostre projecte a 60fps, li
+            diguem que no. Una cosa que és mot recomanable és cambiar el
+            vídeo a format editable:</p>
             <figure>
-            <img src="img/31.png" style="width:13cm" alt="Nivell 1" />
-            <figcaption aria-hidden="true">Nivell 1</figcaption>
+            <img src="img/28.png" style="width:50.0%"
+            alt="Adaptar el vídeo" />
+            <figcaption aria-hidden="true">Adaptar el vídeo</figcaption>
             </figure>
-            <p>I ací tenim dos exemple de dos imatges amb els seus
-            prompts. Fixeu-vos que baix ens dona un feedback del prompt
-            que hem creat:</p>
+            <p>Una cosa que podem fer si volem organitzar el vídeo en
+            zones és extraure una zona del vídeo. Per a això simplement
+            hem de seleccionar la zona que volem extraure i fer clic en
+            “Extraure zona”. Podem marcar el inici i el final de la zona
+            que volem extraure:</p>
             <figure>
-            <img src="img/32.png" style="width:13cm" alt="Imatge 1" />
-            <figcaption aria-hidden="true">Imatge 1</figcaption>
+            <img src="img/29.png" style="width:50.0%"
+            alt="Seleccionem zona" />
+            <figcaption aria-hidden="true">Seleccionem zona</figcaption>
             </figure>
             <figure>
-            <img src="img/33.png" style="width:13cm" alt="Imatge 2" />
-            <figcaption aria-hidden="true">Imatge 2</figcaption>
+            <img src="img/30.png" style="width:50.0%"
+            alt="Extraure zona" />
+            <figcaption aria-hidden="true">Extraure zona</figcaption>
             </figure>
-            <div class="note">
-            <p>En aquesta unitat hem vist una petita introducció a les
-            possibilitats que ens ofereix la IA i les tecnologies que
-            s’estan desenvolupant al respecte. A més, una sèrie de
-            conceptes molt bàsics a tenir en compte, però… Quan ens
-            posem a fer prompts? Això ho vorem al proper mòdul…</p>
+            <p>Si en lloc d’extraure zona fem “zona a bandeja de
+            projectes” la zona dependrà del vídeo original. Pots ser
+            útil si volem delimitar varies zones d’un vídeo i tenim
+            molts vídeos en el nostre projecte:</p>
+            <figure>
+            <img src="img/31.png" style="width:70.0%"
+            alt="Zona a bandeja de projectes" />
+            <figcaption aria-hidden="true">Zona a bandeja de
+            projectes</figcaption>
+            </figure>
+            <p>El que anem a fer nosaltres serà simplement agafar el
+            vídeo original i arrastrar-lo a la línia de temps. Després
+            darrere afegirem dos zones aleatories:</p>
+            <figure>
+            <img src="img/32.png" style="width:70.0%"
+            alt="Arrastrar i soltar" />
+            <figcaption aria-hidden="true">Arrastrar i
+            soltar</figcaption>
+            </figure>
+            <p>Si volem afegir més pistes podem fer clic en el botó dret
+            del ratolí i afegir una nova pista de vídeo o de so:</p>
+            <figure>
+            <img src="img/33.png" style="width:50.0%"
+            alt="Afegir pista" />
+            <figcaption aria-hidden="true">Afegir pista</figcaption>
+            </figure>
+            <p><strong>Com funcionen les pistes?</strong></p>
+            <p>Les pistes que están al capdamunt es veuran per damunt de
+            les que estan més abaix. Les pistes no es poden arrastrar ni
+            canviar d’ordre, però podem afegir una pista per damunt
+            d’una altra i afegir-hi un element. Això farà que el nou
+            element es veja per damunt de l’altre.</p>
+            <figure>
+            <img src="img/34.png" style="width:50.0%" alt="Pistes" />
+            <figcaption aria-hidden="true">Pistes</figcaption>
+            </figure>
+            <p><strong>La línia de temps</strong></p>
+            <p>Fixem-nos que tenim una guia que ens mostrarà la pantalla
+            del com quedarà el vídeo al final una vegada aplicats els
+            efectes. El resultat el podrem visualitzar en la pantalla de
+            projecte (ubicada a la dreta):</p>
+            <figure>
+            <img src="img/35.png" style="width:50.0%"
+            alt="Línia de temps" />
+            <figcaption aria-hidden="true">Línia de temps</figcaption>
+            </figure>
+            <p>Si ens fixem veurem que tenim el vídeo agrupat al so,
+            podem desagrupar-los fent clic en el botó dret del ratolí i
+            seleccionant “Desagrupar clips”:</p>
+            <figure>
+            <img src="img/36.png" style="width:50.0%"
+            alt="Desagrupar clips" />
+            <figcaption aria-hidden="true">Desagrupar clips</figcaption>
+            </figure>
+            <p>Si posem un vídeo damunt d’altre veurem que el vídeo de
+            dalt es veu per damunt del de baix.</p>
+            <figure>
+            <img src="img/37.png" style="width:50.0%"
+            alt="Línia de temps" />
+            <figcaption aria-hidden="true">Línia de temps</figcaption>
+            </figure>
+            <p>La imatge que veiem és al següent:</p>
+            <figure>
+            <img src="img/38.png" style="width:50.0%"
+            alt="Previsualització" />
+            <figcaption aria-hidden="true">Previsualització</figcaption>
+            </figure>
+            <p>Pero clar, això no és el que volem. El que volem fer és
+            el següent:</p>
+            <ul>
+            <li>Llevar la part central del vídeo: per a això utilitzarem
+            l’acció de tallar. Tal i com feien antigament quan tallaven
+            el film de vídeo.</li>
+            <li>Desplaçar el vídeo a l’esquerra: per a això utilitzarem
+            l’acció de desplaçar. Es només seleccionar el video i
+            moure’l.</li>
+            <li>Afegir un efecte de transició: per a això utilitzarem
+            l’acció de transició (fade in i fade out).</li>
+            <li>Crear un difuminat al voltant del vídeo: per a això
+            utilitzarem l’acció de <strong>màscara forma alfa</strong> i
+            la composició <strong>transformació</strong>..</li>
+            </ul>
+            <p>Per a tallar el vídeo simplement hem de fer clic en
+            l’accio de tallar i seleccionar la part que volem tallar
+            (veurem que ens apareix una línia roja):</p>
+            <figure>
+            <img src="img/42.png" style="width:50.0%" alt="Tallar" />
+            <figcaption aria-hidden="true">Tallar</figcaption>
+            </figure>
+            <div class="caution">
+            <p>Quan tallem la ferramenta encara esta seleccionada, cal
+            tornar a l’estat de selecció fent clic en la fletxa de la
+            barra de ferramentes de la línia de temps o simplement
+            polsant S. Cal tenir en compte també que quan tallem un
+            vídeo que té efectes, les dos parts mantenen els efectes que
+            hem aplicat.</p>
             </div>
+            <p>Ara ja podem seleccionar el clip tallat i desplaçar-lo a
+            l’esquerra. També podem agrupar els dos clips per a que quan
+            apliquem un efecte afecte a les dos parts. Això sím després
+            cal editar cada efecte per separat (però podem copiar i
+            pegar els efectes). Així que ens centrem en una de les dos
+            parts del vídeo i després copiem i peguem els efectes.</p>
+            <p>Ara aplicarem els efectes fade-in i fade-out, que es
+            enclarir i enfosquir el video. Com és un efecte molt
+            utilitzat al cantó del vídeo seleccionat podem desplaçar una
+            boleta i ja ens aplicacarà l’efecte:</p>
+            <figure>
+            <img src="img/43.png" style="width:50.0%" alt="Fade-in" />
+            <figcaption aria-hidden="true">Fade-in</figcaption>
+            </figure>
+            <p>Esta part és la més complexa i que explicarem més
+            detalladament més endavant en el curs, així que no vos
+            preoucupeu si ho vegeu massa complicat.</p>
+            <ul>
+            <li><p>Composició: Transformació</p></li>
+            <li><p>Efecte: Màscara forma alfa</p></li>
+            </ul>
+            <h2 data-number="7.3"
+            id="aplicant-efectes-de-manera-bàsica"><span
+            class="header-section-number">7.3</span> Aplicant efectes de
+            manera bàsica</h2>
+            <p>Anem a cambiar un poc el que estàvem fent fins ara i
+            començarem un projecte nou, vos recomane que seguiu el
+            videotutorial que teniu penjat en Aules. Però hem agafat una
+            base y una cara. ELs arrastrem i soltem a la nostra bandeja
+            de projectes:</p>
+            <figure>
+            <img src="img/48.png" style="width:50.0%"
+            alt="Arrastrar i soltar" />
+            <figcaption aria-hidden="true">Arrastrar i
+            soltar</figcaption>
+            </figure>
+            <p>Ara els arrastrem a la líne a de temps de la següent
+            manera:</p>
+            <figure>
+            <img src="img/49.png" style="width:50.0%"
+            alt="Arrastrar i soltar" />
+            <figcaption aria-hidden="true">Arrastrar i
+            soltar</figcaption>
+            </figure>
+            <p>Una vegada tenim fet açò, apliquem l’efecte fade-in,
+            fade-out com ja hem vist i arrastrem i soltem l’efecte de
+            màscara forma alfa al vídeo de la xica:</p>
+            <figure>
+            <img src="img/50.png" style="width:50.0%"
+            alt="Arrastrar i soltar" />
+            <figcaption aria-hidden="true">Arrastrar i
+            soltar</figcaption>
+            </figure>
+            <p>Amb el requadre roig seleccionem com volem que s’aplique
+            la màscara i podem canviar la forma en
+            <strong>shape</strong>, nosaltres li hem posat Ellipse.</p>
+            <figure>
+            <img src="img/51.png" style="width:50.0%"
+            alt="Màscara forma alfa" />
+            <figcaption aria-hidden="true">Màscara forma
+            alfa</figcaption>
+            </figure>
+            <p>Finalment en la Composició de de “Composició i
+            transformació” podem variar la forma i la posició:</p>
+            <figure>
+            <img src="img/52.png" style="width:50.0%"
+            alt="Composició" />
+            <figcaption aria-hidden="true">Composició</figcaption>
+            </figure>
+            <p>D’aquesta manera tindriem un projecte molt bàsic on ja
+            hem tocat tots els elements esencials de Kdenlive.</p>
+            <h3 data-number="7.3.1" id="generació-de-clips"><span
+            class="header-section-number">7.3.1</span> Generació de
+            clips</h3>
+            <p>Si fem clic en la “Crear títol” ens la bandeja de
+            projecte ens apareixerà la següent pantalla:</p>
+            <figure>
+            <img src="img/54.png" style="width:50.0%"
+            alt="Crear títol" />
+            <figcaption aria-hidden="true">Crear títol</figcaption>
+            </figure>
+            <figure>
+            <img src="img/55.png" style="width:50.0%"
+            alt="Crear títol" />
+            <figcaption aria-hidden="true">Crear títol</figcaption>
+            </figure>
+            <p>Com vegeu, podem afegir text, imatges, etc. Això ens
+            permetrà crear títols per a la nostra presentació. Si fem
+            clic en “Crear títol” ens apareixerà un nou clip a la nostra
+            bandeja de projectes. Nosaltres hem generat un text senzill
+            i l’hem posat al centre de la pantalla. En background podem
+            canviar el color del fons. L’afegim al principi del</p>
+            <h3 data-number="7.3.2" id="generació-de-vídeo"><span
+            class="header-section-number">7.3.2</span> Generació de
+            vídeo</h3>
+            <p>Finalment per a renderitzar el clip, fem clic en Procesar
+            i ens apareixerà la següent pantalla. Pots fer clic en “More
+            Options” per a que t’aparega completa:</p>
+            <figure>
+            <img src="img/53.png" style="width:50.0%" alt="Procesar" />
+            <figcaption aria-hidden="true">Procesar</figcaption>
+            </figure>
+            <p>Li diem on volem guardar el clip i amb quin nom i ja fem
+            clic en “Render to file” i ja començarà a procesar el Vídeo.
+            Es tracta d’un procés lent que pot tardar molt depenent dels
+            efectes que hagem afegit al vídeo.</p>
+            <h1 data-number="8" id="guardar-projecte"><span
+            class="header-section-number">8</span> Guardar projecte</h1>
+            <p>Ja hem comentat que és important anar guardant el
+            projecte de tant en tant, cal tenir en compte que quan es
+            guarda un projecte es fa amb extensió .kdenlive, si
+            compartixes eixe projecte, o tractes d’obrir-lo en un altre
+            ordinador, cal que tingues en compte que el projecte ha de
+            tindre tots els clips que has utilitzat en el projecte. Si
+            no tens els clips en la mateixa ubicació que quan vas
+            guardar el projecte, el projecte no es podrà obrir.</p>
+            <p>Per a evitar això pots “Arxivar” el projecte:</p>
+            <figure>
+            <img src="img/56.png" style="width:50.0%"
+            alt="Arxivar projecte" />
+            <figcaption aria-hidden="true">Arxivar projecte</figcaption>
+            </figure>
+            <p>Quan aparega esta pantalla demana que et guarde el
+            projecte en un arxiu .zip, d’eixa amnera ja tindràs el
+            prokecte guardat amb tots els seus clips en un únic arxiu
+            .zip. Podràs compartir-lo amb altres companys.</p>
+            <figure>
+            <img src="img/57.png" style="width:50.0%"
+            alt="Arxivar projecte" />
+            <figcaption aria-hidden="true">Arxivar projecte</figcaption>
+            </figure>
+            <p>Finalment fas clic en “Archive” i ja tindràs el projecte
+            guardat en un únic arxiu .zip.</p>
+            <h1 data-number="9" id="repositoris-de-vídeos"><span
+            class="header-section-number">9</span> Repositoris de
+            vídeos</h1>
+            <p>Vos deixem una sèrie de repositoris on podeu trobar
+            vídeos que vos poden ajudar a realitzar els vostres
+            projectes:</p>
+            <ul>
+            <li><a href="https://www.pexels.com/videos/">Pexels</a></li>
+            <li><a
+            href="https://pixabay.com/es/videos/">Pixabay</a></li>
+            <li><a href="https://www.videvo.net/">Videvo</a></li>
+            <li><a href="https://coverr.co/">Coverr</a></li>
+            </ul>
+            <div class="caution">
+            <p>Fixeu-vos en les llicències del vídeos. Encara que gran
+            part son de lliure ús, sempre és recomanable llegir-ne les
+            condicions.</p>
+            </div>
+            <p><a
+            href="https://docs.kdenlive.org/en/effects_and_filters/lists/video_effects_list.html">Efectes</a>
+            <a
+            href="https://docs.kdenlive.org/en/compositing/compositions.html">Composicions</a></p>
             <section id="footnotes"
             class="footnotes footnotes-end-of-document"
             role="doc-endnotes">
             <hr />
             <ol>
-            <li id="fn1"><p>Prompt, és el text que escrius a la
-            plataforma per a que interprete el que realment necessites.
-            Entrarem amb més detall a la propera unitat.<a
-            href="#fnref1" class="footnote-back"
-            role="doc-backlink">↩︎</a></p></li>
-            <li
-            id="fn2"><p>https://es.wired.com/articulos/nick-bostrom-hizo-al-mundo-temer-por-la-ia-ahora-pregunta-y-si-es-la-solucion-a-todos-nuestros-problemas<a
-            href="#fnref2" class="footnote-back"
-            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn1"><p><a
+            href="https://openai.com/index/whisper/">Whisper</a> és un
+            model creat per OpenAI.<a href="#fnref1"
+            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+            <li id="fn2"><p><a
+            href="https://alphacephei.com/vosk/">VOSK</a> és un model
+            creat per Alphacephei.<a href="#fnref2"
+            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
             </ol>
             </section>
         </main>

@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ca" xml:lang="ca" >
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />        <title>2. Grabación y Producción. OBS.</title>
+    <style>
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+        <link rel="stylesheet" href="aqua.css" />  
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
+      
+</head>
+
+<body>
+    <div id="content">
+                 <header id="title-block-header">
+            <h1 class="title">2. Grabación y Producción. OBS.</h1>
+            <!---->
+            <!--  -->
+                    </header>
+                 <nav id="TOC" role="doc-toc">
+            <div class="navContainer">
+                                <h2 id="toc-title">Contenidos</h2>
+                 <ul>
+<li><a href="#introducción" id="toc-introducción"><span
+class="toc-section-number">1</span> Introducción</a></li>
+<li><a href="#preparación-de-la-grabación"
+id="toc-preparación-de-la-grabación"><span
+class="toc-section-number">2</span> Preparación de la Grabación</a>
+<ul>
+<li><a href="#fuentes" id="toc-fuentes"><span
+class="toc-section-number">2.1</span> Fuentes</a>
+<ul>
+<li><a href="#captura-de-pantalla" id="toc-captura-de-pantalla"><span
+class="toc-section-number">2.1.1</span> Captura de pantalla</a></li>
+<li><a href="#capura-de-ventana" id="toc-capura-de-ventana"><span
+class="toc-section-number">2.1.2</span> Capura de ventana</a></li>
+<li><a href="#dispositivo-de-captura-de-vídeo"
+id="toc-dispositivo-de-captura-de-vídeo"><span
+class="toc-section-number">2.1.3</span> Dispositivo de captura de
+vídeo</a></li>
+<li><a href="#fuente-multimedia" id="toc-fuente-multimedia"><span
+class="toc-section-number">2.1.4</span> Fuente multimedia</a></li>
+<li><a href="#galería-de-imágenes" id="toc-galería-de-imágenes"><span
+class="toc-section-number">2.1.5</span> Galería de imágenes</a></li>
+<li><a href="#navegador" id="toc-navegador"><span
+class="toc-section-number">2.1.6</span> Navegador</a></li>
+<li><a href="#orige-del-color" id="toc-orige-del-color"><span
+class="toc-section-number">2.1.7</span> Orige del color</a></li>
+<li><a href="#texto-gdi" id="toc-texto-gdi"><span
+class="toc-section-number">2.1.8</span> Texto (GDI+)</a></li>
+<li><a href="#grupo" id="toc-grupo"><span
+class="toc-section-number">2.1.9</span> Grupo</a></li>
+<li><a href="#captura-de-juego" id="toc-captura-de-juego"><span
+class="toc-section-number">2.1.10</span> Captura de juego</a></li>
+<li><a href="#escena-como-fuente" id="toc-escena-como-fuente"><span
+class="toc-section-number">2.1.11</span> Escena (como fuente)</a></li>
+</ul></li>
+<li><a href="#filtros" id="toc-filtros"><span
+class="toc-section-number">2.2</span> Filtros</a>
+<ul>
+<li><a href="#filtros-de-vídeo" id="toc-filtros-de-vídeo"><span
+class="toc-section-number">2.2.1</span> Filtros de vídeo</a></li>
+<li><a href="#filtros-de-audio" id="toc-filtros-de-audio"><span
+class="toc-section-number">2.2.2</span> Filtros de audio</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#modo-estudio" id="toc-modo-estudio"><span
+class="toc-section-number">3</span> Modo Estudio</a></li>
+</ul>
+            </div>
+        </nav>
+                <main>
+            <!-- \awesomebox[violet]{2pt}{\faRocket}{violet}{Lorem ipsum…} -->
+            <!-- \awesomebox[violet]{2pt}{\faRobot}{violet}{Lorem ipsum…} -->
+            <!-- IMATGE ![Pregunta inicial](./img/proxi/5b.png) -->
+            <!-- \textbf{greatest} -->
+            <p><img src="img/cc.png" height="50" /> Este documento está
+            sujeto a una licencia creative commons que permite su
+            difusión y uso comercial reconociendo siempre la autoría de
+            su creador. Este documento se encuentra para ser modificado
+            en el siguiente repositorio de github:
+            <!-- CANVIAR L'ENLLAÇ --> <a
+            href="https://github.com/arvicenteboix/kdenliveiobs_curs">https://github.com/arvicenteboix/kdenliveiobs_curs</a>
+            </p>
+            <h1 data-number="1" id="introducción"><span
+            class="header-section-number">1</span> Introducción</h1>
+            <p>En esta unidad ya nos vamos a centrar concretamente en un
+            ejemplo concreto de producción de un videotutorial. No vamos
+            a centrarnos en ningún aspecto concreto y trataremos de dar
+            varias opciones para que cada uno pueda adaptarlo a sus
+            necesidades.</p>
+            <h1 data-number="2" id="preparación-de-la-grabación"><span
+            class="header-section-number">2</span> Preparación de la
+            Grabación</h1>
+            <p>Normalmente un videotutorial puede estar compuesto de una
+            explicación de una pantalla de tu ordenador, tu cara y tu
+            voz. Y elementos de refuerzo que nos van a permitir.
+            Preparar un directo no es tarea sencilla pero se puede hacer
+            perfectamente con una persona, si tienes una segunda persona
+            que está controlando el OBS mucho mejor. Antes de preparar
+            cualquier cosa con OBS es necesario tener claro los
+            siguientes conceptos:</p>
+            <ul>
+            <li>Escena: Una escena es un conjunto de fuentes que se
+            muestran en un momento determinado. Puedes tener tantas
+            escenas como quieras y puedes cambiar de una a una en el
+            momento que quieras.</li>
+            <li>Fuentes y sus propiedades: Una fuente es un elemento que
+            se muestra en una escena. Puedes tener fuentes de distintos
+            tipos: pantalla, cámara, imagen, texto, etc.</li>
+            <li>Filtros: Un filtro es un efecto que puedes aplicar a una
+            fuente.</li>
+            </ul>
+            <h2 data-number="2.1" id="fuentes"><span
+            class="header-section-number">2.1</span> Fuentes</h2>
+            <p>Recordemos que para añadir una fuente es necesario hacer
+            clic en el botón “+” y seleccionar el tipo de fuente que
+            queremos añadir. Hay que tener en cuenta que las fuentes se
+            añaden a una escena. Cuando las tenemos seleccionadas
+            aparecerán en un recuadro rojo y podremos mover esa fuente
+            hacia donde queremos de la escena, también podremos hacerlas
+            de mayor o menor tamaño. La posición y el tamaño, no son
+            propiedades de esa la fuente sino de la escena, así si
+            vinculamos diferentes fuentes no . A continuación le
+            mostraremos cómo configurar las fuentes más comunes.</p>
+            <figure>
+            <img src="img/1.png" alt="Fuentes" />
+            <figcaption aria-hidden="true">Fuentes</figcaption>
+            </figure>
+            <h3 data-number="2.1.1" id="captura-de-pantalla"><span
+            class="header-section-number">2.1.1</span> Captura de
+            pantalla</h3>
+            <p>Cuando hacemos clic en Captura de pantalla nos aparecerá
+            una ventana en la que podemos escoger el nombre que queremos
+            darle a la fuente o añadir una existente, esta
+            característica es común a todas las fuentes. Si creas una
+            nueva, le damos un nombre y hacemos clic en aceptar. A
+            continuación nos aparecerá una ventana en la que podemos
+            seleccionar la pantalla que queremos capturar. Si tenemos
+            más de una pantalla, podemos seleccionar la que queremos
+            capturar. Si queremos capturar una ventana en concreto,
+            seleccionamos la opción “Captura de ventana” y seleccionamos
+            la ventana que deseamos capturar.</p>
+            <p>Una característica interesante es la de <strong>Añadir
+            una existente</strong> por lo que las propiedades de esa
+            ventana quedan vinculadas a la que acabamos de añadir, así
+            si cambiaremos dentro de propiedades el monitor que estamos
+            utilizamos en cualquiera de las dos fuentes, también
+            cambiará en el otro. Una forma muy sencilla de hacer lo
+            mismo de forma rápida y que quedan vinculadas es copiando y
+            pegando una fuente de una escena a otra.</p>
+            <figure>
+            <img src="img/2.png" alt="Captura de pantalla" />
+            <figcaption aria-hidden="true">Captura de
+            pantalla</figcaption>
+            </figure>
+            <p>Una vez seleccionado el nombre nos aparecerá una ventana
+            en la que podemos seleccionar la pantalla que queremos
+            capturar. Si tenemos más de una pantalla, podemos
+            seleccionar la que queremos capturar.</p>
+            <figure>
+            <img src="img/3.png" alt="Captura de pantalla" />
+            <figcaption aria-hidden="true">Captura de
+            pantalla</figcaption>
+            </figure>
+            <p>Si has seleccionado Añadir una existente, no te aparecerá
+            nada ya que las propiedades de esa fuente ya están
+            configuradas.</p>
+            <h3 data-number="2.1.2" id="capura-de-ventana"><span
+            class="header-section-number">2.1.2</span> Capura de
+            ventana</h3>
+            <p>Cuando hacemos clic en Captura de ventana nos aparecerá
+            una ventana en la que podemos seleccionar la ventana que
+            queremos capturar. Si tenemos más de una ventana abierta,
+            podemos seleccionar la que deseamos capturar. Cuando
+            capturamos una ventana hay que tener en cuenta varias
+            cosas:</p>
+            <ul>
+            <li>Si cambiamos el tamaño de la ventana, la fuente se
+            redimensionará automáticamente.</li>
+            <li>Si la ventana se minimiza, la fuente se
+            desactivará.</li>
+            <li>Si la ventana se cierra, la fuente se desactivará.</li>
+            </ul>
+            <figure>
+            <img src="img/6.png" alt="Captura de ventana" />
+            <figcaption aria-hidden="true">Captura de
+            ventana</figcaption>
+            </figure>
+            <div class="tipo">
+            <p>Es bastante interesante utilizar la captura de ventana si
+            queremos explicar algún procedimiento que utilice varios
+            programas, de esa manera sólo se verá la ventana y no se
+            verá lo que tenemos en el escritorio.</p>
+            </div>
+            <h3 data-number="2.1.3"
+            id="dispositivo-de-captura-de-vídeo"><span
+            class="header-section-number">2.1.3</span> Dispositivo de
+            captura de vídeo</h3>
+            <p>El dispositivo de captura de vídeo es la cámara web que
+            tenemos conectada a nuestro ordenador. Si tenemos más de una
+            cámara conectada, podemos seleccionar la que queremos
+            utilizar.</p>
+            <figure>
+            <img src="img/4.png"
+            alt="Dispositivo de captura de vídeo" />
+            <figcaption aria-hidden="true">Dispositivo de captura de
+            vídeo</figcaption>
+            </figure>
+            <p>Algo a tener en cuenta cuando configuramos una cámara web
+            es que estas llevan incorporado un micrófono, por tanto, si
+            seleccionamos la cámara web como fuente de vídeo, también
+            estaremos seleccionando el micrófono que lleva incorporado.
+            Si tenemos un micrófono externo, es necesario seleccionarlo
+            como fuente de micrófono. Siempre dependerá de la situación
+            en la que se encuentre, pero si sólo vamos a grabar nuestra
+            voz y el audio del escritorio, en el mezclador de audio hay
+            que dejar sólo una fuente, muteando todas las demás:</p>
+            <figure>
+            <img src="img/5.png"
+            alt="Dispositivo de captura de vídeo" />
+            <figcaption aria-hidden="true">Dispositivo de captura de
+            vídeo</figcaption>
+            </figure>
+            <div class="tipo">
+            <p>En algunos tipos de videotutoriales es interesante
+            utilizar la combinación de dos cámaras web, una para mostrar
+            algo que estés manipulando y otra para mostrar tu cara u
+            otra cosa que estés manipulando. En estos casos es
+            interesante disponer de un soporte de cámara web y que la
+            cámara tenga una tuerca incorporada para el brazo. Si no
+            dispone de una segunda cámara siempre se puede utilizar el
+            móvil como cámara web con la aplicación Droidcam<a
+            href="#fn1" class="footnote-ref" id="fnref1"
+            role="doc-noteref"><sup>1</sup></a>, en ese caso tendrá que
+            utilizado un plugin para OBS que se puede descargar desde la
+            página oficial de Droidcam.</p>
+            </div>
+            <h3 data-number="2.1.4" id="fuente-multimedia"><span
+            class="header-section-number">2.1.4</span> Fuente
+            multimedia</h3>
+            <p>Con fuente multimedia podemos añadir un vídeo que se
+            reproducirá automáticamente cada vez que entremos en la
+            escena. Podemos cambiar algunas características como la
+            velocidad de reproducción, si queremos que sea en bucle,
+            etc… Podemos reproducir un archivo local o un archivo en
+            streaming.</p>
+            <figure>
+            <img src="img/7.png" alt="Fuente multimedia" />
+            <figcaption aria-hidden="true">Fuente
+            multimedia</figcaption>
+            </figure>
+            <p>Un tipo de fuente similar es <strong>Fuente de vídeo
+            VLC</strong>, que es lo mismo pero con una lista de vídeos
+            que se reproducirán en bucle. Una característica que poseen
+            estos elementos multimedia es que disponen de un control
+            para poder reproducir, pausar, avanzar, etc… el vídeo.</p>
+            <figure>
+            <img src="img/8.png" alt="Controles multimedia" />
+            <figcaption aria-hidden="true">Controles
+            multimedia</figcaption>
+            </figure>
+            <h3 data-number="2.1.5" id="galería-de-imágenes"><span
+            class="header-section-number">2.1.5</span> Galería de
+            imágenes</h3>
+            <p>Con la galería de imágenes podemos añadir una serie de
+            imágenes que se reproducirán automáticamente cada vez que
+            entremos en la escena. Podemos cambiar algunas
+            características como la velocidad de reproducción, si
+            queremos que sea en bucle, etc…</p>
+            <p>Podemos añadir una carpeta de imágenes o escoger si
+            queremos reproducirlas en bucle o ir pasándolas nosotros con
+            los controles multimedia:</p>
+            <figure>
+            <img src="img/9.png" alt="Galería de imágenes" />
+            <figcaption aria-hidden="true">Galería de
+            imágenes</figcaption>
+            </figure>
+            <h3 data-number="2.1.6" id="navegador"><span
+            class="header-section-number">2.1.6</span> Navegador</h3>
+            <p>Con la fuente navegadora podemos tener un navegador
+            integrado en nuestra escena. Eso sí, si queremos interactuar
+            con el navegador mejor utilizar una captura de ventana, ya
+            que es más sencillo.</p>
+            <p>Con el navegador integrado de OBS, debemos darle una
+            página de inicio:</p>
+            <figure>
+            <img src="img/10.png" alt="Navegador" />
+            <figcaption aria-hidden="true">Navegador</figcaption>
+            </figure>
+            <p>Luego si queremos interactuar con el navegador debemos
+            hacer clic con el botón interactuar:</p>
+            <figure>
+            <img src="img/11.png" alt="Interactuar" />
+            <figcaption aria-hidden="true">Interactuar</figcaption>
+            </figure>
+            <p>Y nos aparecerá la pantalla del navegador:</p>
+            <figure>
+            <img src="img/12.png" alt="Pantalla navegador" />
+            <figcaption aria-hidden="true">Pantalla
+            navegador</figcaption>
+            </figure>
+            <h3 data-number="2.1.7" id="orige-del-color"><span
+            class="header-section-number">2.1.7</span> Orige del
+            color</h3>
+            <p>Con el origen del color podemos añadirle un color a
+            nuestra escena. Nos puede servir para tener un color de
+            fondo distinto al negro.</p>
+            <figure>
+            <img src="img/13.png" alt="Orige del color" />
+            <figcaption aria-hidden="true">Orige del color</figcaption>
+            </figure>
+            <h3 data-number="2.1.8" id="texto-gdi"><span
+            class="header-section-number">2.1.8</span> Texto (GDI+)</h3>
+            <p>Nos permite añadir texto a nuestra escena. Podemos
+            cambiar la fuente, el color, el tamaño, etc…</p>
+            <figure>
+            <img src="img/14.png" alt="Texto (GDI+)" />
+            <figcaption aria-hidden="true">Texto (GDI+)</figcaption>
+            </figure>
+            <h3 data-number="2.1.9" id="grupo"><span
+            class="header-section-number">2.1.9</span> Grupo</h3>
+            <p>Se trata de un elemento similar a una carpeta donde
+            podemos agrupar diferentes fuentes. De esa forma podemos
+            organizar mejor las fuentes de nuestra escena.</p>
+            <figure>
+            <img src="img/15.png" alt="Grupo" />
+            <figcaption aria-hidden="true">Grupo</figcaption>
+            </figure>
+            <h3 data-number="2.1.10" id="captura-de-juego"><span
+            class="header-section-number">2.1.10</span> Captura de
+            juego</h3>
+            <p>Porque hay una captura de juego y una captura de
+            pantalla? La captura de juego es una captura de pantalla
+            pero con una serie de características que nos permiten
+            capturar el juego de forma más eficiente. Eso sí, no todos
+            los juegos se pueden capturar con la captura de juego, por
+            tanto, si tenemos problemas, mejor utilizar la captura de
+            pantalla. OBS se utiliza muchísimo en twitch para
+            retransmitir juegos en directo.</p>
+            <div class="tipo">
+            <p>Podemos pensar que no es una característica importante
+            pero tiene especial relevancia si queremos hacer algún
+            videotutorial de Minecraft for education por ejemplo.</p>
+            </div>
+            <h3 data-number="2.1.11" id="escena-como-fuente"><span
+            class="header-section-number">2.1.11</span> Escena (como
+            fuente)</h3>
+            <p>Una característica bastante importante en OBS es añadir
+            otra escena dentro de la misma escena. En este caso, sólo
+            nos deja la opción de añadir una escena que ya tenemos
+            creada. Esto es muy útil para tener una escena con nuestra
+            cara que esté compartida por todas ellas.</p>
+            <p><img src="img/16.png" alt="Escena (como fuente)" /> ###
+            Posición de las fuentes e interacción entre ellas</p>
+            <p>La orden de las fuentes es verdaderamente importante
+            cuando estamos montando una escena puesto que las escenas
+            que están encima se verán por encima de las que están por
+            debajo. Si hacemos clic en el botón derecho de una fuente
+            veremos el menú contextual para realizar una serie de
+            acciones. Aunque no es importante, existe un tipo de
+            interacción que puede ser interesante en algún momento, como
+            por ejemplo, el modo de fusión.</p>
+            <p>Como modo de ejemplo si queremos quitarle el rojo a unas
+            imágenes que tenemos en una escena, podemos añadir una
+            fuente de color rojo por encima de las imágenes y
+            seleccionar el modo de fusión de la fuente de color rojo en
+            “Restar”. De esa manera las imágenes se verán sin el color
+            rojo.</p>
+            <figure>
+            <img src="img/17.png" alt="Fusión" />
+            <figcaption aria-hidden="true">Fusión</figcaption>
+            </figure>
+            <p>Obviamente, podemos pensar en otro tipo de interacciones
+            con el método fusión.</p>
+            <h2 data-number="2.2" id="filtros"><span
+            class="header-section-number">2.2</span> Filtros</h2>
+            <p>Las escenas están compuestas por fuentes y las fuentes a
+            su vez son modificadas por los filtros, que son efectos que
+            podemos aplicar a las fuentes. Para añadir un filtro a una
+            fuente, hacemos clic en el botón derecho de la fuente y
+            seleccionamos “Filtros”. A continuación hacemos clic en el
+            botón “+” y seleccionamos el filtro que queremos añadir.</p>
+            <p>Tenemos una serie de filtros que vienen por defecto en
+            OBS, pero podemos añadir más filtros como hemos visto ya en
+            la unidad anterior. Una vez añadimos una fuente podemos
+            añadir un filtro haciendo clic sobre el botón filtros.
+            Dependiendo de si la fuente tiene o no audio, tendremos
+            filtros de audio o de vídeo. Vamos a ver los filtros más
+            comunes y algunos que pueden resultar basta
+            interesantes.</p>
+            <p>Para poder acceder a los filtros haremos clic en el botón
+            Filtros cuando seleccionemos la fuente sobre la que queremos
+            aplicar el filtro.</p>
+            <figure>
+            <img src="img/18.png" alt="Filtros" />
+            <figcaption aria-hidden="true">Filtros</figcaption>
+            </figure>
+            <p>Una vez dentro de la ventana de filtros podemos ver los
+            filtros que tenemos aplicados y una previsualización de la
+            que vamos a ver.</p>
+            <figure>
+            <img src="img/19.png" alt="Filtros" />
+            <figcaption aria-hidden="true">Filtros</figcaption>
+            </figure>
+            <p>Podemos ver dos secciones, los filtros de audio arriba y
+            los de vídeo bajo. Si hacemos clic en el botón “+” podremos
+            añadir un filtro. A continuación veremos los filtros más
+            comunes.</p>
+            <figure>
+            <img src="img/20.png" alt="Filtros vídeo" />
+            <figcaption aria-hidden="true">Filtros vídeo</figcaption>
+            </figure>
+            <figure>
+            <img src="img/21.png" alt="Filtros audio" />
+            <figcaption aria-hidden="true">Filtros audio</figcaption>
+            </figure>
+            <p>Debemos tener en cuenta que podemos añadir tantos filtros
+            como queramos, y al igual que en las escenas, los que están
+            por encima tienen más prioridad que los que están por
+            debajo.</p>
+            <h3 data-number="2.2.1" id="filtros-de-vídeo"><span
+            class="header-section-number">2.2.1</span> Filtros de
+            vídeo</h3>
+            <h4 data-number="2.2.1.1" id="background-removal"><span
+            class="header-section-number">2.2.1.1</span> Background
+            removal</h4>
+            <p>El primer filtro que veremos que es muy interesante es el
+            de Background removal. Este filtro nos permite eliminar el
+            fondo de nuestra webcam. Este filtro es muy interesante para
+            realizar videotutoriales ya que podemos tener nuestra cara
+            en una esquina de la pantalla sin que se vea el fondo.</p>
+            <figure>
+            <img src="img/22.png" alt="Background removal" />
+            <figcaption aria-hidden="true">Background
+            removal</figcaption>
+            </figure>
+            <p>En la previsualización se ve el fondo negro, pero en la
+            pantalla de la webcam se verá sin fondo.</p>
+            <h4 data-number="2.2.1.2" id="recortar"><span
+            class="header-section-number">2.2.1.2</span> Recortar</h4>
+            <p>El filtro de recortar nos permite recortar la imagen de
+            nuestra webcam. Si sólo queremos centrar la atención en un
+            único elemento.</p>
+            <figure>
+            <img src="img/26.png" alt="Recortar" />
+            <figcaption aria-hidden="true">Recortar</figcaption>
+            </figure>
+            <h4 data-number="2.2.1.3" id="imagen-máscara"><span
+            class="header-section-number">2.2.1.3</span> Imagen
+            máscara</h4>
+            <p>Este filtro es bastante interesante ya que podemos querer
+            recortar nuestra webcam para que se vea en una forma
+            concreta. Por ejemplo, si queremos que nuestra webcam se vea
+            en forma de círculo, podemos utilizar una imagen máscara de
+            forma circular. Por ejemplo podemos crearnos una imagen como
+            ésta (o cualquier otra imagen que tenga un buen contraste de
+            colores) y la cargamos como nuestra máscara.</p>
+            <figure>
+            <img src="img/27.png" alt="Imagen máscara" />
+            <figcaption aria-hidden="true">Imagen máscara</figcaption>
+            </figure>
+            <p>La parte blanca de la imagen será la que se vea y la
+            parte negra será la que no se vea. Aunque podemos configurar
+            cualquier otro color:</p>
+            <figure>
+            <img src="img/28.png" alt="Imagen máscara" />
+            <figcaption aria-hidden="true">Imagen máscara</figcaption>
+            </figure>
+            <p>De esta forma podemos tener una imagen de nuestra cámara
+            web en forma de círculo.</p>
+            <figure>
+            <img src="img/29.png" alt="Imagen máscara" />
+            <figcaption aria-hidden="true">Imagen máscara</figcaption>
+            </figure>
+            <p>La mascarilla también acepta difuminación, para que no se
+            vea tan bruscamente el recortado.</p>
+            <h4 data-number="2.2.1.4" id="fondo-croma"><span
+            class="header-section-number">2.2.1.4</span> Fondo
+            croma</h4>
+            <p>El fondo croma es un filtro con un efecto bastante
+            complicado de conseguir a menos que se deponga de una tela
+            verde o azul. El color debe ser bastante homogéneo y debe
+            haber boba iluminación. Tienes que poner un valor del color
+            muy aproximado a lo que ves. En este caso he puesto una
+            carpeta azul:</p>
+            <figure>
+            <img src="img/23.png" alt="Fondo croma" />
+            <figcaption aria-hidden="true">Fondo croma</figcaption>
+            </figure>
+            <p>Poniendo un vídeo de fondo conseguimos el efecto croma,
+            aunque con una calidad pésima:</p>
+            <figure>
+            <img src="img/24.png" alt="Fondo croma" />
+            <figcaption aria-hidden="true">Fondo croma</figcaption>
+            </figure>
+            <h5 data-number="2.2.1.4.1" id="clave-luma"><span
+            class="header-section-number">2.2.1.4.1</span> Clave
+            Luma</h5>
+            <p>Este filtro nos permite conseguir un efecto similar al
+            del Croma pero se basa con los objetos más iluminados que
+            los que están alrededor. Esto es muy interesante para
+            conseguir un efecto de fondo croma sin tener una tela verde
+            o azul, pero debes saber jugar con las luces.</p>
+            <h5 data-number="2.2.1.4.2" id="enhanced-portrait"><span
+            class="header-section-number">2.2.1.4.2</span> Enhanced
+            portrait</h5>
+            <p>Produce un efecto bastante interesante para crear un
+            efecto de dibujo a lápiz, combinado con la clave
+            <strong>Lluma</strong> se refuerza su efecto.</p>
+            <figure>
+            <img src="img/25.png" alt="Enhanced portrait" />
+            <figcaption aria-hidden="true">Enhanced
+            portrait</figcaption>
+            </figure>
+            <h4 data-number="2.2.1.5" id="otros-filtros"><span
+            class="header-section-number">2.2.1.5</span> Otros
+            filtros</h4>
+            <p>Existen muchos filtros que podemos utilizar, y otros que
+            podemos descargar, los otros filtros que vienen por defecto
+            son:</p>
+            <ul>
+            <li>Corrección de color: Como su nombre indica nos puede ser
+            útil para modificar el color de la cámara.</li>
+            <li>Desplazamiento: Nos permite desplazar la cámara en la
+            pantalla creando un efecto como de sintonización de la
+            cámara.</li>
+            <li>Escala/Relación de aspecto: Nos permite cambiar el
+            tamaño de la cámara.</li>
+            <li>Filtro de color: Nos permite aplicar un filtro de color
+            a la cámara.</li>
+            <li>Filtro de enfoque: Nos permite aumentar la nitidez de la
+            imagen.</li>
+            <li>Retraso en el procesamiento: Retrasa la emisión de la
+            cámara hasta 500ms.</li>
+            </ul>
+            <h3 data-number="2.2.2" id="filtros-de-audio"><span
+            class="header-section-number">2.2.2</span> Filtros de
+            audio</h3>
+            <p>Los filtros de audio, tal y como su nombre indica, sirven
+            para modificar el audio. Ese audio quizás de una fuente
+            externa que tenemos conectada a nuestro ordenador o puede
+            ser el audio de nuestra webcam. Así cuando tengamos una
+            fuente que tenga audio, podremos añadir filtros de audio. A
+            modo de ejemplo, partiendo de una fuente de captura de audio
+            se aparecen los siguientes filtros:</p>
+            <figure>
+            <img src="img/30.png" alt="Filtros audio" />
+            <figcaption aria-hidden="true">Filtros audio</figcaption>
+            </figure>
+            <p>No vamos a entrar en detalle en todos los filtros de
+            audio, pero aquellos que nos pueden resultar interesantes
+            son los siguientes:</p>
+            <h4 data-number="2.2.2.1" id="eliminación-de-ruido"><span
+            class="header-section-number">2.2.2.1</span> Eliminación de
+            ruido</h4>
+            <p>Elimina el ruido de fondo de nuestro micrófono. Debemos
+            tener cuidado porque puede eliminar también nuestra voz.</p>
+            <div class="caution">
+            <p>En nuestro parecer, si realiza muchos videotutoriales, es
+            mejor utilizar un micrófono externo que no tenga ruido de
+            fondo que utilizar este filtro. Puede encontrar ofertas de
+            vez en cuando por unos 25 €, y valen la pena.</p>
+            </div>
+            <h4 data-number="2.2.2.2" id="puerta-anti-ruido"><span
+            class="header-section-number">2.2.2.2</span> Puerta
+            anti-ruido</h4>
+            <p>Semejante a lo anterior, pero en este caso sólo se
+            escuchará el audio cuando hablemos. Si no hablamos, nada se
+            escuchará. Puesto que crea un umbral de ruido en un
+            determinado valor.</p>
+            <h4 data-number="2.2.2.3" id="compresor"><span
+            class="header-section-number">2.2.2.3</span> Compresor</h4>
+            <p>El compresor es un filtro que permite ajustar el volumen
+            de nuestra voz. Si hablamos muy bajo, el compresor aumentará
+            el volumen de nuestra voz. Si hablamos muy alto, el
+            compresor disminuirá el volumen de nuestra voz.</p>
+            <h4 data-number="2.2.2.4" id="ganancia"><span
+            class="header-section-number">2.2.2.4</span> Ganancia</h4>
+            <p>El filtro de ganancia nos permite aumentar o disminuir el
+            volumen de nuestra voz. Si hablamos muy bajo podemos
+            aumentar el volumen de nuestra voz. Si hablamos muy alto
+            podemos disminuir el volumen de nuestra voz.</p>
+            <h4 data-number="2.2.2.5" id="localvocal"><span
+            class="header-section-number">2.2.2.5</span> LocalVocal</h4>
+            <p>Por último, tenemos el filtro LocalVocal que hemos
+            instalado el plugin en la unidad anterior. Este filtro crea
+            subtítulos en directo de nuestra voz. Eso sí, es necesario
+            disponer de un ordenador bastante potente ya que consume
+            muchos recursos. Para configurarlo sólo debemos añadirlo y
+            configurarlo. Las opciones que recomendamos para
+            configurarlo son las siguientes:</p>
+            <figure>
+            <img src="img/31.png" alt="LocalVocal" />
+            <figcaption aria-hidden="true">LocalVocal</figcaption>
+            </figure>
+            <p>Fijémonos que hemos escogido el modelo Whisper Small, es
+            un modelo que pesa poco y funciona bastante bien, en idioma
+            de entrada lo hemos dejado con “Auto-detect” pero es
+            recomendable que elija el idioma con el que va a hablar.
+            Este filtro también nos permite realizar traducciones
+            simultáneas de los subtítulos, de manera que puede hacer una
+            charla en castellano que los subtítulos estén en inglés.</p>
+            <p>Una vez que tenemos configurado el filtro, nos aparecerá
+            un elemento texto en nuestra escena:</p>
+            <figure>
+            <img src="img/32.png" alt="LocalVocal" />
+            <figcaption aria-hidden="true">LocalVocal</figcaption>
+            </figure>
+            <p>Este elemento texto es el que mostrará los subtítulos de
+            nuestra voz. Si queremos cambiar la posición del texto,
+            debemos hacerlo desde la ventana de la fuente.</p>
+            <figure>
+            <img src="img/33.png" alt="LocalVocal" />
+            <figcaption aria-hidden="true">LocalVocal</figcaption>
+            </figure>
+            <h1 data-number="3" id="modo-estudio"><span
+            class="header-section-number">3</span> Modo Estudio</h1>
+            <p>El modo de estudio es un modo que nos permite tener una
+            previsualización de nuestra escena y una emisión de nuestra
+            escena. Esto es muy útil para poder ver cómo se ve nuestra
+            escena antes de hacerla pública. Para activar el modo
+            estudio, hacemos clic en el botón “Estudio” que se encuentra
+            en la parte inferior derecha de la pantalla.</p>
+            <figure>
+            <img src="img/34.png" alt="Modo estudio" />
+            <figcaption aria-hidden="true">Modo estudio</figcaption>
+            </figure>
+            <p>Cuando tenemos activado el modo estudio, veremos una
+            pantalla con la previsualización de nuestra escena y una
+            pantalla con la emisión de nuestra escena. Esto nos permite
+            cambiar nuestra escena sin que se vea en la emisión. Además,
+            podemos cambiar la posición de las fuentes, filtros, etc… y
+            ver cómo se ve en la previsualización. Es necesario tener
+            mucha destreza, y disponer de dos pantallas como mínimo para
+            poder utilizar este modo, de manera eficiente.</p>
+            <figure>
+            <img src="img/35.png" alt="Modo estudio" />
+            <figcaption aria-hidden="true">Modo estudio</figcaption>
+            </figure>
+            <p>Los botones principales son:</p>
+            <ul>
+            <li>Transición: Nos permite cambiar de la previsualización a
+            la emisión. Podemos elegir el método de transición.</li>
+            <li>Corte: Nos permite cambiar la previsualización a la
+            emisión y la emisión a la previsualización sin transición
+            suave.</li>
+            <li>Tenemos dos botones que podemos personalizar, siempre es
+            conveniente tener un oscurecimiento a negro para cortar
+            alguna emisión de forma suave.</li>
+            <li>Finalmente tenemos una barra de desplazamiento que nos
+            permite realizar una transición manual entre escenas.</li>
+            </ul>
+            <section id="footnotes"
+            class="footnotes footnotes-end-of-document"
+            role="doc-endnotes">
+            <hr />
+            <ol>
+            <li id="fn1"><p><a
+            href="https://www.dev47apps.com/">Droidcam</a><a
+            href="#fnref1" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            </ol>
+            </section>
+        </main>
+        
+
+        <!--- Modal images -->
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- The Close Button -->
+            <!--span class="close">&times;</span-->
+
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="img01">
+
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+
+        <!-- End Modal Images -->
+
+        <script>
+            function ModalizeImages() {
+                // Script basat en https://www.w3schools.com/howto/howto_css_modal_images.asp
+                // PEr ampliar imatges en fer click
+
+                // Get the modal
+                var modal = document.getElementById("myModal");
+
+                var modalImg = document.getElementById("img01");
+                var captionText = document.getElementById("caption");
+
+                // Get the image and insert it inside the modal - use its "alt" text as a caption
+                //var img = document.getElementById("myImg");
+                document.querySelectorAll("img").forEach((img => {
+                        img.onclick = function() {
+                            modal.style.display = "block";
+                            modalImg.src = this.src;
+                            captionText.innerHTML = this.alt;
+                        }
+                    }))
+                    // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks on <span> (x), close the modal
+                //span.onclick = function() {
+                myModal.onclick = function() {
+                    modal.style.display = "none";
+                }
+
+
+            }
+
+
+            function markItem(id) {
+                // Restaurem format de tots
+                document.querySelectorAll("#TOC a").forEach(function(item) {
+                        //item.style.fontWeight = "300";
+                        item.classList.remove("navItemSelected");
+                    })
+                    //item.style.color = "#ff0000";
+
+                // Afegim format
+                let items = document.querySelectorAll("#TOC a[href='#" + id + "']");
+                items.forEach(function(item) {
+                    //item.style.fontWeight = "bolder";
+                    item.classList.add("navItemSelected");
+                })
+
+            }
+
+            var observer = new IntersectionObserver(function(entries) {
+                // isIntersecting is true when element and viewport are overlapping
+                // isIntersecting is false when element and viewport don't overlap
+                if (entries[0].isIntersecting === true) {
+                    let id = entries[0].target.id;
+                    markItem(id);
+                }
+
+            }, {
+                threshold: [0]
+            });
+
+            window.addEventListener("load", function() {
+                document.querySelectorAll("h1, h2, h3").forEach(function(item) {
+                    observer.observe(item);
+                });
+
+                document.querySelectorAll("#TOC a").forEach(function(item) {
+                    item.addEventListener("click", function(item) {
+                        markItem(item.id);
+                    })
+                })
+
+                // Fem modals totes les imatges
+                ModalizeImages();
+            })
+
+            document.querySelector("#TOC").addEventListener("click", function(event) {
+                let toc = event.target
+                if (toc.offsetWidth > 10) {
+                    toc.classList.add("minimizedToc");
+                }
+            })
+
+            document.querySelector("#TOC").addEventListener("mouseover", function(event) {
+                let toc = event.target
+                if (toc.classList.contains("minimizedToc"))
+                    toc.classList.remove("minimizedToc");
+            })
+
+
+            //item.style.color = "#ff0000";
+        </script>
+    </div>
+</body>
+
+</html>

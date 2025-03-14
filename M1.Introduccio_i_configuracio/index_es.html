@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="generator" content="pandoc" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />        <title>1. Introducción. Conceptos iniciales</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />        <title>1. Introducción y configuración</title>
     <style>
         code{white-space: pre-wrap;}
         span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,70 @@
           vertical-align: middle;
         }
         .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+        /* CSS for syntax highlighting */
+        pre > code.sourceCode { white-space: pre; position: relative; }
+        pre > code.sourceCode > span { line-height: 1.25; }
+        pre > code.sourceCode > span:empty { height: 1.2em; }
+        .sourceCode { overflow: visible; }
+        code.sourceCode > span { color: inherit; text-decoration: inherit; }
+        div.sourceCode { margin: 1em 0; }
+        pre.sourceCode { margin: 0; }
+        @media screen {
+        div.sourceCode { overflow: auto; }
+        }
+        @media print {
+        pre > code.sourceCode { white-space: pre-wrap; }
+        pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+        }
+        pre.numberSource code
+          { counter-reset: source-line 0; }
+        pre.numberSource code > span
+          { position: relative; left: -4em; counter-increment: source-line; }
+        pre.numberSource code > span > a:first-child::before
+          { content: counter(source-line);
+            position: relative; left: -1em; text-align: right; vertical-align: baseline;
+            border: none; display: inline-block;
+            -webkit-touch-callout: none; -webkit-user-select: none;
+            -khtml-user-select: none; -moz-user-select: none;
+            -ms-user-select: none; user-select: none;
+            padding: 0 4px; width: 4em;
+            color: #aaaaaa;
+          }
+        pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+        div.sourceCode
+          {   }
+        @media screen {
+        pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+        }
+        code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+        code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+        code span.at { color: #7d9029; } /* Attribute */
+        code span.bn { color: #40a070; } /* BaseN */
+        code span.bu { color: #008000; } /* BuiltIn */
+        code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+        code span.ch { color: #4070a0; } /* Char */
+        code span.cn { color: #880000; } /* Constant */
+        code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+        code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+        code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+        code span.dt { color: #902000; } /* DataType */
+        code span.dv { color: #40a070; } /* DecVal */
+        code span.er { color: #ff0000; font-weight: bold; } /* Error */
+        code span.ex { } /* Extension */
+        code span.fl { color: #40a070; } /* Float */
+        code span.fu { color: #06287e; } /* Function */
+        code span.im { color: #008000; font-weight: bold; } /* Import */
+        code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+        code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+        code span.op { color: #666666; } /* Operator */
+        code span.ot { color: #007020; } /* Other */
+        code span.pp { color: #bc7a00; } /* Preprocessor */
+        code span.sc { color: #4070a0; } /* SpecialChar */
+        code span.ss { color: #bb6688; } /* SpecialString */
+        code span.st { color: #4070a0; } /* String */
+        code span.va { color: #19177c; } /* Variable */
+        code span.vs { color: #4070a0; } /* VerbatimString */
+        code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
     </style>
         <link rel="stylesheet" href="aqua.css" />  
     <!--[if lt IE 9]>
@@ -32,683 +96,944 @@
 <body>
     <div id="content">
                  <header id="title-block-header">
-            <h1 class="title">1. Introducción. Conceptos iniciales</h1>
+            <h1 class="title">1. Introducción y configuración</h1>
             <!---->
             <!--  -->
                     </header>
                  <nav id="TOC" role="doc-toc">
             <div class="navContainer">
+                                <h2 id="toc-title">Contenidos</h2>
                  <ul>
 <li><a href="#introducción" id="toc-introducción"><span
 class="toc-section-number">1</span> Introducción</a></li>
-<li><a href="#qué-es-y-qué-no-es-la-inteligencia-artificial"
-id="toc-qué-es-y-qué-no-es-la-inteligencia-artificial"><span
-class="toc-section-number">2</span> Qué es y qué no es la inteligencia
-artificial?</a>
+<li><a href="#instalación-de-obs-studio"
+id="toc-instalación-de-obs-studio"><span
+class="toc-section-number">2</span> Instalación de OBS Studio</a></li>
+<li><a href="#instalación-de-kdenlive"
+id="toc-instalación-de-kdenlive"><span
+class="toc-section-number">3</span> Instalación de Kdenlive</a></li>
+<li><a href="#interfaz-de-obs" id="toc-interfaz-de-obs"><span
+class="toc-section-number">4</span> Interfaz de OBS</a></li>
+<li><a href="#interfaz-de-kdenlive" id="toc-interfaz-de-kdenlive"><span
+class="toc-section-number">5</span> Interfaz de Kdenlive</a>
 <ul>
-<li><a href="#modelos-de-lenguaje-a-gran-escala"
-id="toc-modelos-de-lenguaje-a-gran-escala"><span
-class="toc-section-number">2.1</span> Modelos de Lenguaje a Gran
-Escala</a></li>
-<li><a href="#modelos-de-difusión" id="toc-modelos-de-difusión"><span
-class="toc-section-number">2.2</span> Modelos de Difusión</a></li>
-<li><a href="#modelos-de-difusión-1"
-id="toc-modelos-de-difusión-1"><span
-class="toc-section-number">2.3</span> Modelos de difusión</a></li>
-<li><a href="#ejemplos-de-uso-para-empezar-a-experimentar"
-id="toc-ejemplos-de-uso-para-empezar-a-experimentar"><span
-class="toc-section-number">2.4</span> Ejemplos de Uso para Empezar a
-Experimentar</a>
+<li><a href="#barra-de-herrajes" id="toc-barra-de-herrajes"><span
+class="toc-section-number">5.1</span> Barra de herrajes</a></li>
+<li><a href="#conceptos-de-kdenlive"
+id="toc-conceptos-de-kdenlive"><span
+class="toc-section-number">5.2</span> Conceptos de Kdenlive</a></li>
+</ul></li>
+<li><a href="#configuraciones-iniciales"
+id="toc-configuraciones-iniciales"><span
+class="toc-section-number">6</span> Configuraciones iniciales</a>
 <ul>
-<li><a href="#teachable-machine-de-google"
-id="toc-teachable-machine-de-google"><span
-class="toc-section-number">2.4.1</span> Teachable Machine de
-Google</a></li>
-<li><a href="#autodraw" id="toc-autodraw"><span
-class="toc-section-number">2.4.2</span> Autodraw</a></li>
-<li><a href="#quickdraw" id="toc-quickdraw"><span
-class="toc-section-number">2.4.3</span> Quickdraw</a></li>
-<li><a href="#labs-google" id="toc-labs-google"><span
-class="toc-section-number">2.4.4</span> Labs Google</a></li>
+<li><a href="#obs" id="toc-obs"><span
+class="toc-section-number">6.1</span> OBS</a>
+<ul>
+<li><a href="#background-removal" id="toc-background-removal"><span
+class="toc-section-number">6.1.1</span> Background Removal</a></li>
+<li><a href="#v4l2loopback-linux" id="toc-v4l2loopback-linux"><span
+class="toc-section-number">6.1.2</span> v4l2loopback (Linux)</a></li>
+<li><a href="#localvocal" id="toc-localvocal"><span
+class="toc-section-number">6.1.3</span> LocalVocal</a></li>
+</ul></li>
+<li><a href="#kdenlive" id="toc-kdenlive"><span
+class="toc-section-number">6.2</span> Kdenlive</a>
+<ul>
+<li><a href="#whisper-y-vosk" id="toc-whisper-y-vosk"><span
+class="toc-section-number">6.2.1</span> Whisper y VOSK</a></li>
 </ul></li>
 </ul></li>
+<li><a href="#practicamos-un-poco" id="toc-practicamos-un-poco"><span
+class="toc-section-number">7</span> Practicamos un poco</a>
+<ul>
+<li><a href="#grabamos-la-pantalla-con-obs"
+id="toc-grabamos-la-pantalla-con-obs"><span
+class="toc-section-number">7.1</span> Grabamos la pantalla con
+OBS</a></li>
+<li><a href="#editamos-nuestro-vídeo-con-kdenlive"
+id="toc-editamos-nuestro-vídeo-con-kdenlive"><span
+class="toc-section-number">7.2</span> Editamos nuestro vídeo con
+Kdenlive</a></li>
+<li><a href="#aplicando-efectos-de-forma-básica"
+id="toc-aplicando-efectos-de-forma-básica"><span
+class="toc-section-number">7.3</span> Aplicando efectos de forma
+básica</a>
+<ul>
+<li><a href="#generación-de-clips" id="toc-generación-de-clips"><span
+class="toc-section-number">7.3.1</span> Generación de clips</a></li>
+<li><a href="#generación-de-vídeo" id="toc-generación-de-vídeo"><span
+class="toc-section-number">7.3.2</span> Generación de vídeo</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#guardar-proyecto" id="toc-guardar-proyecto"><span
+class="toc-section-number">8</span> Guardar proyecto</a></li>
+<li><a href="#repositorios-de-vídeos"
+id="toc-repositorios-de-vídeos"><span
+class="toc-section-number">9</span> Repositorios de vídeos</a></li>
 </ul>
             </div>
         </nav>
                 <main>
             <!-- \awesomebox[violet]{2pt}{\faRocket}{violet}{Lorem ipsum…} -->
             <!-- \awesomebox[violet]{2pt}{\faRobot}{violet}{Lorem ipsum…} -->
-            <!-- IMATGE ![Pregunta inicial](./img/proxi/5b.png) -->
+            <!-- IMATGE ![Pregunta inicial](./img/proxi/5b.png){ width=50% } -->
             <!-- \textbf{greatest} -->
-            <p><img src="img/cc.png" height="50" /></p>
-            <p>Este documento está sujeto a una licencia creative
-            commons que permite su difusión y uso comercial reconociendo
-            siempre la autoría de su creador. Este documento se
-            encuentra para ser modificado en el siguiente repositorio de
-            github: <!-- CANVIAR L'ENLLAÇ --> <a
-            href="https://github.com/arvicenteboix/AICurs25">https://github.com/arvicenteboix/AICurs25</a>
+            <p><img src="img/cc.png" height="50" /> Este documento está
+            sujeto a una licencia creative commons que permite su
+            difusión y uso comercial reconociendo siempre la autoría de
+            su creador. Este documento se encuentra para ser modificado
+            en el siguiente repositorio de github:
+            <!-- CANVIAR L'ENLLAÇ --> <a
+            href="https://github.com/arvicenteboix/kdenliveiobs_curs">https://github.com/arvicenteboix/kdenliveiobs_curs</a>
             </p>
             <h1 data-number="1" id="introducción"><span
             class="header-section-number">1</span> Introducción</h1>
-            <p>Seguramente muchos de vosotros ya habéis oído hablar de
-            la inteligencia artificial y de todo lo que puede hacer.
-            Algunos ya habéis empezado a utilizarla en vuestro día a día
-            y sabéis distinguir algunos conceptos sobre qué es la IA. En
-            este curso trataremos de haceros una introducción sobre las
-            diferentes herramientas que existen y cómo sacarles
-            provecho.</p>
-            <p>Se trata de un curso de iniciación y es posible que os
-            sintáis abrumados por toda la información que veis, pero no
-            se os pide que profundicéis en muchas de las utilidades que
-            os presentaremos. El curso será breve pero intenso, y
-            trataremos de ayudaros con todas las dudas que se planteen.
-            Todo el texto escrito está redactado sin utilizar
-            inteligencia artificial, aunque algunas imágenes son la
-            excepción. En muchos casos os proporcionaremos un prompt<a
-            href="#fn1" class="footnote-ref" id="fnref1"
-            role="doc-noteref"><sup>1</sup></a> y la respuesta que
-            obtendréis. Trataremos de limitar la extensión a lo que
-            realmente necesitéis. Os lo presentaremos con el siguiente
-            icono.</p>
+            <!-- Mòdul 1: Introducció i Configuració
+            Instal·lació i configuració inicial de Kdenlive i OBS
+            Introducció a les interfícies i eines bàsiques d'ambdós programes
+            Configuració de projectes i ajustos bàsics<br>
+            Mòdul 2: Gravació i Producció
+            Tècniques de gravació de pantalla amb OBS
+            Configuració de fonts de vídeo i àudio
+            Producció de contingut en temps real i gestió d'escenes<br>
+            Mòdul 3: Edició i Publicació
+            Importació de material gravat en Kdenlive
+            Edició bàsica de vídeo: talls, transicions i efectes
+            Exportació de vídeos en diferents formats i publicació en plataformes en línia -->
+            <p>La creación de videotutoriales es una herramienta
+            necesaria para la realización de cursos en formato
+            semipresencial y muchas veces en presencial también puesto
+            que se quedan como una referencia de lo que realmente se
+            quiere realizar.</p>
+            <p>En este módulo empezaremos con una introducción de las
+            dos herramientas que vamos a utilizar en este curso:
+            Kdenlive y OBS. Además, veremos cómo instalarlas y
+            configurarlas para empezar a trabajar con ellas. Haremos un
+            repaso de las interfaces y herramientas básicas de cada
+            programa y veremos cómo configurar proyectos y ajustes
+            básicos.</p>
+            <p>En este curso no nos centraremos en todos los aspectos
+            que nos ofrece OBS ni Kdenlive, ya que son herramientas muy
+            poderosas y presentamos muchísimas características. Nos
+            centraremos en cómo crear un videotutorial y en las
+            herramientas necesarias que pueden hacernos falta para
+            realizarlo. No espere dominar el Kdenlive ni elk OBS de
+            forma profesional, éste no es el propósito de este curso ya
+            que existen ofertas sobre estas herramientas de manera
+            específica. Al final del curso simplemente le pediremos que
+            cree un pequeño videotutorial que trate algún aspecto de su
+            especialidad y lo comparta a sus compañeros.</p>
+            <p>Debemos tener en cuenta las características fundamentales
+            de cada uno de ellos.</p>
+            <ul>
+            <li>OBS Studio: OBS Studio es un software libre y gratuito
+            que nos permite grabar y retransmitir en directo. Es una
+            herramienta muy potente que permite grabar la pantalla de
+            nuestro ordenador.</li>
+            <li>Kdenlive: Kdenlive es un editor de vídeo libre y
+            gratuito que nos permite editar vídeos de forma sencilla e
+            intuitiva. Es una herramienta muy potente que nos permite
+            editar vídeos de forma profesional.</li>
+            </ul>
+            <h1 data-number="2" id="instalación-de-obs-studio"><span
+            class="header-section-number">2</span> Instalación de OBS
+            Studio</h1>
+            <p>Lo primero que debemos hacer es instalar OBS. Para
+            instalarlo simplemente vamos a su <a
+            href="https://obsproject.com/es">página web</a> y
+            descargamos la versión que nos corresponda.</p>
+            <figure>
+            <img src="img/1.png" style="width:50.0%"
+            alt="Descargar OBS" />
+            <figcaption aria-hidden="true">Descargar OBS</figcaption>
+            </figure>
+            <p>En el caso de una distribución Linux, simplemente podemos
+            instalarlo desde los repositorios de nuestra distribución.
+            Por ejemplo, en Ubuntu simplemente debemos ejecutar el
+            siguiente pedido:</p>
+            <div class="sourceCode" id="cb1"><pre
+            class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install obs-studio</span></code></pre></div>
             <div class="note">
-            <p>Se trata de una respuesta de inteligencia artificial.
-            Debido a la complejidad del trabajo, no sería posible
-            escribir un modelo desde cero sin mucho tiempo y
-            esfuerzo.</p>
+            <p>Con linux puedes utilizar flathub para instalar OBS
+            Studio. Simplemente debes ejecutar el siguiente pedido:</p>
+            <div class="sourceCode" id="cb2"><pre
+            class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">flatpak</span> install flathub com.obsproject.Studio</span></code></pre></div>
+            </div>
+            <p>Si dispones de un Mac debes tener en cuenta que en
+            función del procesador que tengas tendrás que descargar una
+            versión u otra.</p>
+            <figure>
+            <img src="img/2.png" style="width:50.0%"
+            alt="Descargar OBS" />
+            <figcaption aria-hidden="true">Descargar OBS</figcaption>
+            </figure>
+            <p>Cuando comience el proceso de instalación simplemente
+            debemos seguir los pasos que nos indica el programa. Al
+            tratarse de un programa donde se pueden realizar tanto
+            sesiones en directo como grabar sesiones nos hará una serie
+            de cuestiones. En nuestro caso simplemente debemos
+            configurarlo para grabar sesiones.</p>
+            <figure>
+            <img src="img/5.png" style="width:50.0%"
+            alt="Configuración OBS" />
+            <figcaption aria-hidden="true">Configuración
+            OBS</figcaption>
+            </figure>
+            <figure>
+            <img src="img/6.png" style="width:50.0%"
+            alt="Configuración OBS" />
+            <figcaption aria-hidden="true">Configuración
+            OBS</figcaption>
+            </figure>
+            <figure>
+            <img src="img/7.png" style="width:50.0%"
+            alt="Configuración OBS" />
+            <figcaption aria-hidden="true">Configuración
+            OBS</figcaption>
+            </figure>
+            <h1 data-number="3" id="instalación-de-kdenlive"><span
+            class="header-section-number">3</span> Instalación de
+            Kdenlive</h1>
+            <p>Para instalar Kdenlive simplemente vamos a su <a
+            href="https://kdenlive.org/">página web</a> y descargamos la
+            versión que nos corresponda. Hacemos clic en Download:</p>
+            <figure>
+            <img src="img/3.png" style="width:50.0%"
+            alt="Descargar Kdenlive" />
+            <figcaption aria-hidden="true">Descargar
+            Kdenlive</figcaption>
+            </figure>
+            <p>Opciones de descarga:</p>
+            <figure>
+            <img src="img/4.png" style="width:50.0%"
+            alt="Descargar Kdenlive" />
+            <figcaption aria-hidden="true">Descargar
+            Kdenlive</figcaption>
+            </figure>
+            <p>Tenemos diferentes opciones para instalar Kdenlive en los
+            distintos sistemas operativos. En Windows tenemos dos
+            versiones:</p>
+            <ul>
+            <li>Instalable: Es una versión que se instala en nuestro
+            sistema operativo.</li>
+            <li>Standalone: ​​Es una versión portable que no requiere
+            instalación.</li>
+            </ul>
+            <div class="caution">
+            <p>Standalone puede servirnos para hacer uso del programa en
+            aquellos entornos que no se nos permite instalar software.
+            Siempre es recomendable instalar la versión instalable. Es
+            necesario disponer de un sistema operativo actualizado
+            (Windows 10 o superior).</p>
+            </div>
+            <p>En el caso de una distribución Linux, simplemente podemos
+            instalarlo desde los repositorios de nuestra distribución.
+            Por ejemplo, en Ubuntu simplemente debemos ejecutar el
+            siguiente pedido:</p>
+            <div class="sourceCode" id="cb3"><pre
+            class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install kdenlive</span></code></pre></div>
+            <p>La versión portable para linux se llama AppImage.
+            Simplemente debemos descargar el archivo y darle permisos de
+            ejecución:</p>
+            <div class="sourceCode" id="cb4"><pre
+            class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> +x kdenlive-<span class="pp">*</span>.appimage</span></code></pre></div>
+            <p>Existe la versión flatpak de Kdenlive. Simplemente
+            debemos ejecutar el siguiente pedido:</p>
+            <div class="sourceCode" id="cb5"><pre
+            class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">flatpak</span> install flathub org.kde.kdenlive</span></code></pre></div>
+            <p>O hacer clic en el botón Flatpak.</p>
+            <h1 data-number="4" id="interfaz-de-obs"><span
+            class="header-section-number">4</span> Interfaz de OBS</h1>
+            <p>Cuando iniciemos OBS por primera vez nos aparecerá una
+            pantalla como la siguiente:</p>
+            <figure>
+            <img src="img/8.png" style="width:80.0%"
+            alt="Interfaz OBS" />
+            <figcaption aria-hidden="true">Interfaz OBS</figcaption>
+            </figure>
+            <p>En la imagen podemos distinguir varios elementos, los que
+            vamos a utilizar en este curso principalmente serán:</p>
+            <ul>
+            <li>Escenas: Las escenas son conjuntos de fuentes de vídeo y
+            audio que podemos mostrar en directo o grabar. Podemos
+            configurar diferentes escenas para mostrar distintos
+            elementos en cada momento.</li>
+            <li>Fuentes (elementos de la escena): Las fuentes son los
+            elementos que podemos mostrar en una escena. Pueden ser
+            desde la pantalla de nuestro ordenador hasta una webcam o un
+            vídeo.</li>
+            <li>Audio: En esta sección podemos configurar las fuentes de
+            audio que queremos utilizar en nuestra grabación.</li>
+            <li>Previsualización: En esta sección podemos ver cómo se
+            verá nuestra grabación en directo o cómo se verá el vídeo
+            que estamos grabando.</li>
+            <li>Controles: Aquí hemos destacado dos botones que serán
+            los que utilizaremos principalmente, <em>Iniciar
+            grabación</em> e <em>Iniciar cámara virtual</em>. El primero
+            nos permitirá empezar a grabar nuestra pantalla y el segundo
+            nos permitirá empezar a utilizar la cámara virtual.</li>
+            </ul>
+            <div class="tipo">
+            <p>La cámara virtual nos permitirá añadir efectos en las
+            sesiones que realizamos en directo. También nos resulta útil
+            para grabar sesiones, pero en este caso la postedición nos
+            puede facilitar más las cosas.</p>
+            </div>
+            <h1 data-number="5" id="interfaz-de-kdenlive"><span
+            class="header-section-number">5</span> Interfaz de
+            Kdenlive</h1>
+            <p>La interfaz de Kdenlive es algo más compleja que la de
+            OBS. Cuando abramos Kdenlive por primera vez nos aparecerá
+            una pantalla como la siguiente:</p>
+            <figure>
+            <img src="img/15.png" style="width:80.0%"
+            alt="Interfaz Kdenlive" />
+            <figcaption aria-hidden="true">Interfaz
+            Kdenlive</figcaption>
+            </figure>
+            <p>En la imagen podemos distinguir varios elementos, los que
+            vamos a utilizar en este curso principalmente serán:</p>
+            <ul>
+            <li>[1] Safata de proyectos: Aquí podemos ver los elementos
+            que tenemos abiertos y los que podemos abrir.</li>
+            <li>[2] Monitor de clips: Visualizas el clip
+            seleccionado.</li>
+            <li>[3] Monitor de proyecto: Visualizas el proyecto que
+            estás editando.</li>
+            <li>[4] Composiciones y efectos: Aquí podemos ver las
+            composiciones y efectos que podemos añadir a nuestro
+            proyecto. En su momento veremos qué diferencias existen en
+            cada una de ellas.</li>
+            <li>[5] Línea de tiempo: Aquí es donde realizaremos la
+            mayoría de nuestras tareas. En la línea de tiempo podemos
+            añadir clips, efectos, transiciones, etc.</li>
+            <li>[6] Se trata de una panel donde veremos los efectos y
+            composiciones añadidos a un elemento de nuestro proyecto.
+            Podemos elegir elementos como Audio,
+            efectos/composiciones[7], subtítulos.</li>
+            <li>[8] Barra de herramientas de la línea de tiempo: Aquí
+            tenemos las herramientas básicas para editar nuestra línea
+            de tiempo.</li>
+            </ul>
+            <p>El ejemplo mostrado está en inglés, puedes cambiar el
+            interfaz al idioma que desees en el menú de
+            configuración.</p>
+            <figure>
+            <img src="img/16.png" style="width:50.0%"
+            alt="Interfaz Kdenlive" />
+            <figcaption aria-hidden="true">Interfaz
+            Kdenlive</figcaption>
+            </figure>
+            <h2 data-number="5.1" id="barra-de-herrajes"><span
+            class="header-section-number">5.1</span> Barra de
+            herrajes</h2>
+            <p>La barra de herramientas de la línea de tiempo es una de
+            las herramientas más importantes de Kdenlive. Aquí tenemos
+            las herramientas básicas para editar nuestra línea de
+            tiempo. Las herramientas más importantes son:</p>
+            <figure>
+            <img src="img/17.png" style="width:80.0%"
+            alt="Barra de herramientas de la línea de tiempo" />
+            <figcaption aria-hidden="true">Barra de herramientas de la
+            línea de tiempo</figcaption>
+            </figure>
+            <p>Por otra parte, es recomendable que active la barra de
+            herramientas general y adicional.</p>
+            <figure>
+            <img src="img/18.png" style="width:50.0%"
+            alt="Ver barra de herramientas general" />
+            <figcaption aria-hidden="true">Ver barra de herramientas
+            general</figcaption>
+            </figure>
+            <p>De este modo podremos ver la barra de herramienta
+            general:</p>
+            <figure>
+            <img src="img/47.png" style="width:70.0%"
+            alt="Barra de herramientas general" />
+            <figcaption aria-hidden="true">Barra de herramientas
+            general</figcaption>
+            </figure>
+            <p>Esta barra no tiene mucho misterio, pero nos da un acceso
+            directo a Procesar… que es la última parte del proceso de
+            creación de un vídeo, renderizar el proyecto.</p>
+            <h2 data-number="5.2" id="conceptos-de-kdenlive"><span
+            class="header-section-number">5.2</span> Conceptos de
+            Kdenlive</h2>
+            <p>Hemos visto ya algo como es el entorno del programa, pero
+            debemos tener claros una serie de conceptos básicos para
+            poder realizar nuestras tareas. Todos estos coneptos irán
+            teniéndolos cada vez más claros a medida que trabaja con el
+            programa.</p>
+            <ul>
+            <li>Composición: Se trata de efectos que añadimos a la
+            composición de nuestra línea de tiempo. Generalmente se ven
+            implicados dos clips en estos efectos, necesitan de un
+            elemento para realizar el otro. Los veremos representados
+            por recuadros entre dos elementos en un color morado:</li>
+            </ul>
+            <figure>
+            <img src="img/39.png" style="width:50.0%"
+            alt="Composición" />
+            <figcaption aria-hidden="true">Composición</figcaption>
+            </figure>
+            <ul>
+            <li>Efectos: Los efectos son transformaciones que se aplican
+            sobre un vídeo en concreto de la línea de tiempo, recortar,
+            difuminar, etc. Los veremos representados por una varilla
+            con el nombre del efecto al lado. Al seleccionar un vídeo
+            veremos que a la derecha nos aparecerán todos los efectos
+            que tiene aplicados el vídeo:</li>
+            </ul>
+            <figure>
+            <img src="img/40.png" style="width:50.0%" alt="Efectos" />
+            <figcaption aria-hidden="true">Efectos</figcaption>
+            </figure>
+            <p>Para poder añadir efectos o composiciones los
+            seleccionamos de la lista de composiciones y efectos y los
+            arrastramos a la línea de tiempo. Si queremos añadir un
+            efecto a un vídeo simplemente debemos seleccionar el vídeo y
+            arrastrar el efecto a la línea de tiempo.</p>
+            <figure>
+            <img src="img/41.png" style="width:50.0%"
+            alt="Añadir efectos" />
+            <figcaption aria-hidden="true">Añadir efectos</figcaption>
+            </figure>
+            <h1 data-number="6" id="configuraciones-iniciales"><span
+            class="header-section-number">6</span> Configuraciones
+            iniciales</h1>
+            <p>En este punto vamos a mostrarle cómo instalar una serie
+            de complementos que vamos a utilizar tanto en kdenlive como
+            en OBS. Hay muchísima variedad de complementos pero aquí
+            hemos seleccionado unos pocos que pueden ser útiles.</p>
+            <p>En el curso vamos a hacer uso de una serie de
+            complementos que nos permitirán realizar nuestras tareas de
+            forma más eficiente. Estos complementos son necesarios para
+            poder realizar las labores que nos proponemos en el
+            curso.</p>
+            <h2 data-number="6.1" id="obs"><span
+            class="header-section-number">6.1</span> OBS</h2>
+            <h3 data-number="6.1.1" id="background-removal"><span
+            class="header-section-number">6.1.1</span> Background
+            Removal</h3>
+            <p>OBS dispone de una página en la que disponemos diferentes
+            plugins que nos permiten realizar tareas específicas. En
+            nuestro caso necesitamos el plugin Background Removal. Para
+            instalarlo simplemente debemos descargar el archivo,
+            dependiendo del sistema operativo habrá que hacerlo de una u
+            otra forma. En primer lugar vamos a la página de <a
+            href="https://obsproject.com/forum/resources/background-removal-virtual-green-screen-low-light-enhance.1260/">descarga</a>
+            y tenemos una página que nos lleva a un repositorio de
+            github donde tienes la lista de archivos
+            (https://github.com/locaal-ai/obs-backgroundremoval/releases).</p>
+            <p>Si dispones del gestor de paquetería flatpak simplemente
+            debes ejecutar el siguiente pedido. Recuerda que en este
+            caso debes instalar el paquete de OBS Studio con
+            flatpak.</p>
+            <div class="sourceCode" id="cb6"><pre
+            class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">flatpak</span> install com.obsproject.Studio.Plugin.BackgroundRemoval</span></code></pre></div>
+            <h3 data-number="6.1.2" id="v4l2loopback-linux"><span
+            class="header-section-number">6.1.2</span> v4l2loopback
+            (Linux)</h3>
+            <p>Si dispones de un sistema operativo Linux necesitarás
+            instalar el paquete v4l2loopback. Este paquete nos permitirá
+            crear dispositivos de vídeo virtuales. Esto nos permitirá
+            utilizar la cámara virtual en OBS.</p>
+            <div class="sourceCode" id="cb7"><pre
+            class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install v4l2loopback-dkms</span></code></pre></div>
+            <p>Si tienes alguna otra distribución simplemente debes
+            buscar el paquete en los repositorios de tu distribución,
+            por ejemplo en arch:</p>
+            <div class="sourceCode" id="cb8"><pre
+            class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> pacman <span class="at">-S</span> v4l2loopback-dkms</span></code></pre></div>
+            <h3 data-number="6.1.3" id="localvocal"><span
+            class="header-section-number">6.1.3</span> LocalVocal</h3>
+            <p>LocalVocal es un plugin que nos permitirá realizar la
+            transcripción de texto en directo. Es recomendable si tiene
+            una GPU NVIDIA ya que hace uso de la tecnología CUDA. Para
+            instalarlo simplemente vamos a la página de <a
+            href="https://obsproject.com/forum/resources/localvocal-local-live-captions-translation-on-the-go.1769/">descarga</a>
+            y descargamos el archivo correspondiente a nuestro sistema
+            operativo. Tiene el enlace en la misma página.</p>
+            <div class="note">
+            <p>OBS dispone de numerosos plugins que pueden ayudarle a
+            realizar tareas concretas. Estos plugins están en constante
+            evolución, si los enlaces no funcionan simplemente busque en
+            la página de <a
+            href="https://obsproject.com/forum/resources/">recursos</a>
+            de OBS y los bsuque, ya que probablemente los hayan
+            actualizado.</p>
             </div>
             <div class="warning">
-            <p>Se recomienda crear un cuenta de correo electrónico
-            específica para experimentar con estas herramientas y
-            servicios. Esto permitirá mantener tu cuenta principal libre
-            de correos electrónicos no deseados y proteger tu
-            privacidad. Puedes utilizar proveedores de correo
-            electrónico como Gmail, Outlook o cualquier otro servicio
-            gratuito para este propósito.</p>
+            <p>No se recomienda su instalación si no se dispone de un
+            ordenador verdaderamente potente con tarjeta gráfica
+            dedicada y con CUDA.</p>
             </div>
-            <h1 data-number="2"
-            id="qué-es-y-qué-no-es-la-inteligencia-artificial"><span
-            class="header-section-number">2</span> Qué es y qué no es la
-            inteligencia artificial?</h1>
-            <p>Podemos pensar que todo lo que hacemos en el ordenador
-            tiene que ver con la inteligencia artificial, pero
-            obviamente no es así. Los ordenadores utilizan algoritmos
-            con lenguajes de programación para poder automatizar tareas
-            o realizar programas. Los algoritmos son una serie de pasos
-            que se siguen para realizar una tarea. Aquí tenéis un
-            ejemplo de diagrama de flujo sencillo que muestra un
-            proceso::</p>
-            <!-- DIAGRAMA DE FLUJO -->
+            <h2 data-number="6.2" id="kdenlive"><span
+            class="header-section-number">6.2</span> Kdenlive</h2>
+            <h3 data-number="6.2.1" id="whisper-y-vosk"><span
+            class="header-section-number">6.2.1</span> Whisper y
+            VOSK</h3>
+            <p>Uno de los elementos a tener en cuenta a la hora de
+            generar videotutoriales es el de la creación de subtítulos,
+            la generación de subtítulos realizados de forma automática
+            nos puede ayudar a la creación de contenido. Para ello
+            haremos uso de dos complementos: Whisper<a href="#fn1"
+            class="footnote-ref" id="fnref1"
+            role="doc-noteref"><sup>1</sup></a> y VOSK<a href="#fn2"
+            class="footnote-ref" id="fnref2"
+            role="doc-noteref"><sup>2</sup></a>. Ambos son bastante
+            exactos, pero la diferencia más importante que veo es que en
+            Vosk tienes que descargar un modelo para cada lengua, con
+            Whisper no. Eso sí, el modelo de Whisper es mucho más
+            pesado.</p>
+            <p>Le recomendamos que instale los dos modelos si es
+            posible, muchas veces por temas de versiones de python,
+            confiugración del ordenador, etc… puede dar problemas. Para
+            instalarlos vamos al siguiente menú:</p>
             <figure>
-            <img src="img/1.png" height="300"
-            alt="Diagrama de flujo. Origen: Wikipedia" />
-            <figcaption aria-hidden="true">Diagrama de flujo. Origen:
-            Wikipedia</figcaption>
+            <img src="img/11.png" style="width:50.0%"
+            alt="Instalación Whisper" />
+            <figcaption aria-hidden="true">Instalación
+            Whisper</figcaption>
             </figure>
-            <p>Estas funciones llevan una lógica detrás, en cambio las
-            IA utilizan un modo de programación diferente que mezcla
-            muchas más posibilidades para dar una respuesta más creativa
-            basándose en entradas más complejas, a esto lo llamamos
-            redes neuronales. Aquí tenemos un ejemplo de red
-            neuronal</p>
+            <p>Podrás ver la siguiente pantalla:</p>
             <figure>
-            <img src="img/2.png" height="300"
-            alt="Red neuronal. Origen: Wikipedia" />
-            <figcaption aria-hidden="true">Red neuronal. Origen:
-            Wikipedia</figcaption>
+            <img src="img/12.png" style="width:50.0%"
+            alt="Instalación Whisper" />
+            <figcaption aria-hidden="true">Instalación
+            Whisper</figcaption>
             </figure>
-            <p>Existe una clase de arquitectura llamada <strong>modelos
-            de transformadores</strong> que se basan en redes
-            neuronales. Estos modelos son capaces de aprender patrones
-            en los datos y generar respuestas más complejas. Aunque no
-            profundizaremos en cómo funcionan, es importante que sepáis
-            que existen.</p>
-            <div class="note">
-            <p>La Inteligencia Artificial (IA) es un campo amplio que
-            incluye diferentes técnicas y algoritmos para crear sistemas
-            que puedan simular la inteligencia humana. Las redes
-            neuronales son una de las técnicas de IA que imitan el
-            funcionamiento del cerebro humano para resolver
-            problemas</p>
+            <p>Y haremos clic en “Configure” y nos parecerá la siguiente
+            pantalla:</p>
+            <figure>
+            <img src="img/13.png" style="width:50.0%"
+            alt="Speech-to-text" />
+            <figcaption aria-hidden="true">Speech-to-text</figcaption>
+            </figure>
+            <div class="tipo">
+            <p>Si ya tiene instalado alguno, debe acceder a este menú
+            desde Preferencias&gt;Speech-to-text</p>
             </div>
-            <p>Dentro del mismo campo de la inteligencia artificial nos
-            podemos encontrar diferentes categorías que iremos viendo a
-            lo largo de los próximos años.</p>
-            <table>
-            <colgroup>
-            <col style="width: 33%" />
-            <col style="width: 33%" />
-            <col style="width: 33%" />
-            </colgroup>
-            <thead>
-            <tr>
-            <th>Tipo de IA</th>
-            <th>Descripción</th>
-            <th>Ejemplos</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-            <td><strong>Inteligencia Artificial Estrecha
-            (IAE)</strong></td>
-            <td>La IAE está programada para realizar una sola tarea, ya
-            sea verificar el clima, jugar al ajedrez o analizar datos
-            para escribir informes periodísticos. Los sistemas IAE
-            pueden atender una tarea en tiempo real, pero extraen
-            información de un conjunto de datos específico. No funcionan
-            fuera de la única tarea para la cual están diseñados.</td>
-            <td>Asistentes virtuales como Siri o Alexa, sistemas de
-            reconocimiento facial, coches autónomos.</td>
-            </tr>
-            <tr>
-            <td><strong>Inteligencia Artificial General
-            (IAG)</strong></td>
-            <td>La IAG es una forma de IA que puede aprender y entender
-            cualquier tarea intelectual que un ser humano pueda
-            realizar. La IAG es capaz de razonar, planificar, aprender,
-            comprender lenguajes naturales e integrar diversos
-            conocimientos para resolver problemas complejos.</td>
-            <td>Aún en desarrollo, objeto de investigación
-            académica.</td>
-            </tr>
-            <tr>
-            <td><strong>Inteligencia Artificial Superintelectual
-            (IAS)</strong></td>
-            <td>La IAS se refiere a una IA que sobrepasa la inteligencia
-            y capacidades cognitivas de todos los humanos en
-            prácticamente todos los campos, incluyendo creatividad
-            científica, sabiduría general y habilidades sociales.</td>
-            <td>Teóricamente posible, pero aún no existe; concepto
-            popularizado por científicos e futuristas como Nick
-            Bostrom<a href="#fn2" class="footnote-ref" id="fnref2"
-            role="doc-noteref"><sup>2</sup></a>.</td>
-            </tr>
-            </tbody>
-            </table>
-            <h2 data-number="2.1"
-            id="modelos-de-lenguaje-a-gran-escala"><span
-            class="header-section-number">2.1</span> Modelos de Lenguaje
-            a Gran Escala</h2>
-            <p>Los Modelos de Lenguaje a Gran Escala (LLM, por las
-            siglas en inglés, Large Language Models) son modelos de
-            inteligencia artificial que han sido entrenados con enormes
-            cantidades de datos textuales para aprender patrones,
-            estructuras y representaciones del lenguaje natural. Estos
-            modelos son capaces de realizar tareas relacionadas con el
-            procesamiento del lenguaje, como entender el significado de
-            frases, generar texto coherente y responder preguntas.</p>
-            <p>Algunos de los modelos de lenguaje a gran escala más
-            conocidos son:</p>
-            <ol type="1">
-            <li><p><strong>RoBERTa (Robustly Optimized BERT
-            Approach)</strong>: Una variante de BERT desarrollada por
-            Facebook AI, que está optimizada para obtener mejor
-            rendimiento en diversas tareas del lenguaje
-            natural.</p></li>
-            <li><p><strong>XLNet</strong>: Creado por Google Brain, este
-            modelo combina los mejores elementos de BERT y autoencoders
-            secuenciales para mejorar la comprensión de contextos largos
-            en tareas de lenguaje natural.</p></li>
-            <li><p><strong>ALBERT (A Lite BERT)</strong>: Desarrollado
-            por Google Research, es una versión más ligera de BERT que
-            utiliza menos recursos computacionales manteniendo el
-            rendimiento.</p></li>
-            <li><p><strong>DistilBERT</strong>: Creado por Hugging Face,
-            este modelo es una versión más pequeña y eficiente de BERT
-            que conserva el 97% del rendimiento con solo el 60% del peso
-            del modelo original.</p></li>
-            <li><p><strong>Electra</strong>: También desarrollado por
-            Google, este modelo utiliza una nueva técnica de
-            entrenamiento para hacer modelos más eficientes y con un
-            rendimiento mejor en tareas de lenguaje natural.</p></li>
-            <li><p><strong>GPT-Neo</strong>: Un modelo de código abierto
-            desarrollado por EleutherAI como alternativa a GPT-3,
-            disponible para la comunidad de investigación y
-            desarrollo.</p></li>
-            <li><p><strong>Megatron-LM</strong>: Desarrollado por
-            NVIDIA, es un modelo de gran escala entrenado con una
-            versión mejorada de transformers, optimizado para GPU de
-            NVIDIA.</p></li>
-            <li><p><strong>Turing-NLG</strong>: Desarrollado por
-            Microsoft, este modelo es uno de los modelos más poderosos
-            de lenguaje natural de gran escala creado para tareas
-            complejas de IA.</p></li>
-            <li><p><strong>GPT-3 y 4</strong> (Generative Pre-trained
-            Transformer) de OpenAI</p></li>
-            <li><p><strong>BERT</strong> (Bidirectional Encoder
-            Representations from Transformers) de Google</p></li>
-            <li><p><strong>T5</strong> (Text-to-Text Transfer
-            Transformer) de Google.</p></li>
-            <li><p><strong>Llama</strong> de Meta: Un modelo de lenguaje
-            a gran escala desarrollado por Meta (anteriormente Facebook)
-            que se centra en la eficiencia y la sostenibilidad.</p></li>
-            </ol>
-            <div class="note">
-            <p>No es importante que conozcáis estos Nombres pero cuando
-            usemos diferentes modelos en el próximo módulo veremos como
-            usarlos.</p>
+            <p>Le aparecerá esta pantalla tanto en VOSK como en Whisper
+            donde le pedirá que instale las dependencias necesarias.
+            Haga clic y el sistema ya le instalará lo que necesite para
+            poder cofigurar (cuidado que no instalará el modelo):</p>
+            <figure>
+            <img src="img/14.png" style="width:50.0%"
+            alt="Instalación dependencias" />
+            <figcaption aria-hidden="true">Instalación
+            dependencias</figcaption>
+            </figure>
+            <p>En el caso de VOSK, el modelo debe configurarlo a mano,
+            dispone de un enlace que se lleva al lugar donde puede
+            descargar el modelo correspondiente a su lengua.</p>
+            <h1 data-number="7" id="practicamos-un-poco"><span
+            class="header-section-number">7</span> Practicamos un
+            poco</h1>
+            <p>En este apartado no vamos a realizar ningún proyecto como
+            tal, sino que vamos a practicar algo con el kdenlive y el
+            OBS.</p>
+            <h2 data-number="7.1"
+            id="grabamos-la-pantalla-con-obs"><span
+            class="header-section-number">7.1</span> Grabamos la
+            pantalla con OBS</h2>
+            <p>Para grabar la pantalla con OBS lo primero que hacemos es
+            crear una nueva escena. Lo hacemos haciendo clic en el botón
+            “+” de la sección de escenas:</p>
+            <figure>
+            <img src="img/19.png" style="width:50.0%"
+            alt="Nueva escena" />
+            <figcaption aria-hidden="true">Nueva escena</figcaption>
+            </figure>
+            <p>Luego en el apartado de fuentes añadimos una nueva
+            fuente. En nuestro caso añadiremos la pantalla de nuestro
+            ordenador:</p>
+            <figure>
+            <img src="img/20.png" style="width:50.0%"
+            alt="Nueva fuente" />
+            <figcaption aria-hidden="true">Nueva fuente</figcaption>
+            </figure>
+            <p>Nos aparecerá una pantalla como la siguiente donde
+            podemos dar un nombre a la fuente:</p>
+            <figure>
+            <img src="img/21.png" style="width:50.0%"
+            alt="Nueva fuente" />
+            <figcaption aria-hidden="true">Nueva fuente</figcaption>
+            </figure>
+            <p>Dependiendo de la cantidad de monitores que tengas puedes
+            seleccionar uno u otro. En nuestro caso tenemos 3
+            monitores.</p>
+            <figure>
+            <img src="img/22.png" style="width:50.0%"
+            alt="Selección de monitor" />
+            <figcaption aria-hidden="true">Selección de
+            monitor</figcaption>
+            </figure>
+            <div class="tipo">
+            <p>Puede resultar un tema baladí pero recomiendo tener al
+            menos dos monitores para trabajar de manera adecuada cuando
+            vas a editar vídeos.</p>
             </div>
-            <p>Estos son solo algunos de los muchas versiones de LLM que
-            están ayudando a avanzar la investigación y aplicaciones en
-            el campo de la inteligencia artificial.</p>
-            <p>Algunas aplicaciones destacadas de los LLM son:</p>
-            <ol type="1">
-            <li><p><strong>Generación de Texto Creativo</strong>: LLM
-            como GPT-3 pueden usarse para generar contenido textual
-            creativo, desde poesía hasta narrativa.</p></li>
-            <li><p><strong>Asistentes Virtuales Avanzados</strong>: LLM
-            se integran en asistentes virtuales para mejorar la
-            capacidad de comprensión y generación de respuestas en
-            lenguaje natural.</p></li>
-            <li><p><strong>Traducción Automática Mejorada</strong>:
-            Modelos como T5 han demostrado mejoras significativas en
-            tareas de traducción automática.</p></li>
-            <li><p><strong>Generación de Resúmenes Automáticos</strong>:
-            LLM son empleados para resumir automáticamente textos
-            largos, extrayendo información clave.</p></li>
-            <li><p><strong>Preguntas y Respuestas</strong>: Modelos como
-            BERT se utilizan en sistemas de preguntas y respuestas para
-            entender y responder consultas en lenguaje natural.</p></li>
-            <li><p><strong>Análisis de Sentimiento Avanzado</strong>:
-            LLM pueden mejorar la capacidad de analizar el sentimiento
-            en grandes cantidades de texto, beneficiando aplicaciones en
-            redes sociales y comentarios en línea.</p></li>
-            <li><p><strong>Autocompletado de Texto Mejorado</strong>:
-            Herramientas de autocompletado, como las utilizadas en
-            correos electrónicos o búsquedas en la web, se benefician de
-            la capacidad predictiva de los LLM.</p></li>
-            <li><p><strong>Creación de Contenido Multimedio</strong>:
-            LLM pueden combinarse con otros modelos de inteligencia
-            artificial para crear contenido multimedió, como imágenes,
-            vídeos o audio, a partir de texto.</p></li>
-            <li><p><strong>Creación de Contenido para Redes
-            Sociales</strong>: Los LLM se utilizan para generar
-            contenido relevante y atractivo en plataformas de redes
-            sociales.</p></li>
-            <li><p><strong>Reconocimiento de Entidades
-            Mejorado</strong>: Modelos como GPT-3 pueden ayudar en la
-            identificación y clasificación precisa de entidades en
-            textos.</p></li>
-            <li><p><strong>Personalización de Recomendaciones</strong>:
-            Los LLM contribuyen a mejorar la personalización en sistemas
-            de recomendación en áreas como streaming y comercio
-            electrónico.</p></li>
-            </ol>
-            <p>Estas aplicaciones resaltan cómo los LLM están
-            transformando la forma en que las máquinas interactúan con
-            el lenguaje humano, abriendo nuevas posibilidades en
-            diversas áreas.</p>
-            <h2 data-number="2.2" id="modelos-de-difusión"><span
-            class="header-section-number">2.2</span> Modelos de
-            Difusión</h2>
-            <p>Los modelos de difusión, como DALL-E, son modelos
-            generativos avanzados que utilizan técnicas de difusión para
-            generar imágenes. Estos modelos se basan en la difusión
-            probabilística, que es un proceso estocástico para generar
-            datos complejos paso a paso. En lugar de generar
-            directamente píxeles de una imagen, los modelos de difusión
-            generan una imagen al “difundiendo” gradualmente información
-            a través de múltiples pasos, lo que permite capturar
-            patrones complejos y estructuras en los datos.</p>
-            <h2 data-number="2.3" id="modelos-de-difusión-1"><span
-            class="header-section-number">2.3</span> Modelos de
-            difusión</h2>
-            <p>Los modelos de difusión, como DALL-E, son modelos
-            generativos avanzados que utilizan técnicas de difusión para
-            generar imágenes. Estos modelos se basan en la difusión
-            probabilística, que es un proceso estocástico para generar
-            datos complejos paso a paso. En lugar de generar
-            directamente píxeles de una imagen, los modelos de difusión
-            generan una imagen “difundiendo” gradualmente información a
-            través de múltiples pasos, lo cual permite capturar patrones
-            complejos y estructuras en los datos.</p>
-            <p>Ejemplos de modelos de difusión incluyen:</p>
-            <table>
-            <colgroup>
-            <col style="width: 50%" />
-            <col style="width: 50%" />
-            </colgroup>
-            <thead>
-            <tr>
-            <th>Modelo de Difusión</th>
-            <th>Descripción</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-            <td><strong>DALL-E</strong></td>
-            <td>Desarrollado por OpenAI, DALL-E es conocido por generar
-            imágenes creativas a partir de descripciones textuales.
-            Puede crear imágenes realistas y únicas a partir de
-            conceptos específicos.</td>
-            </tr>
-            <tr>
-            <td><strong>MidJourney</strong></td>
-            <td>Otro modelo de difusión que se centra en la generación
-            de imágenes a través de procesos de difusión probabilística.
-            Puede utilizarse para crear imágenes realistas y
-            detalladas.</td>
-            </tr>
-            <tr>
-            <td><strong>Stable Diffusion</strong></td>
-            <td>Un enfoque de difusión que busca lograr una difusión más
-            estable y eficiente en términos de entrenamiento y
-            generación de imágenes.</td>
-            </tr>
-            <tr>
-            <td><strong>Imagen</strong></td>
-            <td>Desarrollado por Google Research, es un modelo de
-            difusión que genera imágenes a partir de descripciones
-            textuales con una calidad de alta fidelidad. Utiliza
-            técnicas de difusión avanzadas para mejorar la nitidez y el
-            detalle de las imágenes generadas.</td>
-            </tr>
-            <tr>
-            <td><strong>VQ-VAE-2</strong></td>
-            <td>Un modelo de difusión basado en VQ-VAE (Vector Quantized
-            Variational Autoencoder), utilizado para la generación de
-            datos visuales de alta calidad. Es conocido por su capacidad
-            de generar imágenes con detalle fino y colores vivos.</td>
-            </tr>
-            <tr>
-            <td><strong>BigGAN</strong></td>
-            <td>Desarrollado por Google, BigGAN es un modelo de red
-            adversaria generativa que utiliza técnicas de difusión para
-            generar imágenes de alta calidad con resoluciones elevadas.
-            Es utilizado para aplicaciones donde se requieren imágenes
-            realistas y detalladas.</td>
-            </tr>
-            <tr>
-            <td><strong>DDPM</strong></td>
-            <td>Denoising Diffusion Probabilistic Models (DDPM) son
-            modelos de difusión probabilística que eliminan el ruido de
-            manera progresiva para generar imágenes nítidas. Se utilizan
-            en diversas aplicaciones de generación de imágenes.</td>
-            </tr>
-            </tbody>
-            </table>
-            <p>Estos modelos de difusión tienen aplicaciones en varias
-            áreas, incluyendo:</p>
-            <ol type="1">
-            <li><p><strong>Generación de Imágenes Artísticas y
-            Creativas</strong>: Los modelos de difusión como DALL-E se
-            utilizan para generar imágenes artísticas y creativas
-            basadas en descripciones textuales.</p></li>
-            <li><p><strong>Reconstrucción y Mejora de Imágenes</strong>:
-            Pueden aplicarse para reconstruir o mejorar imágenes
-            existentes, generando versiones más detalladas o
-            modificadas.</p></li>
-            <li><p><strong>Generación de Contenido Visual
-            Personalizado</strong>: Se pueden emplear en la creación de
-            contenido visual personalizado para aplicaciones de diseño
-            gráfico, publicidad y marketing.</p></li>
-            <li><p><strong>Simulación y Entrenamiento en Realidad
-            Virtual</strong>: Estos modelos pueden generar escenarios
-            visuales realistas para aplicaciones de realidad virtual,
-            simulación y entrenamiento.</p></li>
-            <li><p><strong>Síntesis de Datos para la
-            Investigación</strong>: En ámbitos como la investigación
-            científica y médica, los modelos de difusión pueden
-            sintetizar datos visuales para fines
-            experimentales.</p></li>
-            <li><p><strong>Generación de Contenido para
-            Videojuegos</strong>: Pueden utilizarse en la creación de
-            mundos y elementos visuales en videojuegos, ofreciendo
-            variedad y realismo.</p></li>
-            <li><p><strong>Creación de Ilustraciones y Arte
-            Digital</strong>: Los artistas digitales pueden emplear
-            modelos de difusión para crear ilustraciones y arte digital
-            único.</p></li>
-            </ol>
-            <p>Estas aplicaciones destacan la versatilidad de los
-            modelos de difusión en la generación de contenido visual,
-            desde la creación de arte hasta la simulación de entornos
-            complejos. Su capacidad para manejar datos de manera
-            probabilística y generar resultados detallados los hace
-            valiosos en diversas disciplinas creativas y
-            tecnológicas.</p>
-            <h2 data-number="2.4"
-            id="ejemplos-de-uso-para-empezar-a-experimentar"><span
-            class="header-section-number">2.4</span> Ejemplos de Uso
-            para Empezar a Experimentar</h2>
-            <h3 data-number="2.4.1"
-            id="teachable-machine-de-google"><span
-            class="header-section-number">2.4.1</span> Teachable Machine
-            de Google</h3>
-            <p>Teachable Machine de Google es una plataforma que permite
-            a los usuarios crear modelos de aprendizaje automático sin
-            necesidad de escribir código. Los usuarios pueden entrenar
-            modelos de clasificación de imágenes, sonidos o posiciones
-            utilizando una interfaz amigable, facilitando la
-            incorporación de inteligencia artificial en proyectos
-            creativos.</p>
-            <p>Esta herramienta nos permite entrenar a pequeña escala
-            nuestro modelo de inteligencia artificial para un propósito,
-            por ejemplo el de reconocer objetos, sonidos o posturas.
-            Solo necesitamos una webcam para hacerlo. Pueden acceder a
-            la plataforma desde aquí:
-            [https://teachablemachine.withgoogle.com/]</p>
+            <p>Nos aseguramos de que el sonido está activo y que la
+            pantalla se ve correctamente. Si todo está correcto
+            simplemente debemos hacer clic en “Iniciar grabación”.</p>
             <figure>
-            <img src="img/24.png" style="width:13cm"
-            alt="Teachablemachine" />
-            <figcaption aria-hidden="true">Teachablemachine</figcaption>
+            <img src="img/23.png" style="width:50.0%"
+            alt="Fuente de audio" />
+            <figcaption aria-hidden="true">Fuente de audio</figcaption>
             </figure>
-            <p>Y creamos nuestro primer proyecto</p>
             <figure>
-            <img src="img/25.png" style="width:13cm"
-            alt="Modelo de imagen" />
-            <figcaption aria-hidden="true">Modelo de imagen</figcaption>
+            <img src="img/24.png" style="width:50.0%"
+            alt="Iniciar grabación" />
+            <figcaption aria-hidden="true">Iniciar
+            grabación</figcaption>
             </figure>
-            <p>¡Nosotros hemos preparado un modelo para distinguir entre
-            un bolígrafo y unas tijeras, subiendo imágenes de cada
-            uno!</p>
+            <p>El vídeo grabado se guardará en la carpeta de vídeos del
+            usuario con el nombre que representa la fecha y hora de la
+            grabación.</p>
+            <h2 data-number="7.2"
+            id="editamos-nuestro-vídeo-con-kdenlive"><span
+            class="header-section-number">7.2</span> Editamos nuestro
+            vídeo con Kdenlive</h2>
+            <p>Para grabar con kdenlive en primer lugar lo que haremos
+            será escoger el perfil del vídeo que queremos crear. Para
+            ello vamos a “Opciones de proyecto” y seleccionamos el
+            perfil que más se ajuste a nuestras necesidades. En nuestro
+            caso seleccionaremos “HD 1080p 25fps”.</p>
             <figure>
-            <img src="img/26.png" style="width:13cm"
-            alt="Modelo de imagen creado" />
-            <figcaption aria-hidden="true">Modelo de imagen
-            creado</figcaption>
+            <img src="img/25.png" style="width:50.0%"
+            alt="Opciones de proyecto" />
+            <figcaption aria-hidden="true">Opciones de
+            proyecto</figcaption>
             </figure>
-            <p>Este modelo lo podemos exportar y compartir. Obviamente
-            el modelo que he creado no es muy interesante, pero puedes
-            entrenar mejores modelos con muchas fotos, de objetos
-            específicos y crear tu propio reconocedor de objetos. Puedes
-            descargar el modelo desde <a
-            href="https://teachablemachine.withgoogle.com/models/9OqM8E4An/">aquí</a></p>
-            <h3 data-number="2.4.2" id="autodraw"><span
-            class="header-section-number">2.4.2</span> Autodraw</h3>
-            <p>La función principal de AutoDraw es facilitar la creación
-            de dibujos reconocibles incluso para aquellos que no son
-            hábiles en el dibujo. La herramienta ofrece una variedad de
-            ícones y formas que coinciden con el contenido aproximado
-            del dibujo original, permitiendo a los usuarios mejorar y
-            refinar sus creaciones de manera intuitiva.</p>
-            <p><a
-            href="https://www.autodraw.com/">https://www.autodraw.com/</a></p>
-            <p>Por ejemplo, si dibujamos un barco lo mejor que
-            sabemos</p>
             <figure>
-            <img src="img/3.png" style="width:13cm"
-            alt="Imagen dibujada por nosotros" />
-            <figcaption aria-hidden="true">Imagen dibujada por
-            nosotros</figcaption>
+            <img src="img/26.png" style="width:50.0%"
+            alt="Perfil de vídeo" />
+            <figcaption aria-hidden="true">Perfil de vídeo</figcaption>
             </figure>
-            <p>La barra de menú superior de la plataforma cambiará
-            intentando adivinar qué hemos dibujado y nos proporcionará
-            una imagen un poco mejor dibujada de lo que hemos hecho.</p>
-            <figure>
-            <img src="img/4.png" style="width:13cm"
-            alt="Imagen del menú seleccionada" />
-            <figcaption aria-hidden="true">Imagen del menú
-            seleccionada</figcaption>
-            </figure>
-            <h3 data-number="2.4.3" id="quickdraw"><span
-            class="header-section-number">2.4.3</span> Quickdraw</h3>
-            <p>Quick, Draw! es un juego en línea desarrollado por Google
-            que utiliza inteligencia artificial para reconocer y
-            clasificar dibujos realizados por los usuarios en un tiempo
-            limitado. El funcionamiento básico del juego es el
-            siguiente:</p>
-            <ol type="1">
-            <li><p><strong>Dibujar Rápido</strong>: El jugador recibe
-            una palabra sugerida y tiene un tiempo limitado
-            (generalmente 20 segundos) para dibujar el objeto o concepto
-            asociado en una pantalla digital.</p></li>
-            <li><p><strong>Reconocimiento en Tiempo Real</strong>:
-            Mientras el jugador dibuja, la inteligencia artificial
-            intenta adivinar lo que está representando en tiempo real.
-            Utiliza algoritmos de aprendizaje automático y redes
-            neuronales para analizar el trazo del dibujo.</p></li>
-            <li><p><strong>Retroalimentación Instantánea</strong>: Una
-            vez que se completa el tiempo de dibujo, el juego
-            proporciona retroalimentación instantánea sobre si la
-            inteligencia artificial ha reconocido correctamente el
-            dibujo o no. Además, muestra ejemplos de cómo otros usuarios
-            han representado la misma palabra.</p></li>
-            <li><p><strong>Contribución al Conjunto de Datos de
-            Entrenamiento</strong>: Los dibujos realizados por los
-            usuarios no solo son parte del juego, sino que también
-            contribuyen al conjunto de datos utilizado para entrenar y
-            mejorar los algoritmos de reconocimiento de Google.</p></li>
-            </ol>
-            <p>En resumen, Quick, Draw! a través del entretenimiento de
-            un juego en línea recopila nuestros datos para mejorar los
-            modelos de inteligencia artificial de reconocimiento de
-            patrones.</p>
-            <p><a
-            href="https://quickdraw.withgoogle.com/">https://quickdraw.withgoogle.com/</a></p>
-            <div class="note">
-            <p>Se trata de un juego sencillo que nos permitirá
-            experimentar con una red neuronal. Esta tratará de adivinar
-            qué es lo que estamos dibujando con un tiempo de 20
-            segundos.</p>
+            <div class="tipo">
+            <p>¿Qué significa HD 1080p 25fps? HD significa que la
+            resolución del vídeo será de 1920x1080 píxeles. 25fps
+            significa que el vídeo tendrá 25 fotogramas por segundo. Es
+            importante modificar estas opciones en función de nuestras
+            necesidades, una opción que recomiendo si vas a grabar
+            videotutoriales es la de 16fps (a menos que aparezca algún
+            vídeo). Para mostrar lo que haces en la pantalla es
+            suficiente y el peso del vídeo será mucho menor.</p>
             </div>
-            <figure>
-            <img src="img/5.png" style="width:13cm" alt="Juego" />
-            <figcaption aria-hidden="true">Juego</figcaption>
-            </figure>
-            <figure>
-            <img src="img/6.png" style="width:13cm"
-            alt="Imagen a adivinar" />
-            <figcaption aria-hidden="true">Imagen a
-            adivinar</figcaption>
-            </figure>
-            <figure>
-            <img src="img/7.png" style="width:13cm"
-            alt="Nuestro dibujo" />
-            <figcaption aria-hidden="true">Nuestro dibujo</figcaption>
-            </figure>
-            <p>Así seguirá durante 6 imágenes. Es un buen ejercicio para
-            entender cómo funcionan las redes neuronales.</p>
-            <figure>
-            <img src="img/8.png" style="width:13cm"
-            alt="Nos ha acertado los 6" />
-            <figcaption aria-hidden="true">Nos ha acertado los
-            6</figcaption>
-            </figure>
-            <h3 data-number="2.4.4" id="labs-google"><span
-            class="header-section-number">2.4.4</span> Labs Google</h3>
-            <p>Google ofrece <a href="https://labs.google/">Labs
-            Google</a>, una serie de laboratorios en línea para
-            experimentar con la inteligencia artificial y otras
-            tecnologías. Estos laboratorios proporcionan herramientas
-            interactivas y guías paso a paso para aprender conceptos
-            clave y aplicarlos en proyectos prácticos. Algunos de los
-            laboratorios donde se puede practicar son:</p>
-            <h4 data-number="2.4.4.1" id="gentype"><span
-            class="header-section-number">2.4.4.1</span> Gentype</h4>
-            <p>Gentype es un laboratorio interactivo que nos permite
-            explorar y experimentar con la generación de textos
-            creativos utilizando modelos de lenguaje a gran escala. El
-            laboratorio ofrece herramientas para generar textos,
-            modificarlos y compartilos con otros usuarios. También
-            proporciona información sobre los modelos de lenguaje
-            utilizados y cómo funcionan. Puedes acceder a Gentype desde
-            <a href="https://labs.google/gentype">aquí</a></p>
-            <p>Tendremos que logearnos con una cuenta de google para
-            poder acceder a la plataforma. Luego podemos darle una
-            descripción del tipo de texto que queremos generar:</p>
-            <figure>
-            <img src="img/27.png" style="width:13cm"
-            alt="Descripción" />
-            <figcaption aria-hidden="true">Descripción</figcaption>
-            </figure>
-            <p>Luego podremos generar un texto con la nueva tipografía y
-            descargarlo con una imagen que podré utilizat:</p>
-            <figure>
-            <img src="img/28.png" style="width:13cm"
-            alt="Texto generado" />
-            <figcaption aria-hidden="true">Texto generado</figcaption>
-            </figure>
-            <p>Imagen generada:</p>
-            <figure>
-            <img src="img/29.png" style="width:13cm"
-            alt="Imagen generada" />
-            <figcaption aria-hidden="true">Imagen generada</figcaption>
-            </figure>
-            <h4 data-number="2.4.4.2" id="say-what-you-see"><span
-            class="header-section-number">2.4.4.2</span> Say what you
-            see</h4>
-            <p><em>Say what you see</em> es un laboratorio que prueba tu
-            capacidad de describir imágenes con palabras. El laboratorio
-            muestra una serie de imágenes y te pide que las describas
-            con frases cortas y concisas. Además, puedes comparar tus
-            descripciones con las de otros usuarios y ver cómo la
-            inteligencia artificial interpreta las imágenes. Puedes
-            acceder a <em>Say what you see</em> desde <a
-            href="https://artsandculture.google.com/experiment/say-what-you-see/jwG3m7wQShZngw">aquí</a></p>
             <div class="warning">
-            <p>Uno de los principales inconvenientes de esta herramienta
-            es que está en inglés, pero es importante practicarla ya que
-            los prompts para generar imágenes es mejor hacerlos en
-            inglés. Esta herramienta nos permitirá mejorar la creación
-            de nuestros prompts para generar imágenes ya que nos da
-            feedback de qué estamos haciendo bien y qué no.</p>
+            <p>Es muy importante que vaya guardando su proyecto de forma
+            regular. Los programas de edición de vídeo son muy pesados ​​y
+            pueden dar problemas si no los guardamos de forma
+            regular.</p>
             </div>
-            <p>En este caso hemos probado el nivel 1, donde nos piden
-            describir algunas imágenes, luego nos dice un feedback del
-            prompt que hemos creado:</p>
+            <p>Ahora ya podemos arrastrar y soltar nuestro vídeo en la
+            línea de tiempo:</p>
             <figure>
-            <img src="img/30.png" style="width:13cm"
-            alt="Say what you see" />
-            <figcaption aria-hidden="true">Say what you see</figcaption>
+            <img src="img/27.png" style="width:50.0%"
+            alt="Arrastrar y soltar" />
+            <figcaption aria-hidden="true">Arrastrar y
+            soltar</figcaption>
             </figure>
-            <p>Entramos al nivel 1:</p>
+            <p>Fijémonos en que muchas veces nos aparecerá bajo un
+            recuadro que nos pregunta si queremos adaptar el proyecto al
+            vídeo. En este caso OBS ha grabado el vídeo a 60 fps y nos
+            recomienda cambiar el perfil de nuestro proyecto a 60 fps,
+            le digamos que no. Algo muy recomendable es cambiar el vídeo
+            a formato editable:</p>
             <figure>
-            <img src="img/31.png" style="width:13cm" alt="Nivel 1" />
-            <figcaption aria-hidden="true">Nivel 1</figcaption>
+            <img src="img/28.png" style="width:50.0%"
+            alt="Adaptar el vídeo" />
+            <figcaption aria-hidden="true">Adaptar el vídeo</figcaption>
             </figure>
-            <p>Y aquí tenéis dos ejemplos de dos imágenes con sus
-            prompts. Fijaros que abajo nos da un feedback del prompt que
-            hemos creado:</p>
+            <p>Algo que podemos hacer si queremos organizar el vídeo en
+            zonas es extraer una zona del vídeo. Para ello simplemente
+            debemos seleccionar la zona que queremos extraer y hacer
+            clic en “Extraer zona”. Podemos marcar el inicio y el final
+            de la zona que queremos extraer:</p>
             <figure>
-            <img src="img/32.png" style="width:13cm" alt="Imagen 1" />
-            <figcaption aria-hidden="true">Imagen 1</figcaption>
+            <img src="img/29.png" style="width:50.0%"
+            alt="Seleccionemos zona" />
+            <figcaption aria-hidden="true">Seleccionemos
+            zona</figcaption>
             </figure>
             <figure>
-            <img src="img/33.png" style="width:13cm" alt="Imagen 2" />
-            <figcaption aria-hidden="true">Imagen 2</figcaption>
+            <img src="img/30.png" style="width:50.0%"
+            alt="Extraer zona" />
+            <figcaption aria-hidden="true">Extraer zona</figcaption>
             </figure>
-            <div class="note">
-            <p>En este módulo hemos visto una pequeña introducción a las
-            posibilidades que nos ofrece la IA y las tecnologías que se
-            están desarrollando en ese sentido. Además, una serie de
-            conceptos muy básicos para tener en cuenta, pero… ¿Cuándo
-            nos ponemos a hacer prompts? Esto lo veremos en el próximo
-            módulo…</p>
+            <p>Si en lugar de extraer zona hacemos “zona a bandeja de
+            proyectos” la zona dependerá del vídeo original. Puedes ser
+            útil si queremos delimitar varias zonas de un vídeo y
+            tenemos muchos vídeos en nuestro proyecto:</p>
+            <figure>
+            <img src="img/31.png" style="width:70.0%"
+            alt="Zona en bandeja de proyectos" />
+            <figcaption aria-hidden="true">Zona en bandeja de
+            proyectos</figcaption>
+            </figure>
+            <p>Lo que vamos a hacer nosotros será simplemente tomar el
+            vídeo original y arrastrarlo a la línea de tiempo. Después
+            detrás añadiremos dos zonas aleatorias:</p>
+            <figure>
+            <img src="img/32.png" style="width:70.0%"
+            alt="Arrastrar y soltar" />
+            <figcaption aria-hidden="true">Arrastrar y
+            soltar</figcaption>
+            </figure>
+            <p>Si queremos añadir más pistas podemos hacer clic en el
+            botón derecho del ratón y añadir una nueva pista de vídeo o
+            de sonido:</p>
+            <figure>
+            <img src="img/33.png" style="width:50.0%"
+            alt="Añadir pista" />
+            <figcaption aria-hidden="true">Añadir pista</figcaption>
+            </figure>
+            <p><strong>¿Cómo funcionan las pistas?</strong></p>
+            <p>Las pistas que están en lo alto se verán por encima de
+            las que están más abajo. Las pistas no pueden arrastrarse ni
+            cambiarse de orden, pero podemos añadir una pista por encima
+            de otra y añadir un elemento. Esto hará que el nuevo
+            elemento se vea por encima del otro.</p>
+            <p><img src="img/34.png" style="width:50.0%" alt="Pistas" />
+            <strong>La línea de tiempo</strong></p>
+            <p>Fijémonos en que tenemos una guía que nos mostrará la
+            pantalla del cómo quedará el vídeo al final una vez
+            aplicados los efectos. El resultado lo podremos visualizar
+            en la pantalla de proyecto (ubicada a la derecha):</p>
+            <figure>
+            <img src="img/35.png" style="width:50.0%"
+            alt="Línea de tiempo" />
+            <figcaption aria-hidden="true">Línea de tiempo</figcaption>
+            </figure>
+            <p>Si nos fijamos veremos que tenemos el vídeo agrupado en
+            el sonido, podemos desagruparlos haciendo clic en el botón
+            derecho del ratón y seleccionando “Desagrupar clips”:</p>
+            <figure>
+            <img src="img/36.png" style="width:50.0%"
+            alt="Desagrupar clips" />
+            <figcaption aria-hidden="true">Desagrupar clips</figcaption>
+            </figure>
+            <p>Si ponemos un vídeo encima de otro veremos que el vídeo
+            de arriba se ve por encima del de abajo.</p>
+            <figure>
+            <img src="img/37.png" style="width:50.0%"
+            alt="Línea de tiempo" />
+            <figcaption aria-hidden="true">Línea de tiempo</figcaption>
+            </figure>
+            <p>La imagen que vemos es lo siguiente:</p>
+            <figure>
+            <img src="img/38.png" style="width:50.0%"
+            alt="Previsualización" />
+            <figcaption aria-hidden="true">Previsualización</figcaption>
+            </figure>
+            <p>Pero claro, esto no es lo que queremos. Lo que queremos
+            hacer es lo siguiente:</p>
+            <ul>
+            <li>Quitar la parte central del vídeo: para ello
+            utilizaremos la acción de cortar. Tal y como hacían
+            antiguamente cuando cortaban el filme de vídeo.</li>
+            <li>Desplazar el vídeo a la izquierda: para ello
+            utilizaremos la acción de desplazar. Es sólo seleccionar el
+            vídeo y moverlo.</li>
+            <li>Añadir un efecto de transición: para ello utilizaremos
+            la acción de transición (fade in y fade out).</li>
+            <li>Crear un difuminado alrededor del vídeo: para ello
+            utilizaremos la acción de <strong>máscara forma
+            alfa</strong> y la composición
+            <strong>transformación</strong>.</li>
+            </ul>
+            <p>Para cortar el vídeo simplemente debemos hacer clic en la
+            acción de cortar y seleccionar la parte que queremos cortar
+            (veremos que nos aparece una línea roja):</p>
+            <figure>
+            <img src="img/42.png" style="width:50.0%" alt="Cortar" />
+            <figcaption aria-hidden="true">Cortar</figcaption>
+            </figure>
+            <div class="caution">
+            <p>Cuando cortamos la herramienta todavía está seleccionada,
+            es necesario volver al estado de selección haciendo clic en
+            la flecha de la barra de herramientas de la línea de tiempo
+            o simplemente pulsando S. Hay que tener en cuenta también
+            que al cortar un vídeo que tiene efectos, ambas partes
+            mantienen los efectos que hemos aplicado.</p>
             </div>
+            <p>Ahora podemos seleccionar el clip cortado y desplazarlo a
+            la izquierda. También podemos agrupar los dos clips para que
+            cuando apliquemos un efecto afecto a ambas partes. Esto sí
+            después hay que editar cada efecto por separado (pero
+            podemos copiar y pegar los efectos). Así que nos centramos
+            en una de las dos partes del vídeo y después copiamos y
+            pegamos los efectos.</p>
+            <p>Ahora aplicaremos los efectos fade-in y fade-out, que se
+            enclarecer y oscurecer el video. Como es un efecto muy
+            utilizado en la esquina del vídeo seleccionado podemos
+            desplazar una bolita y ya nos aplicará el efecto:</p>
+            <figure>
+            <img src="img/43.png" style="width:50.0%" alt="Fade-in" />
+            <figcaption aria-hidden="true">Fade-in</figcaption>
+            </figure>
+            <p>Esta parte es la más compleja y que explicaremos más
+            detalladamente más adelante en el curso, así que no se
+            preocupe si lo ve demasiado complicado.</p>
+            <ul>
+            <li><p>Composición: Transformación</p></li>
+            <li><p>Efecto: Máscara forma alfa</p></li>
+            </ul>
+            <h2 data-number="7.3"
+            id="aplicando-efectos-de-forma-básica"><span
+            class="header-section-number">7.3</span> Aplicando efectos
+            de forma básica</h2>
+            <p>Vamos a cambiar un poco lo que estábamos haciendo hasta
+            ahora y empezaremos un proyecto nuevo, le recomiendo que
+            siga el videotutorial que tiene colgado en Aulas. Pero hemos
+            cogido una base y una cara. Les arrastramos y soltamos en
+            nuestra bandeja de proyectos:</p>
+            <figure>
+            <img src="img/48.png" style="width:50.0%"
+            alt="Arrastrar y soltar" />
+            <figcaption aria-hidden="true">Arrastrar y
+            soltar</figcaption>
+            </figure>
+            <p>Ahora los arrastramos en la línea a de tiempo de la
+            siguiente manera:</p>
+            <figure>
+            <img src="img/49.png" style="width:50.0%"
+            alt="Arrastrar y soltar" />
+            <figcaption aria-hidden="true">Arrastrar y
+            soltar</figcaption>
+            </figure>
+            <p>Una vez tenemos hecho esto, aplicamos el efecto fade-in,
+            fade-out como ya hemos visto y arrastramos y soltamos el
+            efecto de máscara forma alfa en el vídeo de la chica:</p>
+            <figure>
+            <img src="img/50.png" style="width:50.0%"
+            alt="Arrastrar y soltar" />
+            <figcaption aria-hidden="true">Arrastrar y
+            soltar</figcaption>
+            </figure>
+            <p>Con el recuadro rojo seleccionamos cómo queremos que se
+            aplique la máscara y podemos cambiar la forma en
+            <strong>shape</strong>, nosotros le hemos puesto
+            Ellipse.</p>
+            <figure>
+            <img src="img/51.png" style="width:50.0%"
+            alt="Máscara forma alfa" />
+            <figcaption aria-hidden="true">Máscara forma
+            alfa</figcaption>
+            </figure>
+            <p>Por último en la Composición de de “Composición y
+            transformación” podemos variar la forma y la posición:</p>
+            <figure>
+            <img src="img/52.png" style="width:50.0%"
+            alt="Composición" />
+            <figcaption aria-hidden="true">Composición</figcaption>
+            </figure>
+            <p>De esta forma tendríamos un proyecto muy básico en el que
+            ya hemos tocado todos los elementos esenciales de
+            Kdenlive.</p>
+            <h3 data-number="7.3.1" id="generación-de-clips"><span
+            class="header-section-number">7.3.1</span> Generación de
+            clips</h3>
+            <p>Si hacemos clic en la “Crear título” nos la bandeja de
+            proyecto nos aparecerá la siguiente pantalla:</p>
+            <figure>
+            <img src="img/54.png" style="width:50.0%"
+            alt="Crear título" />
+            <figcaption aria-hidden="true">Crear título</figcaption>
+            </figure>
+            <figure>
+            <img src="img/55.png" style="width:50.0%"
+            alt="Crear título" />
+            <figcaption aria-hidden="true">Crear título</figcaption>
+            </figure>
+            <p>Como vea, podemos añadir texto, imágenes, etc. Esto nos
+            permitirá crear títulos para nuestra presentación. Si
+            hacemos clic en “Crear título” nos aparecerá un nuevo clip
+            en nuestra bandeja de proyectos. Nosotros hemos generado un
+            texto sencillo y lo hemos puesto en el centro de la
+            pantalla. En background podemos cambiar el color del fondo.
+            Lo añadimos al principio del</p>
+            <h3 data-number="7.3.2" id="generación-de-vídeo"><span
+            class="header-section-number">7.3.2</span> Generación de
+            vídeo</h3>
+            <p>Por último para renderizar el clip, hacemos clic en
+            Procesar y nos aparecerá la siguiente pantalla. Puedes hacer
+            clic en “More Options” para que te aparezca completa:</p>
+            <figure>
+            <img src="img/53.png" style="width:50.0%" alt="Procesar" />
+            <figcaption aria-hidden="true">Procesar</figcaption>
+            </figure>
+            <p>Le decimos dónde queremos guardar el clip y con qué
+            nombre y ya hacemos clic en “Render to file” y ya empezará a
+            procesar el Vídeo. Se trata de un proceso lento que puede
+            tardar mucho dependiendo de los efectos que hayamos añadido
+            al vídeo.</p>
+            <h1 data-number="8" id="guardar-proyecto"><span
+            class="header-section-number">8</span> Guardar proyecto</h1>
+            <p>Ya hemos comentado que es importante ir guardando el
+            proyecto de vez en cuando, hay que tener en cuenta que
+            cuando se guarda un proyecto se realiza con extensión
+            .kdenlive, si compartes ese proyecto, o tratas de abrirlo en
+            otro ordenador, debes tener en cuenta que el proyecto debe
+            tener todos los clips que has utilizado en el proyecto. Si
+            no tienes los clips en la misma ubicación que cuando
+            guardaste el proyecto, el proyecto no podrá abrirse.</p>
+            <p>Para evitar esto puedes “Archivar” el proyecto:</p>
+            <figure>
+            <img src="img/56.png" style="width:50.0%"
+            alt="Archivar proyecto" />
+            <figcaption aria-hidden="true">Archivar
+            proyecto</figcaption>
+            </figure>
+            <p>Cuando aparezca esta pantalla pide que te guarde el
+            proyecto en un archivo .zip, de esa amnera ya tendrás el
+            proyecto guardado con todos sus clips en un único archivo
+            .zip. Podrás compartirlo con otros compañeros.</p>
+            <figure>
+            <img src="img/57.png" style="width:50.0%"
+            alt="Archivar proyecto" />
+            <figcaption aria-hidden="true">Archivar
+            proyecto</figcaption>
+            </figure>
+            <p>Por último haces clic en “Archive” y ya tendrás el
+            proyecto guardado en un único archivo .zip.</p>
+            <h1 data-number="9" id="repositorios-de-vídeos"><span
+            class="header-section-number">9</span> Repositorios de
+            vídeos</h1>
+            <p>Os dejamos una serie de repositorios donde puede
+            encontrar vídeos que le pueden ayudar a realizar sus
+            proyectos:</p>
+            <ul>
+            <li><a href="https://www.pexels.com/videos/">Pexels</a></li>
+            <li><a
+            href="https://pixabay.com/es/videos/">Pixabay</a></li>
+            <li><a href="https://www.videvo.net/">Videvo</a></li>
+            <li><a href="https://coverr.co/">Coverr</a></li>
+            </ul>
+            <div class="caution">
+            <p>Fíjese en las licencias de vídeos. Aunque gran parte son
+            de libre uso, siempre es recomendable leer sus
+            condiciones.</p>
+            </div>
+            <p><a
+            href="https://docs.kdenlive.org/en/effects_and_filters/lists/video_effects_list.html">Efectos</a>
+            <a
+            href="https://docs.kdenlive.org/en/compositing/compositions.html">Composiciones</a></p>
             <section id="footnotes"
             class="footnotes footnotes-end-of-document"
             role="doc-endnotes">
             <hr />
             <ol>
-            <li id="fn1"><p>Prompt es el texto que escribes en la
-            plataforma para que interprete lo que realmente necesitas.
-            Entraremos en más detalle en la próxima unidad.<a
-            href="#fnref1" class="footnote-back"
-            role="doc-backlink">↩︎</a></p></li>
-            <li
-            id="fn2"><p>https://es.wired.com/articulos/nick-bostrom-hizo-al-mundo-temer-por-la-ia-ahora-pregunta-y-si-es-la-solucion-a-todos-nuestros-problemas<a
-            href="#fnref2" class="footnote-back"
-            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn1"><p><a
+            href="https://openai.com/index/whisper/">Whisper</a> es un
+            modelo creado por OpenAI.<a href="#fnref1"
+            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+            <li id="fn2"><p><a
+            href="https://alphacephei.com/vosk/">VOSK</a> es un modelo
+            creado por Alphacephei.<a href="#fnref2"
+            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
             </ol>
             </section>
         </main>

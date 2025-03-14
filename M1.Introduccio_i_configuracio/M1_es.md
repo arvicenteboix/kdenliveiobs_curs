@@ -1,5 +1,5 @@
 ---
-# Información general del documento
+# Informació general del document
 title: 1. Introducción y configuración
 lang: es
 page-background: img/bg.png
@@ -12,22 +12,22 @@ titlepage-rule-color: eeeee4
 titlepage-text-color: eeeee4
 titlepage-background: img/U1c.png
 
-# Tabla de contenidos
-toque: true
-toque-own-page: true
-toque-title: Contenidos
+# Taula de continguts
+toc: true
+toc-own-page: true
+toc-title: Contenidos
 
-# Cabeceras y pies
+# Capçaleres i peus
 header-left: 1. Introducción y configuración
 header-right: Curso 2024-2025
-footer-left: CEFIRE FP
+footer-left: DGFP
 footer-right: \thepage/\pageref{LastPage}
 
-# Imágenes
-float-placement-figuro: H
+# Imatges
+float-placement-figure: H
 caption-justification: centering
 
-# Listados de código
+# Llistats de codi
 listings-no-page-break: true
 listings-disable-line-numbers: false
 
@@ -56,287 +56,453 @@ pandoc-latex-environment:
 
 <!-- \awesomebox[violet]{2pt}{\faRobot}{violet}{Lorem ipsum…} -->
 
-<!-- IMATGE ![Pregunta inicial](./img/proxi/5b.png) -->
+<!-- IMATGE ![Pregunta inicial](./img/proxi/5b.png){ width=50% } -->
 
 <!-- \textbf{greatest} -->
 
-\vspace{\fill}
+\vspace*{\fill}
 
 ![](img/cc.png){ height=50px }
-
 Este documento está sujeto a una licencia creative commons que permite su difusión y uso comercial reconociendo siempre la autoría de su creador. Este documento se encuentra para ser modificado en el siguiente repositorio de github:
 <!-- CANVIAR L'ENLLAÇ -->
 [https://github.com/arvicenteboix/kdenliveiobs_curs](https://github.com/arvicenteboix/kdenliveiobs_curs)
 \newpage
 
+
 # Introducción
 
-Seguramente muchos de vosotros ya habéis oído hablar de la inteligencia artificial y de todo lo que puede hacer. Algunos ya habéis empezado a utilizarla en vuestro día a día y sabéis distinguir algunos conceptos sobre qué es la IA. En este curso trataremos de haceros una introducción sobre las diferentes herramientas que existen y cómo sacarles provecho.
+<!-- Mòdul 1: Introducció i Configuració
+Instal·lació i configuració inicial de Kdenlive i OBS
+Introducció a les interfícies i eines bàsiques d'ambdós programes
+Configuració de projectes i ajustos bàsics<br>
+Mòdul 2: Gravació i Producció
+Tècniques de gravació de pantalla amb OBS
+Configuració de fonts de vídeo i àudio
+Producció de contingut en temps real i gestió d'escenes<br>
+Mòdul 3: Edició i Publicació
+Importació de material gravat en Kdenlive
+Edició bàsica de vídeo: talls, transicions i efectes
+Exportació de vídeos en diferents formats i publicació en plataformes en línia -->
+La creación de videotutoriales es una herramienta necesaria para la realización de cursos en formato semipresencial y muchas veces en presencial también puesto que se quedan como una referencia de lo que realmente se quiere realizar.
 
-Se trata de un curso de iniciación y es posible que os sintáis abrumados por toda la información que veis, pero no se os pide que profundicéis en muchas de las utilidades que os presentaremos. El curso será breve pero intenso, y trataremos de ayudaros con todas las dudas que se planteen. Todo el texto escrito está redactado sin utilizar inteligencia artificial, aunque algunas imágenes son la excepción. En muchos casos os proporcionaremos un prompt[^1] y la respuesta que obtendréis. Trataremos de limitar la extensión a lo que realmente necesitéis. Os lo presentaremos con el siguiente icono.
+En este módulo empezaremos con una introducción de las dos herramientas que vamos a utilizar en este curso: Kdenlive y OBS. Además, veremos cómo instalarlas y configurarlas para empezar a trabajar con ellas. Haremos un repaso de las interfaces y herramientas básicas de cada programa y veremos cómo configurar proyectos y ajustes básicos.
 
-[^1]: Prompt es el texto que escribes en la plataforma para que interprete lo que realmente necesitas. Entraremos en más detalle en la próxima unidad.
+En este curso no nos centraremos en todos los aspectos que nos ofrece OBS ni Kdenlive, ya que son herramientas muy poderosas y presentamos muchísimas características. Nos centraremos en cómo crear un videotutorial y en las herramientas necesarias que pueden hacernos falta para realizarlo. No espere dominar el Kdenlive ni elk OBS de forma profesional, éste no es el propósito de este curso ya que existen ofertas sobre estas herramientas de manera específica. Al final del curso simplemente le pediremos que cree un pequeño videotutorial que trate algún aspecto de su especialidad y lo comparta a sus compañeros.
 
-\awesomebox[violet]{2pt}{\faRobot}{violet}{\textbf{¡Bienvenidos al curso de Introducción a la Inteligencia Artificial! Este curso de 30 horas está diseñado para aquellos que desean aprender los fundamentos de la IA y sus aplicaciones prácticas. A través de seis módulos, cubrimos una amplia gama de temas, desde conceptos básicos hasta herramientas más avanzadas.}\hfill \break
+Debemos tener en cuenta las características fundamentales de cada uno de ellos.
 
-¡Bienvenidos al curso de Introducción a la Inteligencia Artificial! Este curso de 30 horas está diseñado para aquellos que desean aprender los fundamentos de la IA y sus aplicaciones prácticas. A través de seis módulos, cubrimos una amplia gama de temas, desde conceptos básicos hasta herramientas más avanzadas.
+* OBS Studio: OBS Studio es un software libre y gratuito que nos permite grabar y retransmitir en directo. Es una herramienta muy potente que permite grabar la pantalla de nuestro ordenador.
+* Kdenlive: Kdenlive es un editor de vídeo libre y gratuito que nos permite editar vídeos de forma sencilla e intuitiva. Es una herramienta muy potente que nos permite editar vídeos de forma profesional.
 
-La IA es una de las áreas más emocionantes e innovadoras de la informática, con el potencial de transformar muchos aspectos de nuestra sociedad. Aprenderás a crear modelos de lenguaje natural, utilizar Microsoft Copilot para escribir código más eficiente y aplicar la IA en la educación.
+# Instalación de OBS Studio
 
-Este curso está diseñado para estudiantes con conocimientos previos en programación, matemáticas discretas y álgebra lineal. No se requiere experiencia previa en IA, aunque se recomienda tener nociones de estadística y cálculo. El curso será impartido en valenciano, con material complementario en inglés.}
+Lo primero que debemos hacer es instalar OBS. Para instalarlo simplemente vamos a su [página web](https://obsproject.com/es) y descargamos la versión que nos corresponda.
+
+![Descargar OBS](img/1.png){ width=50% }
+
+En el caso de una distribución Linux, simplemente podemos instalarlo desde los repositorios de nuestra distribución. Por ejemplo, en Ubuntu simplemente debemos ejecutar el siguiente pedido:
+
+```bash
+sudo apt install obs-studio
+```
+:::note
+Con linux puedes utilizar flathub para instalar OBS Studio. Simplemente debes ejecutar el siguiente pedido:
+
+```bash
+flatpak install flathub com.obsproject.Studio
+```
+:::
+
+Si dispones de un Mac debes tener en cuenta que en función del procesador que tengas tendrás que descargar una versión u otra.
+
+![Descargar OBS](img/2.png){ width=50% }
+
+Cuando comience el proceso de instalación simplemente debemos seguir los pasos que nos indica el programa. Al tratarse de un programa donde se pueden realizar tanto sesiones en directo como grabar sesiones nos hará una serie de cuestiones. En nuestro caso simplemente debemos configurarlo para grabar sesiones.
+
+![Configuración OBS](img/5.png){ width=50% }
+
+![Configuración OBS](img/6.png){ width=50% }
+
+![Configuración OBS](img/7.png){ width=50% }
+
+
+# Instalación de Kdenlive
+
+Para instalar Kdenlive simplemente vamos a su [página web](https://kdenlive.org/) y descargamos la versión que nos corresponda. Hacemos clic en Download:
+
+![Descargar Kdenlive](img/3.png){ width=50% }
+
+Opciones de descarga:
+
+![Descargar Kdenlive](img/4.png){ width=50% }
+
+Tenemos diferentes opciones para instalar Kdenlive en los distintos sistemas operativos. En Windows tenemos dos versiones:
+
+* Instalable: Es una versión que se instala en nuestro sistema operativo.
+* Standalone: ​​Es una versión portable que no requiere instalación.
+
+:::caution
+Standalone puede servirnos para hacer uso del programa en aquellos entornos que no se nos permite instalar software. Siempre es recomendable instalar la versión instalable. Es necesario disponer de un sistema operativo actualizado (Windows 10 o superior).
+:::
+
+En el caso de una distribución Linux, simplemente podemos instalarlo desde los repositorios de nuestra distribución. Por ejemplo, en Ubuntu simplemente debemos ejecutar el siguiente pedido:
+
+```bash
+sudo apt install kdenlive
+```
+
+La versión portable para linux se llama AppImage. Simplemente debemos descargar el archivo y darle permisos de ejecución:
+
+```bash
+chmod +x kdenlive-*.appimage
+```
+
+Existe la versión flatpak de Kdenlive. Simplemente debemos ejecutar el siguiente pedido:
+
+```bash
+flatpak install flathub org.kde.kdenlive
+```
+
+O hacer clic en el botón Flatpak.
+
+# Interfaz de OBS
+
+Cuando iniciemos OBS por primera vez nos aparecerá una pantalla como la siguiente:
+
+![Interfaz OBS](img/8.png){ width=80% }
+
+En la imagen podemos distinguir varios elementos, los que vamos a utilizar en este curso principalmente serán:
+
+* Escenas: Las escenas son conjuntos de fuentes de vídeo y audio que podemos mostrar en directo o grabar. Podemos configurar diferentes escenas para mostrar distintos elementos en cada momento.
+* Fuentes (elementos de la escena): Las fuentes son los elementos que podemos mostrar en una escena. Pueden ser desde la pantalla de nuestro ordenador hasta una webcam o un vídeo.
+* Audio: En esta sección podemos configurar las fuentes de audio que queremos utilizar en nuestra grabación.
+* Previsualización: En esta sección podemos ver cómo se verá nuestra grabación en directo o cómo se verá el vídeo que estamos grabando.
+* Controles: Aquí hemos destacado dos botones que serán los que utilizaremos principalmente, *Iniciar grabación* e *Iniciar cámara virtual*. El primero nos permitirá empezar a grabar nuestra pantalla y el segundo nos permitirá empezar a utilizar la cámara virtual.
+
+:::tipo
+La cámara virtual nos permitirá añadir efectos en las sesiones que realizamos en directo. También nos resulta útil para grabar sesiones, pero en este caso la postedición nos puede facilitar más las cosas.
+:::
+
+# Interfaz de Kdenlive
+
+La interfaz de Kdenlive es algo más compleja que la de OBS. Cuando abramos Kdenlive por primera vez nos aparecerá una pantalla como la siguiente:
+
+![Interfaz Kdenlive](img/15.png){ width=80% }
+
+En la imagen podemos distinguir varios elementos, los que vamos a utilizar en este curso principalmente serán:
+
+* [1] Safata de proyectos: Aquí podemos ver los elementos que tenemos abiertos y los que podemos abrir.
+* [2] Monitor de clips: Visualizas el clip seleccionado.
+* [3] Monitor de proyecto: Visualizas el proyecto que estás editando.
+* [4] Composiciones y efectos: Aquí podemos ver las composiciones y efectos que podemos añadir a nuestro proyecto. En su momento veremos qué diferencias existen en cada una de ellas.
+* [5] Línea de tiempo: Aquí es donde realizaremos la mayoría de nuestras tareas. En la línea de tiempo podemos añadir clips, efectos, transiciones, etc.
+* [6] Se trata de una panel donde veremos los efectos y composiciones añadidos a un elemento de nuestro proyecto. Podemos elegir elementos como Audio, efectos/composiciones[7], subtítulos.
+* [8] Barra de herramientas de la línea de tiempo: Aquí tenemos las herramientas básicas para editar nuestra línea de tiempo.
+
+El ejemplo mostrado está en inglés, puedes cambiar el interfaz al idioma que desees en el menú de configuración.
+
+![Interfaz Kdenlive](img/16.png){ width=50% }
+
+## Barra de herrajes
+
+La barra de herramientas de la línea de tiempo es una de las herramientas más importantes de Kdenlive. Aquí tenemos las herramientas básicas para editar nuestra línea de tiempo. Las herramientas más importantes son:
+
+![Barra de herramientas de la línea de tiempo](img/17.png){ width=80% }
+
+Por otra parte, es recomendable que active la barra de herramientas general y adicional.
+
+![Ver barra de herramientas general](img/18.png){ width=50% }
+
+De este modo podremos ver la barra de herramienta general:
+
+![Barra de herramientas general](img/47.png){ width=70% }
+
+Esta barra no tiene mucho misterio, pero nos da un acceso directo a Procesar... que es la última parte del proceso de creación de un vídeo, renderizar el proyecto.
+
+## Conceptos de Kdenlive
+
+Hemos visto ya algo como es el entorno del programa, pero debemos tener claros una serie de conceptos básicos para poder realizar nuestras tareas. Todos estos coneptos irán teniéndolos cada vez más claros a medida que trabaja con el programa.
+
+* Composición: Se trata de efectos que añadimos a la composición de nuestra línea de tiempo. Generalmente se ven implicados dos clips en estos efectos, necesitan de un elemento para realizar el otro. Los veremos representados por recuadros entre dos elementos en un color morado:
+
+![Composición](img/39.png){ width=50% }
+
+* Efectos: Los efectos son transformaciones que se aplican sobre un vídeo en concreto de la línea de tiempo, recortar, difuminar, etc. Los veremos representados por una varilla con el nombre del efecto al lado. Al seleccionar un vídeo veremos que a la derecha nos aparecerán todos los efectos que tiene aplicados el vídeo:
+
+![Efectos](img/40.png){ width=50% }
+
+Para poder añadir efectos o composiciones los seleccionamos de la lista de composiciones y efectos y los arrastramos a la línea de tiempo. Si queremos añadir un efecto a un vídeo simplemente debemos seleccionar el vídeo y arrastrar el efecto a la línea de tiempo.
+
+![Añadir efectos](img/41.png){ width=50% }
+
+# Configuraciones iniciales
+
+En este punto vamos a mostrarle cómo instalar una serie de complementos que vamos a utilizar tanto en kdenlive como en OBS. Hay muchísima variedad de complementos pero aquí hemos seleccionado unos pocos que pueden ser útiles.
+
+En el curso vamos a hacer uso de una serie de complementos que nos permitirán realizar nuestras tareas de forma más eficiente. Estos complementos son necesarios para poder realizar las labores que nos proponemos en el curso.
+
+## OBS
+
+### Background Removal
+
+OBS dispone de una página en la que disponemos diferentes plugins que nos permiten realizar tareas específicas. En nuestro caso necesitamos el plugin Background Removal. Para instalarlo simplemente debemos descargar el archivo, dependiendo del sistema operativo habrá que hacerlo de una u otra forma. En primer lugar vamos a la página de [descarga](https://obsproject.com/forum/resources/background-removal-virtual-green-screen-low-light-enhance.1260/) y tenemos una página que nos lleva a un repositorio de github donde tienes la lista de archivos (https://github.com/locaal-ai/obs-backgroundremoval/releases).
+
+Si dispones del gestor de paquetería flatpak simplemente debes ejecutar el siguiente pedido. Recuerda que en este caso debes instalar el paquete de OBS Studio con flatpak.
+
+```bash
+flatpak install com.obsproject.Studio.Plugin.BackgroundRemoval
+```
+### v4l2loopback (Linux)
+
+Si dispones de un sistema operativo Linux necesitarás instalar el paquete v4l2loopback. Este paquete nos permitirá crear dispositivos de vídeo virtuales. Esto nos permitirá utilizar la cámara virtual en OBS.
+
+```bash
+sudo apt install v4l2loopback-dkms
+```
+
+Si tienes alguna otra distribución simplemente debes buscar el paquete en los repositorios de tu distribución, por ejemplo en arch:
+
+```bash
+sudo pacman -S v4l2loopback-dkms
+```
+
+### LocalVocal
+
+LocalVocal es un plugin que nos permitirá realizar la transcripción de texto en directo. Es recomendable si tiene una GPU NVIDIA ya que hace uso de la tecnología CUDA. Para instalarlo simplemente vamos a la página de [descarga](https://obsproject.com/forum/resources/localvocal-local-live-captions-translation-on-the-go.1769/) y descargamos el archivo correspondiente a nuestro sistema operativo. Tiene el enlace en la misma página.
 
 :::note
-Se trata de una respuesta de inteligencia artificial. Debido a la complejidad del trabajo, no sería posible escribir un modelo desde cero sin mucho tiempo y esfuerzo.
+OBS dispone de numerosos plugins que pueden ayudarle a realizar tareas concretas. Estos plugins están en constante evolución, si los enlaces no funcionan simplemente busque en la página de [recursos](https://obsproject.com/forum/resources/) de OBS y los bsuque, ya que probablemente los hayan actualizado.
 :::
 
 :::warning
-Se recomienda crear un cuenta de correo electrónico específica para experimentar con estas herramientas y servicios. Esto permitirá mantener tu cuenta principal libre de correos electrónicos no deseados y proteger tu privacidad. Puedes utilizar proveedores de correo electrónico como Gmail, Outlook o cualquier otro servicio gratuito para este propósito.
+No se recomienda su instalación si no se dispone de un ordenador verdaderamente potente con tarjeta gráfica dedicada y con CUDA.
 :::
 
-# Qué es y qué no es la inteligencia artificial?
+## Kdenlive
 
-Podemos pensar que todo lo que hacemos en el ordenador tiene que ver con la inteligencia artificial, pero obviamente no es así. Los ordenadores utilizan algoritmos con lenguajes de programación para poder automatizar tareas o realizar programas. Los algoritmos son una serie de pasos que se siguen para realizar una tarea. Aquí tenéis un ejemplo de diagrama de flujo sencillo que muestra un proceso::
+### Whisper y VOSK
 
-<!-- DIAGRAMA DE FLUJO -->
-![Diagrama de flujo. Origen: Wikipedia](img/1.png){ height=300px }
+Uno de los elementos a tener en cuenta a la hora de generar videotutoriales es el de la creación de subtítulos, la generación de subtítulos realizados de forma automática nos puede ayudar a la creación de contenido. Para ello haremos uso de dos complementos: Whisper[^1] y VOSK[^2]. Ambos son bastante exactos, pero la diferencia más importante que veo es que en Vosk tienes que descargar un modelo para cada lengua, con Whisper no. Eso sí, el modelo de Whisper es mucho más pesado.
 
-Estas funciones llevan una lógica detrás, en cambio las IA utilizan un modo de programación diferente que mezcla muchas más posibilidades para dar una respuesta más creativa basándose en entradas más complejas, a esto lo llamamos redes neuronales. Aquí tenemos un ejemplo de red neuronal
+Le recomendamos que instale los dos modelos si es posible, muchas veces por temas de versiones de python, confiugración del ordenador, etc... puede dar problemas. Para instalarlos vamos al siguiente menú:
 
-![Red neuronal. Origen: Wikipedia](img/2.png){ height=300px }
+![Instalación Whisper](img/11.png){ width=50% }
 
-Existe una clase de arquitectura llamada **modelos de transformadores** que se basan en redes neuronales. Estos modelos son capaces de aprender patrones en los datos y generar respuestas más complejas. Aunque no profundizaremos en cómo funcionan, es importante que sepáis que existen.
+[^1]: [Whisper](https://openai.com/index/whisper/) es un modelo creado por OpenAI.
+[^2]: [VOSK](https://alphacephei.com/vosk/) es un modelo creado por Alphacephei.
 
-:::note
-La Inteligencia Artificial (IA) es un campo amplio que incluye diferentes técnicas y algoritmos para crear sistemas que puedan simular la inteligencia humana. Las redes neuronales son una de las técnicas de IA que imitan el funcionamiento del cerebro humano para resolver problemas
+Podrás ver la siguiente pantalla:
+
+![Instalación Whisper](img/12.png){ width=50% }
+
+Y haremos clic en "Configure" y nos parecerá la siguiente pantalla:
+
+![Speech-to-text](img/13.png){ width=50% }
+
+:::tipo
+Si ya tiene instalado alguno, debe acceder a este menú desde Preferencias>Speech-to-text
 :::
 
-Dentro del mismo campo de la inteligencia artificial nos podemos encontrar diferentes categorías que iremos viendo a lo largo de los próximos años.
+Le aparecerá esta pantalla tanto en VOSK como en Whisper donde le pedirá que instale las dependencias necesarias. Haga clic y el sistema ya le instalará lo que necesite para poder cofigurar (cuidado que no instalará el modelo):
 
-| Tipo de IA | Descripción | Ejemplos |
-| --- | --- | --- |
-| **Inteligencia Artificial Estrecha (IAE)** | La IAE está programada para realizar una sola tarea, ya sea verificar el clima, jugar al ajedrez o analizar datos para escribir informes periodísticos. Los sistemas IAE pueden atender una tarea en tiempo real, pero extraen información de un conjunto de datos específico. No funcionan fuera de la única tarea para la cual están diseñados. | Asistentes virtuales como Siri o Alexa, sistemas de reconocimiento facial, coches autónomos. |
-| **Inteligencia Artificial General (IAG)** | La IAG es una forma de IA que puede aprender y entender cualquier tarea intelectual que un ser humano pueda realizar. La IAG es capaz de razonar, planificar, aprender, comprender lenguajes naturales e integrar diversos conocimientos para resolver problemas complejos. | Aún en desarrollo, objeto de investigación académica. |
-| **Inteligencia Artificial Superintelectual (IAS)** | La IAS se refiere a una IA que sobrepasa la inteligencia y capacidades cognitivas de todos los humanos en prácticamente todos los campos, incluyendo creatividad científica, sabiduría general y habilidades sociales. | Teóricamente posible, pero aún no existe; concepto popularizado por científicos e futuristas como Nick Bostrom[^2]. |
+![Instalación dependencias](img/14.png){ width=50% }
 
-[^2]: https://es.wired.com/articulos/nick-bostrom-hizo-al-mundo-temer-por-la-ia-ahora-pregunta-y-si-es-la-solucion-a-todos-nuestros-problemas
+En el caso de VOSK, el modelo debe configurarlo a mano, dispone de un enlace que se lleva al lugar donde puede descargar el modelo correspondiente a su lengua.
 
-## Modelos de Lenguaje a Gran Escala
+# Practicamos un poco
+En este apartado no vamos a realizar ningún proyecto como tal, sino que vamos a practicar algo con el kdenlive y el OBS.
 
-Los Modelos de Lenguaje a Gran Escala (LLM, por las siglas en inglés, Large Language Models) son modelos de inteligencia artificial que han sido entrenados con enormes cantidades de datos textuales para aprender patrones, estructuras y representaciones del lenguaje natural. Estos modelos son capaces de realizar tareas relacionadas con el procesamiento del lenguaje, como entender el significado de frases, generar texto coherente y responder preguntas.
+## Grabamos la pantalla con OBS
 
-Algunos de los modelos de lenguaje a gran escala más conocidos son:
+Para grabar la pantalla con OBS lo primero que hacemos es crear una nueva escena. Lo hacemos haciendo clic en el botón "+" de la sección de escenas:
 
-1. **RoBERTa (Robustly Optimized BERT Approach)**: Una variante de BERT desarrollada por Facebook AI, que está optimizada para obtener mejor rendimiento en diversas tareas del lenguaje natural.
-   
-2. **XLNet**: Creado por Google Brain, este modelo combina los mejores elementos de BERT y autoencoders secuenciales para mejorar la comprensión de contextos largos en tareas de lenguaje natural.
+![Nueva escena](img/19.png){ width=50% }
 
-3. **ALBERT (A Lite BERT)**: Desarrollado por Google Research, es una versión más ligera de BERT que utiliza menos recursos computacionales manteniendo el rendimiento.
+Luego en el apartado de fuentes añadimos una nueva fuente. En nuestro caso añadiremos la pantalla de nuestro ordenador:
 
-4. **DistilBERT**: Creado por Hugging Face, este modelo es una versión más pequeña y eficiente de BERT que conserva el 97% del rendimiento con solo el 60% del peso del modelo original.
+![Nueva fuente](img/20.png){ width=50% }
 
-5. **Electra**: También desarrollado por Google, este modelo utiliza una nueva técnica de entrenamiento para hacer modelos más eficientes y con un rendimiento mejor en tareas de lenguaje natural.
+Nos aparecerá una pantalla como la siguiente donde podemos dar un nombre a la fuente:
 
-6. **GPT-Neo**: Un modelo de código abierto desarrollado por EleutherAI como alternativa a GPT-3, disponible para la comunidad de investigación y desarrollo.
+![Nueva fuente](img/21.png){ width=50% }
 
-7. **Megatron-LM**: Desarrollado por NVIDIA, es un modelo de gran escala entrenado con una versión mejorada de transformers, optimizado para GPU de NVIDIA.
+Dependiendo de la cantidad de monitores que tengas puedes seleccionar uno u otro. En nuestro caso tenemos 3 monitores.
 
-8. **Turing-NLG**: Desarrollado por Microsoft, este modelo es uno de los modelos más poderosos de lenguaje natural de gran escala creado para tareas complejas de IA.
+![Selección de monitor](img/22.png){ width=50% }
 
-9.  **GPT-3 y 4** (Generative Pre-trained Transformer) de OpenAI
-    
-10. **BERT** (Bidirectional Encoder Representations from Transformers) de Google
-    
-11. **T5** (Text-to-Text Transfer Transformer) de Google.
-
-12. **Llama** de Meta: Un modelo de lenguaje a gran escala desarrollado por Meta (anteriormente Facebook) que se centra en la eficiencia y la sostenibilidad.
-
-:::note
-No es importante que conozcáis estos Nombres pero cuando usemos diferentes modelos en el próximo módulo veremos como usarlos. 
+:::tipo
+Puede resultar un tema baladí pero recomiendo tener al menos dos monitores para trabajar de manera adecuada cuando vas a editar vídeos.
 :::
 
-Estos son solo algunos de los muchas versiones de LLM que están ayudando a avanzar la investigación y aplicaciones en el campo de la inteligencia artificial.
+Nos aseguramos de que el sonido está activo y que la pantalla se ve correctamente. Si todo está correcto simplemente debemos hacer clic en "Iniciar grabación".
 
-Algunas aplicaciones destacadas de los LLM son:
+![Fuente de audio](img/23.png){ width=50% }
 
-1. **Generación de Texto Creativo**: LLM como GPT-3 pueden usarse para generar contenido textual creativo, desde poesía hasta narrativa.
-2. **Asistentes Virtuales Avanzados**: LLM se integran en asistentes virtuales para mejorar la capacidad de comprensión y generación de respuestas en lenguaje natural.
-3. **Traducción Automática Mejorada**: Modelos como T5 han demostrado mejoras significativas en tareas de traducción automática.
-4. **Generación de Resúmenes Automáticos**: LLM son empleados para resumir automáticamente textos largos, extrayendo información clave.
-5. **Preguntas y Respuestas**: Modelos como BERT se utilizan en sistemas de preguntas y respuestas para entender y responder consultas en lenguaje natural.
-6. **Análisis de Sentimiento Avanzado**: LLM pueden mejorar la capacidad de analizar el sentimiento en grandes cantidades de texto, beneficiando aplicaciones en redes sociales y comentarios en línea.
-7. **Autocompletado de Texto Mejorado**: Herramientas de autocompletado, como las utilizadas en correos electrónicos o búsquedas en la web, se benefician de la capacidad predictiva de los LLM.
-8. **Creación de Contenido Multimedio**: LLM pueden combinarse con otros modelos de inteligencia artificial para crear contenido multimedió, como imágenes, vídeos o audio, a partir de texto.
+![Iniciar grabación](img/24.png){ width=50% }
 
-9. **Creación de Contenido para Redes Sociales**: Los LLM se utilizan para generar contenido relevante y atractivo en plataformas de redes sociales.
+El vídeo grabado se guardará en la carpeta de vídeos del usuario con el nombre que representa la fecha y hora de la grabación.
 
-10. **Reconocimiento de Entidades Mejorado**: Modelos como GPT-3 pueden ayudar en la identificación y clasificación precisa de entidades en textos.
+## Editamos nuestro vídeo con Kdenlive
 
-11. **Personalización de Recomendaciones**: Los LLM contribuyen a mejorar la personalización en sistemas de recomendación en áreas como streaming y comercio electrónico.
+Para grabar con kdenlive en primer lugar lo que haremos será escoger el perfil del vídeo que queremos crear. Para ello vamos a "Opciones de proyecto" y seleccionamos el perfil que más se ajuste a nuestras necesidades. En nuestro caso seleccionaremos "HD 1080p 25fps".
 
-Estas aplicaciones resaltan cómo los LLM están transformando la forma en que las máquinas interactúan con el lenguaje humano, abriendo nuevas posibilidades en diversas áreas.
+![Opciones de proyecto](img/25.png){ width=50% }
 
+![Perfil de vídeo](img/26.png){ width=50% }
 
-## Modelos de Difusión
-
-Los modelos de difusión, como DALL-E, son modelos generativos avanzados que utilizan técnicas de difusión para generar imágenes. Estos modelos se basan en la difusión probabilística, que es un proceso estocástico para generar datos complejos paso a paso. En lugar de generar directamente píxeles de una imagen, los modelos de difusión generan una imagen al "difundiendo" gradualmente información a través de múltiples pasos, lo que permite capturar patrones complejos y estructuras en los datos.
-
-## Modelos de difusión
-
-Los modelos de difusión, como DALL-E, son modelos generativos avanzados que utilizan técnicas de difusión para generar imágenes. Estos modelos se basan en la difusión probabilística, que es un proceso estocástico para generar datos complejos paso a paso. En lugar de generar directamente píxeles de una imagen, los modelos de difusión generan una imagen "difundiendo" gradualmente información a través de múltiples pasos, lo cual permite capturar patrones complejos y estructuras en los datos.
-
-Ejemplos de modelos de difusión incluyen:
-
-| Modelo de Difusión | Descripción |
-| --- | --- |
-| **DALL-E** | Desarrollado por OpenAI, DALL-E es conocido por generar imágenes creativas a partir de descripciones textuales. Puede crear imágenes realistas y únicas a partir de conceptos específicos. |
-| **MidJourney** | Otro modelo de difusión que se centra en la generación de imágenes a través de procesos de difusión probabilística. Puede utilizarse para crear imágenes realistas y detalladas. |
-| **Stable Diffusion** | Un enfoque de difusión que busca lograr una difusión más estable y eficiente en términos de entrenamiento y generación de imágenes. |
-| **Imagen** | Desarrollado por Google Research, es un modelo de difusión que genera imágenes a partir de descripciones textuales con una calidad de alta fidelidad. Utiliza técnicas de difusión avanzadas para mejorar la nitidez y el detalle de las imágenes generadas. |
-| **VQ-VAE-2** | Un modelo de difusión basado en VQ-VAE (Vector Quantized Variational Autoencoder), utilizado para la generación de datos visuales de alta calidad. Es conocido por su capacidad de generar imágenes con detalle fino y colores vivos. |
-| **BigGAN** | Desarrollado por Google, BigGAN es un modelo de red adversaria generativa que utiliza técnicas de difusión para generar imágenes de alta calidad con resoluciones elevadas. Es utilizado para aplicaciones donde se requieren imágenes realistas y detalladas. |
-| **DDPM** | Denoising Diffusion Probabilistic Models (DDPM) son modelos de difusión probabilística que eliminan el ruido de manera progresiva para generar imágenes nítidas. Se utilizan en diversas aplicaciones de generación de imágenes. |
-
-Estos modelos de difusión tienen aplicaciones en varias áreas, incluyendo:
-
-1. **Generación de Imágenes Artísticas y Creativas**: Los modelos de difusión como DALL-E se utilizan para generar imágenes artísticas y creativas basadas en descripciones textuales.
-
-2. **Reconstrucción y Mejora de Imágenes**: Pueden aplicarse para reconstruir o mejorar imágenes existentes, generando versiones más detalladas o modificadas.
-
-3. **Generación de Contenido Visual Personalizado**: Se pueden emplear en la creación de contenido visual personalizado para aplicaciones de diseño gráfico, publicidad y marketing.
-
-4. **Simulación y Entrenamiento en Realidad Virtual**: Estos modelos pueden generar escenarios visuales realistas para aplicaciones de realidad virtual, simulación y entrenamiento.
-
-5. **Síntesis de Datos para la Investigación**: En ámbitos como la investigación científica y médica, los modelos de difusión pueden sintetizar datos visuales para fines experimentales.
-
-6. **Generación de Contenido para Videojuegos**: Pueden utilizarse en la creación de mundos y elementos visuales en videojuegos, ofreciendo variedad y realismo.
-
-7. **Creación de Ilustraciones y Arte Digital**: Los artistas digitales pueden emplear modelos de difusión para crear ilustraciones y arte digital único.
-
-Estas aplicaciones destacan la versatilidad de los modelos de difusión en la generación de contenido visual, desde la creación de arte hasta la simulación de entornos complejos. Su capacidad para manejar datos de manera probabilística y generar resultados detallados los hace valiosos en diversas disciplinas creativas y tecnológicas.
-
-## Ejemplos de Uso para Empezar a Experimentar
-
-### Teachable Machine de Google
-
-Teachable Machine de Google es una plataforma que permite a los usuarios crear modelos de aprendizaje automático sin necesidad de escribir código. Los usuarios pueden entrenar modelos de clasificación de imágenes, sonidos o posiciones utilizando una interfaz amigable, facilitando la incorporación de inteligencia artificial en proyectos creativos.
-
-Esta herramienta nos permite entrenar a pequeña escala nuestro modelo de inteligencia artificial para un propósito, por ejemplo el de reconocer objetos, sonidos o posturas. Solo necesitamos una webcam para hacerlo. Pueden acceder a la plataforma desde aquí: [https://teachablemachine.withgoogle.com/]
-
-![Teachablemachine](img/24.png){ width=13cm }
-
-Y creamos nuestro primer proyecto
-
-![Modelo de imagen](img/25.png){ width=13cm }
-
-¡Nosotros hemos preparado un modelo para distinguir entre un bolígrafo y unas tijeras, subiendo imágenes de cada uno!
-
-![Modelo de imagen creado](img/26.png){ width=13cm }
-
-Este modelo lo podemos exportar y compartir. Obviamente el modelo que he creado no es muy interesante, pero puedes entrenar mejores modelos con muchas fotos, de objetos específicos y crear tu propio reconocedor de objetos. Puedes descargar el modelo desde [aquí](https://teachablemachine.withgoogle.com/models/9OqM8E4An/)
-
-### Autodraw
-
-La función principal de AutoDraw es facilitar la creación de dibujos reconocibles incluso para aquellos que no son hábiles en el dibujo. La herramienta ofrece una variedad de ícones y formas que coinciden con el contenido aproximado del dibujo original, permitiendo a los usuarios mejorar y refinar sus creaciones de manera intuitiva.
-
-[https://www.autodraw.com/](https://www.autodraw.com/)
-
-Por ejemplo, si dibujamos un barco lo mejor que sabemos
-
-![Imagen dibujada por nosotros](img/3.png){ width=13cm }
-
-La barra de menú superior de la plataforma cambiará intentando adivinar qué hemos dibujado y nos proporcionará una imagen un poco mejor dibujada de lo que hemos hecho.
-
-![Imagen del menú seleccionada](img/4.png){ width=13cm }
-
-
-### Quickdraw
-
-Quick, Draw! es un juego en línea desarrollado por Google que utiliza inteligencia artificial para reconocer y clasificar dibujos realizados por los usuarios en un tiempo limitado. El funcionamiento básico del juego es el siguiente:
-
-1. **Dibujar Rápido**: El jugador recibe una palabra sugerida y tiene un tiempo limitado (generalmente 20 segundos) para dibujar el objeto o concepto asociado en una pantalla digital.
-
-2. **Reconocimiento en Tiempo Real**: Mientras el jugador dibuja, la inteligencia artificial intenta adivinar lo que está representando en tiempo real. Utiliza algoritmos de aprendizaje automático y redes neuronales para analizar el trazo del dibujo.
-
-3. **Retroalimentación Instantánea**: Una vez que se completa el tiempo de dibujo, el juego proporciona retroalimentación instantánea sobre si la inteligencia artificial ha reconocido correctamente el dibujo o no. Además, muestra ejemplos de cómo otros usuarios han representado la misma palabra.
-
-4. **Contribución al Conjunto de Datos de Entrenamiento**: Los dibujos realizados por los usuarios no solo son parte del juego, sino que también contribuyen al conjunto de datos utilizado para entrenar y mejorar los algoritmos de reconocimiento de Google.
-
-En resumen, Quick, Draw! a través del entretenimiento de un juego en línea recopila nuestros datos para mejorar los modelos de inteligencia artificial de reconocimiento de patrones.
-
-[https://quickdraw.withgoogle.com/](https://quickdraw.withgoogle.com/)
-
-:::note
-Se trata de un juego sencillo que nos permitirá experimentar con una red neuronal. Esta tratará de adivinar qué es lo que estamos dibujando con un tiempo de 20 segundos.
+:::tipo
+¿Qué significa HD 1080p 25fps? HD significa que la resolución del vídeo será de 1920x1080 píxeles. 25fps significa que el vídeo tendrá 25 fotogramas por segundo. Es importante modificar estas opciones en función de nuestras necesidades, una opción que recomiendo si vas a grabar videotutoriales es la de 16fps (a menos que aparezca algún vídeo). Para mostrar lo que haces en la pantalla es suficiente y el peso del vídeo será mucho menor.
 :::
-
-![Juego](img/5.png){ width=13cm }
-
-![Imagen a adivinar](img/6.png){ width=13cm }
-
-![Nuestro dibujo](img/7.png){ width=13cm }
-
-Así seguirá durante 6 imágenes. Es un buen ejercicio para entender cómo funcionan las redes neuronales.
-
-![Nos ha acertado los 6](img/8.png){ width=13cm }
-
-### Labs Google
-
-Google ofrece [Labs Google](https://labs.google/), una serie de laboratorios en línea para experimentar con la inteligencia artificial y otras tecnologías. Estos laboratorios proporcionan herramientas interactivas y guías paso a paso para aprender conceptos clave y aplicarlos en proyectos prácticos. Algunos de los laboratorios donde se puede practicar son:
-
-#### Gentype
-
-Gentype es un laboratorio interactivo que nos permite explorar y experimentar con la generación de textos creativos utilizando modelos de lenguaje a gran escala. El laboratorio ofrece herramientas para generar textos, modificarlos y compartilos con otros usuarios. También proporciona información sobre los modelos de lenguaje utilizados y cómo funcionan. Puedes acceder a Gentype desde [aquí](https://labs.google/gentype)
-
-Tendremos que logearnos con una cuenta de google para poder acceder a la plataforma. Luego podemos darle una descripción del tipo de texto que queremos generar:
-
-![Descripción](img/27.png){ width=13cm }
-
-Luego podremos generar un texto con la nueva tipografía y descargarlo con una imagen que podré utilizat:
-
-![Texto generado](img/28.png){ width=13cm }
-
-Imagen generada:
-
-![Imagen generada](img/29.png){ width=13cm }
-
-#### Say what you see
-
-*Say what you see* es un laboratorio que prueba tu capacidad de describir imágenes con palabras. El laboratorio muestra una serie de imágenes y te pide que las describas con frases cortas y concisas. Además, puedes comparar tus descripciones con las de otros usuarios y ver cómo la inteligencia artificial interpreta las imágenes. Puedes acceder a *Say what you see* desde [aquí](https://artsandculture.google.com/experiment/say-what-you-see/jwG3m7wQShZngw)
 
 :::warning
-Uno de los principales inconvenientes de esta herramienta es que está en inglés, pero es importante practicarla ya que los prompts para generar imágenes es mejor hacerlos en inglés. Esta herramienta nos permitirá mejorar la creación de nuestros prompts para generar imágenes ya que nos da feedback de qué estamos haciendo bien y qué no.
+Es muy importante que vaya guardando su proyecto de forma regular. Los programas de edición de vídeo son muy pesados ​​y pueden dar problemas si no los guardamos de forma regular.
 :::
 
-En este caso hemos probado el nivel 1, donde nos piden describir algunas imágenes, luego nos dice un feedback del prompt que hemos creado:
+Ahora ya podemos arrastrar y soltar nuestro vídeo en la línea de tiempo:
 
-![Say what you see](img/30.png){ width=13cm }
+![Arrastrar y soltar](img/27.png){ width=50% }
 
-Entramos al nivel 1:
+Fijémonos en que muchas veces nos aparecerá bajo un recuadro que nos pregunta si queremos adaptar el proyecto al vídeo. En este caso OBS ha grabado el vídeo a 60 fps y nos recomienda cambiar el perfil de nuestro proyecto a 60 fps, le digamos que no. Algo muy recomendable es cambiar el vídeo a formato editable:
 
-![Nivel 1](img/31.png){ width=13cm }
+![Adaptar el vídeo](img/28.png){ width=50% }
 
-Y aquí tenéis dos ejemplos de dos imágenes con sus prompts. Fijaros que abajo nos da un feedback del prompt que hemos creado:
+Algo que podemos hacer si queremos organizar el vídeo en zonas es extraer una zona del vídeo. Para ello simplemente debemos seleccionar la zona que queremos extraer y hacer clic en "Extraer zona". Podemos marcar el inicio y el final de la zona que queremos extraer:
 
-![Imagen 1](img/32.png){ width=13cm }
+![Seleccionemos zona](img/29.png){ width=50% }
 
-![Imagen 2](img/33.png){ width=13cm }
+![Extraer zona](img/30.png){ width=50% }
 
+Si en lugar de extraer zona hacemos "zona a bandeja de proyectos" la zona dependerá del vídeo original. Puedes ser útil si queremos delimitar varias zonas de un vídeo y tenemos muchos vídeos en nuestro proyecto:
 
-:::note
-En este módulo hemos visto una pequeña introducción a las posibilidades que nos ofrece la IA y las tecnologías que se están desarrollando en ese sentido.
-Además, una serie de conceptos muy básicos para tener en cuenta, pero... ¿Cuándo nos ponemos a hacer prompts? Esto lo veremos en el próximo módulo...
+![Zona en bandeja de proyectos](img/31.png){ width=70% }
+
+Lo que vamos a hacer nosotros será simplemente tomar el vídeo original y arrastrarlo a la línea de tiempo. Después detrás añadiremos dos zonas aleatorias:
+
+![Arrastrar y soltar](img/32.png){ width=70% }
+
+Si queremos añadir más pistas podemos hacer clic en el botón derecho del ratón y añadir una nueva pista de vídeo o de sonido:
+
+![Añadir pista](img/33.png){ width=50% }
+
+**¿Cómo funcionan las pistas?**
+
+Las pistas que están en lo alto se verán por encima de las que están más abajo. Las pistas no pueden arrastrarse ni cambiarse de orden, pero podemos añadir una pista por encima de otra y añadir un elemento. Esto hará que el nuevo elemento se vea por encima del otro.
+
+![Pistas](img/34.png){ width=50% }
+**La línea de tiempo**
+
+Fijémonos en que tenemos una guía que nos mostrará la pantalla del cómo quedará el vídeo al final una vez aplicados los efectos. El resultado lo podremos visualizar en la pantalla de proyecto (ubicada a la derecha):
+
+![Línea de tiempo](img/35.png){ width=50% }
+
+Si nos fijamos veremos que tenemos el vídeo agrupado en el sonido, podemos desagruparlos haciendo clic en el botón derecho del ratón y seleccionando "Desagrupar clips":
+
+![Desagrupar clips](img/36.png){ width=50% }
+
+Si ponemos un vídeo encima de otro veremos que el vídeo de arriba se ve por encima del de abajo.
+
+![Línea de tiempo](img/37.png){ width=50% }
+
+La imagen que vemos es lo siguiente:
+
+![Previsualización](img/38.png){ width=50% }
+
+Pero claro, esto no es lo que queremos. Lo que queremos hacer es lo siguiente:
+
+* Quitar la parte central del vídeo: para ello utilizaremos la acción de cortar. Tal y como hacían antiguamente cuando cortaban el filme de vídeo.
+* Desplazar el vídeo a la izquierda: para ello utilizaremos la acción de desplazar. Es sólo seleccionar el vídeo y moverlo.
+* Añadir un efecto de transición: para ello utilizaremos la acción de transición (fade in y fade out).
+* Crear un difuminado alrededor del vídeo: para ello utilizaremos la acción de **máscara forma alfa** y la composición **transformación**.
+
+Para cortar el vídeo simplemente debemos hacer clic en la acción de cortar y seleccionar la parte que queremos cortar (veremos que nos aparece una línea roja):
+
+![Cortar](img/42.png){ width=50% }
+
+:::caution
+Cuando cortamos la herramienta todavía está seleccionada, es necesario volver al estado de selección haciendo clic en la flecha de la barra de herramientas de la línea de tiempo o simplemente pulsando S.
+Hay que tener en cuenta también que al cortar un vídeo que tiene efectos, ambas partes mantienen los efectos que hemos aplicado.
 :::
 
+Ahora podemos seleccionar el clip cortado y desplazarlo a la izquierda. También podemos agrupar los dos clips para que cuando apliquemos un efecto afecto a ambas partes. Esto sí después hay que editar cada efecto por separado (pero podemos copiar y pegar los efectos). Así que nos centramos en una de las dos partes del vídeo y después copiamos y pegamos los efectos.
 
+Ahora aplicaremos los efectos fade-in y fade-out, que se enclarecer y oscurecer el video. Como es un efecto muy utilizado en la esquina del vídeo seleccionado podemos desplazar una bolita y ya nos aplicará el efecto:
 
+![Fade-in](img/43.png){ width=50% }
 
+Esta parte es la más compleja y que explicaremos más detalladamente más adelante en el curso, así que no se preocupe si lo ve demasiado complicado.
 
+* Composición: Transformación
 
+* Efecto: Máscara forma alfa
 
+## Aplicando efectos de forma básica
 
+Vamos a cambiar un poco lo que estábamos haciendo hasta ahora y empezaremos un proyecto nuevo, le recomiendo que siga el videotutorial que tiene colgado en Aulas. Pero hemos cogido una base y una cara. Les arrastramos y soltamos en nuestra bandeja de proyectos:
 
+![Arrastrar y soltar](img/48.png){ width=50% }
 
+Ahora los arrastramos en la línea a de tiempo de la siguiente manera:
 
+![Arrastrar y soltar](img/49.png){ width=50% }
 
+Una vez tenemos hecho esto, aplicamos el efecto fade-in, fade-out como ya hemos visto y arrastramos y soltamos el efecto de máscara forma alfa en el vídeo de la chica:
 
+![Arrastrar y soltar](img/50.png){ width=50% }
 
+Con el recuadro rojo seleccionamos cómo queremos que se aplique la máscara y podemos cambiar la forma en **shape**, nosotros le hemos puesto Ellipse.
+
+![Máscara forma alfa](img/51.png){ width=50% }
+
+Por último en la Composición de de "Composición y transformación" podemos variar la forma y la posición:
+
+![Composición](img/52.png){ width=50% }
+
+De esta forma tendríamos un proyecto muy básico en el que ya hemos tocado todos los elementos esenciales de Kdenlive.
+
+### Generación de clips
+
+Si hacemos clic en la "Crear título" nos la bandeja de proyecto nos aparecerá la siguiente pantalla:
+
+![Crear título](img/54.png){ width=50% }
+
+![Crear título](img/55.png){ width=50% }
+
+Como vea, podemos añadir texto, imágenes, etc. Esto nos permitirá crear títulos para nuestra presentación. Si hacemos clic en "Crear título" nos aparecerá un nuevo clip en nuestra bandeja de proyectos. Nosotros hemos generado un texto sencillo y lo hemos puesto en el centro de la pantalla. En background podemos cambiar el color del fondo. Lo añadimos al principio del
+
+### Generación de vídeo
+
+Por último para renderizar el clip, hacemos clic en Procesar y nos aparecerá la siguiente pantalla. Puedes hacer clic en "More Options" para que te aparezca completa:
+
+![Procesar](img/53.png){ width=50% }
+
+Le decimos dónde queremos guardar el clip y con qué nombre y ya hacemos clic en "Render to file" y ya empezará a procesar el Vídeo. Se trata de un proceso lento que puede tardar mucho dependiendo de los efectos que hayamos añadido al vídeo.
+
+# Guardar proyecto
+
+Ya hemos comentado que es importante ir guardando el proyecto de vez en cuando, hay que tener en cuenta que cuando se guarda un proyecto se realiza con extensión .kdenlive, si compartes ese proyecto, o tratas de abrirlo en otro ordenador, debes tener en cuenta que el proyecto debe tener todos los clips que has utilizado en el proyecto. Si no tienes los clips en la misma ubicación que cuando guardaste el proyecto, el proyecto no podrá abrirse.
+
+Para evitar esto puedes "Archivar" el proyecto:
+
+![Archivar proyecto](img/56.png){ width=50% }
+
+Cuando aparezca esta pantalla pide que te guarde el proyecto en un archivo .zip, de esa amnera ya tendrás el proyecto guardado con todos sus clips en un único archivo .zip. Podrás compartirlo con otros compañeros.
+
+![Archivar proyecto](img/57.png){ width=50% }
+
+Por último haces clic en "Archive" y ya tendrás el proyecto guardado en un único archivo .zip.
+
+# Repositorios de vídeos
+
+Os dejamos una serie de repositorios donde puede encontrar vídeos que le pueden ayudar a realizar sus proyectos:
+
+* [Pexels](https://www.pexels.com/videos/)
+* [Pixabay](https://pixabay.com/es/videos/)
+* [Videvo](https://www.videvo.net/)
+* [Coverr](https://coverr.co/)
+
+:::caution
+Fíjese en las licencias de vídeos. Aunque gran parte son de libre uso, siempre es recomendable leer sus condiciones.
+:::
+
+[Efectos](https://docs.kdenlive.org/en/effects_and_filters/lists/video_effects_list.html)
+[Composiciones](https://docs.kdenlive.org/en/compositing/compositions.html)
