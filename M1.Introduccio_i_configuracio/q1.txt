@@ -1,0 +1,79 @@
+// Pregunta 1
+Quines són les dues eines principals de programari tractades al text per crear videotutorials? {
+~Adobe Premiere i OBS Studio
+~Final Cut Pro i Kdenlive
+=OBS Studio i Kdenlive
+~iMovie i Windows Movie Maker
+}
+
+// Pregunta 2
+Quina afirmació descriu millor OBS Studio? {
+~És un programari d'edició de vídeo de pagament
+=És un programari lliure i gratuït per a enregistrar pantalla i transmetre en directe
+~És exclusivament per a l'edició de vídeo
+~Només està disponible per a sistemes operatius Windows
+}
+
+// Pregunta 3
+Per instal·lar OBS Studio en Ubuntu Linux, quina comanda és correcta? {
+~sudo apt download obs-studio
+~sudo install obs-studio
+~flatpak install obs-studio
+=sudo apt install obs-studio
+}
+
+// Pregunta 4
+Quin és el propòsit del complement Background Removal en OBS? {
+~Per ajustar la brillantor del vídeo
+~Per eliminar el soroll de fons de l'àudio
+=Per crear efectes de pantalla verda virtual
+~Per comprimir arxius de vídeo
+}
+
+// Pregunta 5
+En la interfície de Kdenlive, què es mostra al Monitor de Projecte? {
+~Només els clips individuals seleccionats
+=El projecte editat complet
+~Formes d'ona d'àudio
+~Importacions de metratge en brut
+}
+
+// Pregunta 6
+Quin format d'arxiu utilitza Kdenlive per desar projectes? {
+~.kdv
+=.kdenlive
+~.kde
+~.knlv
+}
+
+// Pregunta 7
+Quina és la taxa de fotogrames recomanada per a videotutorials bàsics segons el text? {
+~60 fps
+~30 fps
+=16 fps
+~25 fps
+}
+
+// Pregunta 8
+Quines eines de conversió de veu a text s'esmenten per a la generació de subtítols? {
+~Google Speech i Azure
+=Whisper i VOSK
+~Dragon i Siri
+~Alexa i Cortana
+}
+
+// Pregunta 9
+Quan es treballa amb pistes de vídeo en Kdenlive, quina afirmació és correcta? {
+~Les pistes inferiors apareixen per sobre de les superiors
+~Les pistes es poden reordenar lliurement arrossegant-les
+=Les pistes superiors apareixen per sobre de les inferiors
+~Totes les pistes tenen la mateixa prioritat de visibilitat
+}
+
+// Pregunta 10
+Quin és el propòsit de la funció "Arxivar" en Kdenlive? {
+~Per comprimir la mida de l'arxiu de vídeo
+~Per crear una còpia de seguretat al núvol
+=Per desar el projecte amb tots els clips en un únic arxiu zip
+~Per convertir el projecte a un format diferent
+}

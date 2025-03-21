@@ -1,0 +1,79 @@
+// Pregunta 1
+¿Cuáles son las dos herramientas principales de software mencionadas en el texto para crear videotutoriales? {
+~Adobe Premiere y OBS Studio
+~Final Cut Pro y Kdenlive
+=OBS Studio y Kdenlive
+~iMovie y Windows Movie Maker
+}
+
+// Pregunta 2
+¿Qué afirmación describe mejor OBS Studio? {
+~Es un software de edición de vídeo de pago
+=Es un software libre y gratuito para grabar pantalla y transmitir en directo
+~Es exclusivamente para la edición de vídeo
+~Solo está disponible para sistemas operativos Windows
+}
+
+// Pregunta 3
+Para instalar OBS Studio en Ubuntu Linux, ¿qué comando es correcto? {
+~sudo apt download obs-studio
+~sudo install obs-studio
+~flatpak install obs-studio
+=sudo apt install obs-studio
+}
+
+// Pregunta 4
+¿Cuál es el propósito del complemento Background Removal en OBS? {
+~Para ajustar el brillo del vídeo
+~Para eliminar el ruido de fondo del audio
+=Para crear efectos de pantalla verde virtual
+~Para comprimir archivos de vídeo
+}
+
+// Pregunta 5
+En la interfaz de Kdenlive, ¿qué se muestra en el Monitor de Proyecto? {
+~Solo los clips individuales seleccionados
+=El proyecto editado completo
+~Ondas de audio
+~Importaciones de metraje en bruto
+}
+
+// Pregunta 6
+¿Qué formato de archivo utiliza Kdenlive para guardar proyectos? {
+~.kdv
+=.kdenlive
+~.kde
+~.knlv
+}
+
+// Pregunta 7
+¿Cuál es la tasa de fotogramas recomendada para videotutoriales básicos según el texto? {
+~60 fps
+~30 fps
+=16 fps
+~25 fps
+}
+
+// Pregunta 8
+¿Qué herramientas de conversión de voz a texto se mencionan para la generación de subtítulos? {
+~Google Speech y Azure
+=Whisper y VOSK
+~Dragon y Siri
+~Alexa y Cortana
+}
+
+// Pregunta 9
+Al trabajar con pistas de vídeo en Kdenlive, ¿qué afirmación es correcta? {
+~Las pistas inferiores aparecen por encima de las superiores
+~Las pistas se pueden reorganizar libremente arrastrándolas
+=Las pistas superiores aparecen por encima de las inferiores
+~Todas las pistas tienen la misma prioridad de visibilidad
+}
+
+// Pregunta 10
+¿Cuál es el propósito de la función "Archivar" en Kdenlive? {
+~Para comprimir el tamaño del archivo de vídeo
+~Para crear una copia de seguridad en la nube
+=Para guardar el proyecto con todos los clips en un único archivo zip
+~Para convertir el proyecto a un formato diferente
+}
