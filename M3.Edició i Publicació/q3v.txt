@@ -1,0 +1,69 @@
+::Pregunta 1:: Quina és la principal diferència entre OBS i KDEnlive? {
+    ~OBS és més complex que KDEnlive
+    ~KDEnlive només serveix per a gravació en directe
+    =OBS està centrat en la captura de vídeo i emissions en directe, mentre que KDEnlive és un editor de vídeo
+    ~Ambdós són editors de vídeo amb les mateixes funcionalitats
+}
+
+::Pregunta 2:: Quin repositori de vídeos gratuïts NO es menciona al text? {
+    ~Pexels
+    ~Pixabay
+    ~Videvo
+    =Shutterstock
+}
+
+::Pregunta 3:: En crear un clip de títol en KDEnlive, quin efecte permet que el text aparega com si s'estiguera escrivint? {
+    ~Animation effect
+    =Typewriter effect
+    ~Writing effect
+    ~Text animation
+}
+
+::Pregunta 4:: En l'animació de títols, què representa el quadre verd? {
+    ~La posició final del clip
+    ~L'àrea de treball
+    =La posició inicial del clip
+    ~L'àrea de transició
+}
+
+::Pregunta 5:: Per a utilitzar la funció de crear animació en KDEnlive, quin programa extern és necessari? {
+    ~Adobe Animate
+    ~After Effects
+    =Glaxnimate
+    ~Animation Pro
+}
+
+::Pregunta 6:: Quina és una forma efectiva de pixelar una cara en moviment? {
+    ~Utilitzar únicament l'efecte de pixelat
+    ~Aplicar només un quadre negre
+    =Combinar els efectes de retallar i omplir amb pixelize
+    ~Utilitzar exclusivament l'efecte de desenfocament
+}
+
+::Pregunta 7:: En l'efecte de binaritzar, què controla el paràmetre "treshold value"? {
+    ~La velocitat de transició
+    ~La grandària dels píxels
+    =El nivell de luminositat que determina el canvi entre blanc i negre
+    ~La intensitat del color
+}
+
+::Pregunta 8:: Per a aplicar efectivament un Croma key, quina característica ha de tindre el fons? {
+    ~Ha de ser completament negre
+    =Ha de ser d'un color uniforme
+    ~Ha de tindre múltiples colors
+    ~Ha de ser texturitzat
+}
+
+::Pregunta 9:: Quin efecte és més adequat per a netejar el soroll en l'àudio d'un vídeo? {
+    ~Volume
+    =Denoiser
+    ~Audio enhancer
+    ~Sound equalizer
+}
+
+::Pregunta 10:: En les composicions de KDEnlive, quina és una característica fonamental? {
+    ~Només afecten un vídeo a la vegada
+    ~No permeten ajustar l'opacitat
+    =Afecten almenys a dos vídeos en la línia de temps
+    ~Només funcionen amb efectes de transició
+}

@@ -1,0 +1,69 @@
+::Pregunta 1:: ¿Cuál es la principal diferencia entre OBS y KDEnlive? {
+    ~OBS es más complejo que KDEnlive
+    ~KDEnlive solo sirve para grabación en directo
+    =OBS está centrado en la captura de vídeo y emisiones en directo, mientras que KDEnlive es un editor de vídeo
+    ~Ambos son editores de vídeo con las mismas funcionalidades
+}
+
+::Pregunta 2:: ¿Qué repositorio de vídeos gratuitos NO se menciona en el texto? {
+    ~Pexels
+    ~Pixabay
+    ~Videvo
+    =Shutterstock
+}
+
+::Pregunta 3:: Al crear un clip de título en KDEnlive, ¿qué efecto permite que el texto aparezca como si estuviera siendo escrito? {
+    ~Animation effect
+    =Typewriter effect
+    ~Writing effect
+    ~Text animation
+}
+
+::Pregunta 4:: En la animación de títulos, ¿qué representa el recuadro verde? {
+    ~La posición final del clip
+    ~El área de trabajo
+    =La posición inicial del clip
+    ~El área de transición
+}
+
+::Pregunta 5:: Para utilizar la función de crear animación en KDEnlive, ¿qué programa externo es necesario? {
+    ~Adobe Animate
+    ~After Effects
+    =Glaxnimate
+    ~Animation Pro
+}
+
+::Pregunta 6:: ¿Cuál es una forma efectiva de pixelar una cara en movimiento? {
+    ~Usar únicamente el efecto de pixelado
+    ~Aplicar solo un recuadro negro
+    =Combinar los efectos de recortar y rellenar con pixelize
+    ~Utilizar exclusivamente el efecto de desenfoque
+}
+
+::Pregunta 7:: En el efecto de binarizar, ¿qué controla el parámetro "treshold value"? {
+    ~La velocidad de transición
+    ~El tamaño de los píxeles
+    =El nivel de luminosidad que determina el cambio entre blanco y negro
+    ~La intensidad del color
+}
+
+::Pregunta 8:: Para aplicar efectivamente un Croma key, ¿qué característica debe tener el fondo? {
+    ~Debe ser completamente negro
+    =Debe ser de color uniforme
+    ~Debe tener múltiples colores
+    ~Debe ser texturizado
+}
+
+::Pregunta 9:: ¿Qué efecto es más adecuado para limpiar el ruido en el audio de un video? {
+    ~Volume
+    =Denoiser
+    ~Audio enhancer
+    ~Sound equalizer
+}
+
+::Pregunta 10:: En las composiciones de KDEnlive, ¿cuál es una característica fundamental? {
+    ~Solo afectan a un vídeo a la vez
+    ~No permiten ajustar la opacidad
+    =Afectan al menos a dos vídeos en la línea de tiempo
+    ~Solo funcionan con efectos de transición
+}

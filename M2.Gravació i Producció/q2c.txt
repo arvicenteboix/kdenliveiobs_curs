@@ -1,0 +1,89 @@
+::Pregunta 1::
+¿Qué es una escena en OBS Studio?
+{
+=Un conjunto de fuentes que se muestran en un momento determinado
+~Un tipo de filtro de video
+~Una configuración del micrófono
+~Un efecto de transición
+}
+
+::Pregunta 2::
+¿Cuál es la ventaja principal de usar la opción "Añadir existentes" al crear una fuente de Captura de pantalla?
+{
+~Reduce el consumo de memoria
+~Permite usar efectos especiales
+=Las propiedades quedan vinculadas entre las fuentes
+~Mejora la calidad de video
+}
+
+::Pregunta 3::
+Al utilizar la captura de ventana, ¿qué sucede si la ventana se minimiza?
+{
+~La ventana continúa mostrándose normalmente
+=La fuente se desactiva
+~La ventana se congela en la última imagen
+~Se muestra una pantalla en negro
+}
+
+::Pregunta 4::
+¿Qué consideración importante hay que tener en cuenta al configurar una cámara web?
+{
+~Solo puede usarse en modo estudio
+~Requiere iluminación profesional
+~Debe estar conectada por USB 3.0
+=Lleva incorporado un micrófono que también se selecciona como fuente
+}
+
+::Pregunta 5::
+¿Para qué sirve el filtro "Background removal"?
+{
+~Para añadir un fondo virtual
+=Para eliminar el fondo de la cámara web
+~Para mejorar la calidad del video
+~Para ajustar el contraste
+}
+
+::Pregunta 6::
+¿Qué característica define al filtro "Puerta anti-ruidos"?
+{
+~Elimina completamente todo el ruido
+=Solo permite el audio cuando se detecta voz
+~Aumenta el volumen del micrófono
+~Añade efectos de sonido
+}
+
+::Pregunta 7::
+¿Qué permite hacer el modo Estudio en OBS?
+{
+~Grabar videos en mejor calidad
+=Tener una previsualización antes de emitir
+~Añadir efectos especiales
+~Mejorar el rendimiento del sistema
+}
+
+::Pregunta 8::
+En relación al orden de las fuentes en una escena, ¿qué es correcto?
+{
+~El orden no afecta a la visualización
+~Las fuentes inferiores tienen prioridad
+=Las fuentes superiores se ven por encima de las inferiores
+~Todas las fuentes se muestran al mismo nivel
+}
+
+::Pregunta 9::
+¿Qué función cumple el filtro LocalVocal?
+{
+~Mejora la calidad del audio
+=Crea subtítulos en directo de la voz
+~Traduce el audio a otros idiomas
+~Elimina ruidos del micrófono
+}
+
+::Pregunta 10::
+¿Qué permite hacer una fuente de tipo "Escena"?
+{
+~Crear transiciones personalizadas
+=Añadir otra escena dentro de la escena actual
+~Modificar la resolución de la transmisión
+~Cambiar el formato de video
+}

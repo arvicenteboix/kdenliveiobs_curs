@@ -63,8 +63,8 @@ class="toc-section-number">2.1.4</span> Fuente multimedia</a></li>
 class="toc-section-number">2.1.5</span> Galería de imágenes</a></li>
 <li><a href="#navegador" id="toc-navegador"><span
 class="toc-section-number">2.1.6</span> Navegador</a></li>
-<li><a href="#orige-del-color" id="toc-orige-del-color"><span
-class="toc-section-number">2.1.7</span> Orige del color</a></li>
+<li><a href="#origen-del-color" id="toc-origen-del-color"><span
+class="toc-section-number">2.1.7</span> Origen del color</a></li>
 <li><a href="#texto-gdi" id="toc-texto-gdi"><span
 class="toc-section-number">2.1.8</span> Texto (GDI+)</a></li>
 <li><a href="#grupo" id="toc-grupo"><span
@@ -73,14 +73,40 @@ class="toc-section-number">2.1.9</span> Grupo</a></li>
 class="toc-section-number">2.1.10</span> Captura de juego</a></li>
 <li><a href="#escena-como-fuente" id="toc-escena-como-fuente"><span
 class="toc-section-number">2.1.11</span> Escena (como fuente)</a></li>
+<li><a href="#posición-de-las-fuentes-e-interacción-entre-ellas"
+id="toc-posición-de-las-fuentes-e-interacción-entre-ellas"><span
+class="toc-section-number">2.1.12</span> Posición de las fuentes e
+interacción entre ellas</a></li>
 </ul></li>
 <li><a href="#filtros" id="toc-filtros"><span
-class="toc-section-number">2.2</span> Filtros</a>
-<ul>
+class="toc-section-number">2.2</span> Filtros</a></li>
 <li><a href="#filtros-de-vídeo" id="toc-filtros-de-vídeo"><span
-class="toc-section-number">2.2.1</span> Filtros de vídeo</a></li>
+class="toc-section-number">2.3</span> Filtros de vídeo</a>
+<ul>
+<li><a href="#background-removal" id="toc-background-removal"><span
+class="toc-section-number">2.3.1</span> Background removal</a></li>
+<li><a href="#recortar" id="toc-recortar"><span
+class="toc-section-number">2.3.2</span> Recortar</a></li>
+<li><a href="#imagen-máscara" id="toc-imagen-máscara"><span
+class="toc-section-number">2.3.3</span> Imagen máscara</a></li>
+<li><a href="#fondo-croma" id="toc-fondo-croma"><span
+class="toc-section-number">2.3.4</span> Fondo croma</a></li>
+<li><a href="#otros-filtros" id="toc-otros-filtros"><span
+class="toc-section-number">2.3.5</span> Otros filtros</a></li>
+</ul></li>
 <li><a href="#filtros-de-audio" id="toc-filtros-de-audio"><span
-class="toc-section-number">2.2.2</span> Filtros de audio</a></li>
+class="toc-section-number">2.4</span> Filtros de audio</a>
+<ul>
+<li><a href="#eliminación-de-ruido" id="toc-eliminación-de-ruido"><span
+class="toc-section-number">2.4.1</span> Eliminación de ruido</a></li>
+<li><a href="#puerta-anti-ruido" id="toc-puerta-anti-ruido"><span
+class="toc-section-number">2.4.2</span> Puerta anti-ruido</a></li>
+<li><a href="#compresor" id="toc-compresor"><span
+class="toc-section-number">2.4.3</span> Compresor</a></li>
+<li><a href="#ganancia" id="toc-ganancia"><span
+class="toc-section-number">2.4.4</span> Ganancia</a></li>
+<li><a href="#localvocal" id="toc-localvocal"><span
+class="toc-section-number">2.4.5</span> LocalVocal</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#modo-estudio" id="toc-modo-estudio"><span
@@ -103,9 +129,9 @@ class="toc-section-number">3</span> Modo Estudio</a></li>
             </p>
             <h1 data-number="1" id="introducción"><span
             class="header-section-number">1</span> Introducción</h1>
-            <p>En esta unidad ya nos vamos a centrar concretamente en un
-            ejemplo concreto de producción de un videotutorial. No vamos
-            a centrarnos en ningún aspecto concreto y trataremos de dar
+            <p>En esta unidad ya nos vamos a centrar en un ejemplo
+            concreto de producción de un videotutorial. No vamos a
+            centrarnos en ningún aspecto concreto y trataremos de dar
             varias opciones para que cada uno pueda adaptarlo a sus
             necesidades.</p>
             <h1 data-number="2" id="preparación-de-la-grabación"><span
@@ -252,7 +278,7 @@ class="toc-section-number">3</span> Modo Estudio</a></li>
             móvil como cámara web con la aplicación Droidcam<a
             href="#fn1" class="footnote-ref" id="fnref1"
             role="doc-noteref"><sup>1</sup></a>, en ese caso tendrá que
-            utilizado un plugin para OBS que se puede descargar desde la
+            utilizar un plugin para OBS que se puede descargar desde la
             página oficial de Droidcam.</p>
             </div>
             <h3 data-number="2.1.4" id="fuente-multimedia"><span
@@ -297,7 +323,7 @@ class="toc-section-number">3</span> Modo Estudio</a></li>
             </figure>
             <h3 data-number="2.1.6" id="navegador"><span
             class="header-section-number">2.1.6</span> Navegador</h3>
-            <p>Con la fuente navegadora podemos tener un navegador
+            <p>Con la fuente navegador podemos tener un navegador
             integrado en nuestra escena. Eso sí, si queremos interactuar
             con el navegador mejor utilizar una captura de ventana, ya
             que es más sencillo.</p>
@@ -319,15 +345,15 @@ class="toc-section-number">3</span> Modo Estudio</a></li>
             <figcaption aria-hidden="true">Pantalla
             navegador</figcaption>
             </figure>
-            <h3 data-number="2.1.7" id="orige-del-color"><span
-            class="header-section-number">2.1.7</span> Orige del
+            <h3 data-number="2.1.7" id="origen-del-color"><span
+            class="header-section-number">2.1.7</span> Origen del
             color</h3>
             <p>Con el origen del color podemos añadirle un color a
             nuestra escena. Nos puede servir para tener un color de
             fondo distinto al negro.</p>
             <figure>
-            <img src="img/13.png" alt="Orige del color" />
-            <figcaption aria-hidden="true">Orige del color</figcaption>
+            <img src="img/13.png" alt="Origen del color" />
+            <figcaption aria-hidden="true">Origen del color</figcaption>
             </figure>
             <h3 data-number="2.1.8" id="texto-gdi"><span
             class="header-section-number">2.1.8</span> Texto (GDI+)</h3>
@@ -370,9 +396,16 @@ class="toc-section-number">3</span> Modo Estudio</a></li>
             nos deja la opción de añadir una escena que ya tenemos
             creada. Esto es muy útil para tener una escena con nuestra
             cara que esté compartida por todas ellas.</p>
-            <p><img src="img/16.png" alt="Escena (como fuente)" /> ###
-            Posición de las fuentes e interacción entre ellas</p>
-            <p>La orden de las fuentes es verdaderamente importante
+            <figure>
+            <img src="img/16.png" alt="Escena (como fuente)" />
+            <figcaption aria-hidden="true">Escena (como
+            fuente)</figcaption>
+            </figure>
+            <h3 data-number="2.1.12"
+            id="posición-de-las-fuentes-e-interacción-entre-ellas"><span
+            class="header-section-number">2.1.12</span> Posición de las
+            fuentes e interacción entre ellas</h3>
+            <p>El orden de las fuentes es verdaderamente importante
             cuando estamos montando una escena puesto que las escenas
             que están encima se verán por encima de las que están por
             debajo. Si hacemos clic en el botón derecho de una fuente
@@ -438,12 +471,12 @@ class="toc-section-number">3</span> Modo Estudio</a></li>
             como queramos, y al igual que en las escenas, los que están
             por encima tienen más prioridad que los que están por
             debajo.</p>
-            <h3 data-number="2.2.1" id="filtros-de-vídeo"><span
-            class="header-section-number">2.2.1</span> Filtros de
-            vídeo</h3>
-            <h4 data-number="2.2.1.1" id="background-removal"><span
-            class="header-section-number">2.2.1.1</span> Background
-            removal</h4>
+            <h2 data-number="2.3" id="filtros-de-vídeo"><span
+            class="header-section-number">2.3</span> Filtros de
+            vídeo</h2>
+            <h3 data-number="2.3.1" id="background-removal"><span
+            class="header-section-number">2.3.1</span> Background
+            removal</h3>
             <p>El primer filtro que veremos que es muy interesante es el
             de Background removal. Este filtro nos permite eliminar el
             fondo de nuestra webcam. Este filtro es muy interesante para
@@ -456,8 +489,8 @@ class="toc-section-number">3</span> Modo Estudio</a></li>
             </figure>
             <p>En la previsualización se ve el fondo negro, pero en la
             pantalla de la webcam se verá sin fondo.</p>
-            <h4 data-number="2.2.1.2" id="recortar"><span
-            class="header-section-number">2.2.1.2</span> Recortar</h4>
+            <h3 data-number="2.3.2" id="recortar"><span
+            class="header-section-number">2.3.2</span> Recortar</h3>
             <p>El filtro de recortar nos permite recortar la imagen de
             nuestra webcam. Si sólo queremos centrar la atención en un
             único elemento.</p>
@@ -465,9 +498,9 @@ class="toc-section-number">3</span> Modo Estudio</a></li>
             <img src="img/26.png" alt="Recortar" />
             <figcaption aria-hidden="true">Recortar</figcaption>
             </figure>
-            <h4 data-number="2.2.1.3" id="imagen-máscara"><span
-            class="header-section-number">2.2.1.3</span> Imagen
-            máscara</h4>
+            <h3 data-number="2.3.3" id="imagen-máscara"><span
+            class="header-section-number">2.3.3</span> Imagen
+            máscara</h3>
             <p>Este filtro es bastante interesante ya que podemos querer
             recortar nuestra webcam para que se vea en una forma
             concreta. Por ejemplo, si queremos que nuestra webcam se vea
@@ -492,11 +525,10 @@ class="toc-section-number">3</span> Modo Estudio</a></li>
             <img src="img/29.png" alt="Imagen máscara" />
             <figcaption aria-hidden="true">Imagen máscara</figcaption>
             </figure>
-            <p>La mascarilla también acepta difuminación, para que no se
+            <p>La máscara también acepta difuminación, para que no se
             vea tan bruscamente el recortado.</p>
-            <h4 data-number="2.2.1.4" id="fondo-croma"><span
-            class="header-section-number">2.2.1.4</span> Fondo
-            croma</h4>
+            <h3 data-number="2.3.4" id="fondo-croma"><span
+            class="header-section-number">2.3.4</span> Fondo croma</h3>
             <p>El fondo croma es un filtro con un efecto bastante
             complicado de conseguir a menos que se deponga de una tela
             verde o azul. El color debe ser bastante homogéneo y debe
@@ -513,17 +545,16 @@ class="toc-section-number">3</span> Modo Estudio</a></li>
             <img src="img/24.png" alt="Fondo croma" />
             <figcaption aria-hidden="true">Fondo croma</figcaption>
             </figure>
-            <h5 data-number="2.2.1.4.1" id="clave-luma"><span
-            class="header-section-number">2.2.1.4.1</span> Clave
-            Luma</h5>
+            <h4 data-number="2.3.4.1" id="clave-luma"><span
+            class="header-section-number">2.3.4.1</span> Clave Luma</h4>
             <p>Este filtro nos permite conseguir un efecto similar al
             del Croma pero se basa con los objetos más iluminados que
             los que están alrededor. Esto es muy interesante para
             conseguir un efecto de fondo croma sin tener una tela verde
             o azul, pero debes saber jugar con las luces.</p>
-            <h5 data-number="2.2.1.4.2" id="enhanced-portrait"><span
-            class="header-section-number">2.2.1.4.2</span> Enhanced
-            portrait</h5>
+            <h4 data-number="2.3.4.2" id="enhanced-portrait"><span
+            class="header-section-number">2.3.4.2</span> Enhanced
+            portrait</h4>
             <p>Produce un efecto bastante interesante para crear un
             efecto de dibujo a lápiz, combinado con la clave
             <strong>Lluma</strong> se refuerza su efecto.</p>
@@ -532,9 +563,9 @@ class="toc-section-number">3</span> Modo Estudio</a></li>
             <figcaption aria-hidden="true">Enhanced
             portrait</figcaption>
             </figure>
-            <h4 data-number="2.2.1.5" id="otros-filtros"><span
-            class="header-section-number">2.2.1.5</span> Otros
-            filtros</h4>
+            <h3 data-number="2.3.5" id="otros-filtros"><span
+            class="header-section-number">2.3.5</span> Otros
+            filtros</h3>
             <p>Existen muchos filtros que podemos utilizar, y otros que
             podemos descargar, los otros filtros que vienen por defecto
             son:</p>
@@ -553,9 +584,9 @@ class="toc-section-number">3</span> Modo Estudio</a></li>
             <li>Retraso en el procesamiento: Retrasa la emisión de la
             cámara hasta 500ms.</li>
             </ul>
-            <h3 data-number="2.2.2" id="filtros-de-audio"><span
-            class="header-section-number">2.2.2</span> Filtros de
-            audio</h3>
+            <h2 data-number="2.4" id="filtros-de-audio"><span
+            class="header-section-number">2.4</span> Filtros de
+            audio</h2>
             <p>Los filtros de audio, tal y como su nombre indica, sirven
             para modificar el audio. Ese audio quizás de una fuente
             externa que tenemos conectada a nuestro ordenador o puede
@@ -570,9 +601,9 @@ class="toc-section-number">3</span> Modo Estudio</a></li>
             <p>No vamos a entrar en detalle en todos los filtros de
             audio, pero aquellos que nos pueden resultar interesantes
             son los siguientes:</p>
-            <h4 data-number="2.2.2.1" id="eliminación-de-ruido"><span
-            class="header-section-number">2.2.2.1</span> Eliminación de
-            ruido</h4>
+            <h3 data-number="2.4.1" id="eliminación-de-ruido"><span
+            class="header-section-number">2.4.1</span> Eliminación de
+            ruido</h3>
             <p>Elimina el ruido de fondo de nuestro micrófono. Debemos
             tener cuidado porque puede eliminar también nuestra voz.</p>
             <div class="caution">
@@ -581,27 +612,27 @@ class="toc-section-number">3</span> Modo Estudio</a></li>
             fondo que utilizar este filtro. Puede encontrar ofertas de
             vez en cuando por unos 25 €, y valen la pena.</p>
             </div>
-            <h4 data-number="2.2.2.2" id="puerta-anti-ruido"><span
-            class="header-section-number">2.2.2.2</span> Puerta
-            anti-ruido</h4>
+            <h3 data-number="2.4.2" id="puerta-anti-ruido"><span
+            class="header-section-number">2.4.2</span> Puerta
+            anti-ruido</h3>
             <p>Semejante a lo anterior, pero en este caso sólo se
             escuchará el audio cuando hablemos. Si no hablamos, nada se
             escuchará. Puesto que crea un umbral de ruido en un
             determinado valor.</p>
-            <h4 data-number="2.2.2.3" id="compresor"><span
-            class="header-section-number">2.2.2.3</span> Compresor</h4>
+            <h3 data-number="2.4.3" id="compresor"><span
+            class="header-section-number">2.4.3</span> Compresor</h3>
             <p>El compresor es un filtro que permite ajustar el volumen
             de nuestra voz. Si hablamos muy bajo, el compresor aumentará
             el volumen de nuestra voz. Si hablamos muy alto, el
             compresor disminuirá el volumen de nuestra voz.</p>
-            <h4 data-number="2.2.2.4" id="ganancia"><span
-            class="header-section-number">2.2.2.4</span> Ganancia</h4>
+            <h3 data-number="2.4.4" id="ganancia"><span
+            class="header-section-number">2.4.4</span> Ganancia</h3>
             <p>El filtro de ganancia nos permite aumentar o disminuir el
             volumen de nuestra voz. Si hablamos muy bajo podemos
             aumentar el volumen de nuestra voz. Si hablamos muy alto
             podemos disminuir el volumen de nuestra voz.</p>
-            <h4 data-number="2.2.2.5" id="localvocal"><span
-            class="header-section-number">2.2.2.5</span> LocalVocal</h4>
+            <h3 data-number="2.4.5" id="localvocal"><span
+            class="header-section-number">2.4.5</span> LocalVocal</h3>
             <p>Por último, tenemos el filtro LocalVocal que hemos
             instalado el plugin en la unidad anterior. Este filtro crea
             subtítulos en directo de nuestra voz. Eso sí, es necesario
@@ -618,8 +649,9 @@ class="toc-section-number">3</span> Modo Estudio</a></li>
             de entrada lo hemos dejado con “Auto-detect” pero es
             recomendable que elija el idioma con el que va a hablar.
             Este filtro también nos permite realizar traducciones
-            simultáneas de los subtítulos, de manera que puede hacer una
-            charla en castellano que los subtítulos estén en inglés.</p>
+            simultáneas de los subtítulos, de manera que podemos hacer
+            una charla en castellano y que los subtítulos estén en
+            inglés.</p>
             <p>Una vez que tenemos configurado el filtro, nos aparecerá
             un elemento texto en nuestra escena:</p>
             <figure>

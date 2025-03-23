@@ -15,10 +15,10 @@ titlepage-background: img/U3c.png
 # Taula de continguts
 toc: true
 toc-own-page: true
-toc-title: Continguts
+toc-title: Contenidos
 
 # Capçaleres i peus
-header-left: 3. Edición y Publicación. KDEnlive
+header-left: 3. Edición y Publicación. Kdenlive
 header-right: Curso 2024-2025
 footer-left: DGFP
 footer-right: \thepage/\pageref{LastPage}
@@ -101,9 +101,9 @@ Videvo es otro repositorio de vídeos gratuitos que podemos utilizar en nuestros
 Recuerde que no todos estos vídeos tienen una licencia Creative Commons que nos permite utilizarlos en nuestros proyectos. Por eso siempre es recomendable leer las condiciones de la licencia antes de hacerlo. Encontrar un vídeo susceptible de ser utilizado en nuestros proyectos no es tarea sencilla.
 :::
 
-# Safata de proyectos
+# Bandeja de proyectos
 
-Como ya hemos comentado en la bandeja de proyectos, vemos todos los elementos que tenemos abiertos para componer nuestro proyecto. Lo habitual es que aquí añadimos vídeos, pero hay muchos otros elementos que podemos añadir aquí. Si hacemos clic en el icono de añadir podemos ver todos los elementos que podemos añadir:
+Como ya hemos comentado en la bandeja de proyectos, vemos todos los elementos que tenemos abiertos para componer nuestro proyecto. Lo habitual es que aquí añadamos vídeos, pero hay muchos otros elementos que podemos añadir aquí. Si hacemos clic en el icono de añadir podemos ver todos los elementos que podemos añadir:
 
 ![Elementos](img/1.png)
 
@@ -133,7 +133,7 @@ Podemos ver distintos elementos en la ventana, podemos ver que existe un tempori
 
 Por orden de izquierda a derecha, tenemos la herramienta de selección que nos sirve para mover los distintos elementos, la creación de texto, la creación de rectángulos, la creación de elipses (o círculos), añadir imágenes y un desplegable que nos permite abrir otros clips, salvar lo que estamos editando o bajarnos plantillas de la web de Kdenlive.
 
-Al seleccionar un elemento podemos ver que las opciones de derecha cambiamos y podemos modificar ese elemento. Crear clips de título nos permitirá por ejemplo crear elementos para resaltar algo del vídeo, esto lo haremos ayudándonos del checkbox "Show background" [2], que junto con la pestaña Background, donde desplazaremos el alfa a 0 con el slider, podremos ver lo que existe en nuestro proyecto.
+Al seleccionar un elemento podemos ver que las opciones de la derecha de la ventana cambian y podemos modificar ese elemento. Crear clips de título nos permitirá por ejemplo crear elementos para resaltar algo del vídeo, esto lo haremos ayudándonos del checkbox "Show background" [2], que junto con la pestaña Background, donde desplazaremos el alfa a 0 con el slider, podremos ver lo que existe en nuestro proyecto.
 
 ![Background](img/6.png)
 
@@ -218,7 +218,7 @@ Por lo general todos los efectos tienen una serie de parámetros que podemos mod
 
 ## Efecto binarizar
 
-El efecto binario es un efecto que nos permite simplificar un vídeo a su modo más binario (blanco y negro). A priori parece un efecto que no puede tener poca utilidad. Pero después de explicar cómo funcionan los efectos por lo general os daremos un ejemplo de uso. Vamos a partir de un vídeo de una figura de buda:
+El efecto binario es un efecto que nos permite simplificar un vídeo a su modo más binario (blanco y negro). A priori parece un efecto que puede tener poca utilidad pero en algunos casos puede resultar interesante. A mode de ejemplo vamos a partir de un vídeo de una figura de buda:
 
 ![Buda](img/16.png)
 
@@ -242,7 +242,7 @@ En el siguiente ejemplo podemos ver cómo de un mínimo pasamos a un máximo y d
 
 ![Treshold value](img/20.png)
 
-Podremos añadir tanto marcadores como queramos y modificarlos a nuestra conveniencia. Además podemos añadir distintos efectos al mismo vídeo. Uno de los efectos que podemos conseguir con el efecto binario es utilizar la composición "Composición y transformación" con el "Compositing" Darken y podemos superponer los dos vídeos de forma que nos queda una superposición como haciendo alegoría de Buda en el desierto:
+Podremos añadir tantos marcadores como queramos y modificarlos a nuestra conveniencia. Además podemos añadir distintos efectos al mismo vídeo. Uno de los efectos que podemos conseguir con el efecto binario es utilizar la composición "Composición y transformación" con el "Compositing" Darken y podemos superponer los dos vídeos de forma que nos queda una superposición como haciendo alegoría de Buda en el desierto:
 
 ![Buda en el desierto](img/21.png)
 
@@ -250,7 +250,7 @@ También hemos utilizado el efecto "Alpha" para que el vídeo de buda sea semitr
 
 ## Pixelar cara
 
-Cam hemos visto en el ejemplo anterior, nunca me basta con utilizar un único efecto para conseguir el resultado que queremos, siempre habrá que utilizar diferentes efectos y composiciones. Uno de los ejemplos que ilustran el uso de efectos es el de pixelar una cara. Vamos a ver varios ejemplos, una cara estática y una cara en movimiento.
+Como hemos visto en el ejemplo anterior, nunca me basta con utilizar un único efecto para conseguir el resultado que queremos, siempre habrá que utilizar diferentes efectos y composiciones. Uno de los ejemplos que ilustran el uso de efectos es el de pixelar una cara. Vamos a ver varios ejemplos, una cara estática y una cara en movimiento.
 
 ### Recuadro negro
 
@@ -258,7 +258,7 @@ Una forma muy sencilla de tapar un cara por ejemplo es con un simple recuadro ne
 
 ![Recuadro negro](img/22.png)
 
-Es una forma sencilla pero efectiva de poder tapar una cara. Sin duda no es la que mejor queda, pero es rápida implementar.
+Es una forma sencilla pero efectiva de poder tapar una cara. Sin duda no es la que mejor queda, pero es rápida de implementar.
 
 
 ### Pixelar la cara con los efectos pixelize y transformación
@@ -277,7 +277,7 @@ Y ahora añadimos el efecto Pixelize sobre el vídeo de arriba:
 
 ![Pixelize](img/25.png)
 
-Y podemos ver que la cara está pixelada. Podemos tener el mismo caso en movimiento. Así por ejemplo y amginemos que sólo queremos pixelar los ojos que se mueven más. Lo podremos hacer jugamos con la línea del tiempo del efecto de "Recortar y rellenar", por lo que vamos ajustando diferentes marcadores a los movimientos de los ojos. Podemos ver que nuestro efecto quedaría de la siguiente forma:
+Y podemos ver que la cara está pixelada. Podemos tener el mismo caso en movimiento. Así por ejemplo y imaginemos que sólo queremos pixelar los ojos que se mueven más. Lo podremos hacer jugando con la línea del tiempo del efecto de "Recortar y rellenar", por lo que vamos ajustando diferentes marcadores a los movimientos de los ojos. Podemos ver que nuestro efecto quedaría de la siguiente forma:
 
 ![Diferentes marcadores](img/26.png)
 
@@ -324,7 +324,7 @@ Es importante para aplicar Croma que la parte a eliminar sea bastante uniforme. 
 
 * Desenfoque gaussiano (Gaussian Blur): este es el tipo de desenfoque más utilizado y servirá para agregar un efecto de difuminado sobre cualquier elemento de imagen que queramos. Funciona al igual que el filtro de Pixelize. Es recomendable acompañarlo del efecto de recortar y rellenar para focalizar la atención en una parte de la imagen.
 
-* Colorear (Colorize): con este efecto podremos cambiar el toi al saturación de la imagen, para ello deberemos realizar cambios en tres parámetros básicos (tono, saturación y brillo). Tenemos muchos efectos de corrección del color y la imagen. Si acompañamos este efecto con el efecto Polvo podemos conseguir un efecto de película antigua.
+* Colorear (Colorize): con este efecto podremos cambiar el tono y la saturación de la imagen, para ello deberemos realizar cambios en tres parámetros básicos (tono, saturación y brillo). Tenemos muchos efectos de corrección del color y la imagen. Si acompañamos este efecto con el efecto Polvo podemos conseguir un efecto de película antigua.
 
 ![Efectos](img/34.png)
 
@@ -338,7 +338,7 @@ Es importante para aplicar Croma que la parte a eliminar sea bastante uniforme. 
 
 ![Máscara](img/37.png)
 
-Una mascarilla bastante interesante es la de rotoscopia, que nos permite seleccionar una parte de la imagen y aplicarle un efecto. Podemos seleccionar una parte para recortar esa parte de la imagen:
+Una máscara bastante interesante es la de rotoscopia, que nos permite seleccionar una parte de la imagen y aplicarle un efecto. Podemos seleccionar una parte para recortar esa parte de la imagen:
 
 ![Rotoscopia](img/38.png)
 
@@ -376,7 +376,7 @@ Push up, right, down, left nos dan un efecto similar en el que el vídeo se desp
 
 ## Transformación
 
-Éste es una de las composiciones más utilizadas ya que nos permite transformar un vídeo prácticamente de cualquier manera. Nos permite modifcar el tamnanay, rotarlo, cambia el alfa (transparencia), etc. Dispone de una línea de tiempo que nos permite crear transformaciones de forma progresiva. En la siguiente imagen podemos ver cómo hemos hecho una transformación de un vídeo:
+Éste es una de las composiciones más utilizadas ya que nos permite transformar un vídeo prácticamente de cualquier manera. Nos permite modificar el tamaño, rotarlo, cambiar el alfa (transparencia), etc. Dispone de una línea de tiempo que nos permite crear transformaciones de forma progresiva. En la siguiente imagen podemos ver cómo hemos hecho una transformación de un vídeo:
 
 ![Transformación](img/40.png)
 
@@ -400,6 +400,6 @@ Debes utilizar el punto rojo de la línea de tiempo para ajustar el efecto.
 
 # Otros
 
-Los demás efectos de composición básicamente se centran en la corrección de la imagen o en efectos que no vamos a utilizar cuando crean un videotutorial. Aunque pueden resultar interesantes en algún ámbito de aplicación, no vamos a utilizarlos en nuestros proyectos.
+Los demás efectos de composición básicamente se centran en la corrección de la imagen o en efectos que no vamos a utilizar cuando creamos un videotutorial. Aunque pueden resultar interesantes en algún ámbito de aplicación, no vamos a utilizarlos en nuestros proyectos.
 
 Una de las cosas a tener en cuenta con todos los efectos y composiciones que tenemos es que siempre podremos conseguir efectos similares por diferentes caminos. Ninguno de ellos es más o menos correcto, simplemente son diferentes formas de hacer lo mismo. Por eso es importante que experimentemos con todos los efectos y composiciones que tenemos para conseguir el resultado que queremos y finalmente escoger el que más nos gusta.

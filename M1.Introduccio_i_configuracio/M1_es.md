@@ -87,7 +87,7 @@ La creación de videotutoriales es una herramienta necesaria para la realizació
 
 En este módulo empezaremos con una introducción de las dos herramientas que vamos a utilizar en este curso: Kdenlive y OBS. Además, veremos cómo instalarlas y configurarlas para empezar a trabajar con ellas. Haremos un repaso de las interfaces y herramientas básicas de cada programa y veremos cómo configurar proyectos y ajustes básicos.
 
-En este curso no nos centraremos en todos los aspectos que nos ofrece OBS ni Kdenlive, ya que son herramientas muy poderosas y presentamos muchísimas características. Nos centraremos en cómo crear un videotutorial y en las herramientas necesarias que pueden hacernos falta para realizarlo. No espere dominar el Kdenlive ni elk OBS de forma profesional, éste no es el propósito de este curso ya que existen ofertas sobre estas herramientas de manera específica. Al final del curso simplemente le pediremos que cree un pequeño videotutorial que trate algún aspecto de su especialidad y lo comparta a sus compañeros.
+En este curso no nos centraremos en todos los aspectos que nos ofrece OBS ni Kdenlive, ya que son herramientas muy poderosas y presentan muchísimas características. Nos centraremos en cómo crear un videotutorial y en las herramientas necesarias que pueden hacernos falta para realizarlo. No espere dominar el Kdenlive ni el OBS de forma profesional, éste no es el propósito de este curso ya que existen ofertas sobre estas herramientas de manera específica. Al final del curso simplemente le pediremos que cree un pequeño videotutorial que trate algún aspecto de su especialidad y lo comparta a sus compañeros.
 
 Debemos tener en cuenta las características fundamentales de cada uno de ellos.
 
@@ -191,7 +191,7 @@ La interfaz de Kdenlive es algo más compleja que la de OBS. Cuando abramos Kden
 
 En la imagen podemos distinguir varios elementos, los que vamos a utilizar en este curso principalmente serán:
 
-* [1] Safata de proyectos: Aquí podemos ver los elementos que tenemos abiertos y los que podemos abrir.
+* [1] Bandeja de proyectos: Aquí podemos ver los elementos que tenemos abiertos y los que podemos abrir.
 * [2] Monitor de clips: Visualizas el clip seleccionado.
 * [3] Monitor de proyecto: Visualizas el proyecto que estás editando.
 * [4] Composiciones y efectos: Aquí podemos ver las composiciones y efectos que podemos añadir a nuestro proyecto. En su momento veremos qué diferencias existen en cada una de ellas.
@@ -203,7 +203,7 @@ El ejemplo mostrado está en inglés, puedes cambiar el interfaz al idioma que d
 
 ![Interfaz Kdenlive](img/16.png){ width=50% }
 
-## Barra de herrajes
+## Barra de herramientas
 
 La barra de herramientas de la línea de tiempo es una de las herramientas más importantes de Kdenlive. Aquí tenemos las herramientas básicas para editar nuestra línea de tiempo. Las herramientas más importantes son:
 
@@ -425,7 +425,7 @@ Hay que tener en cuenta también que al cortar un vídeo que tiene efectos, amba
 
 Ahora podemos seleccionar el clip cortado y desplazarlo a la izquierda. También podemos agrupar los dos clips para que cuando apliquemos un efecto afecto a ambas partes. Esto sí después hay que editar cada efecto por separado (pero podemos copiar y pegar los efectos). Así que nos centramos en una de las dos partes del vídeo y después copiamos y pegamos los efectos.
 
-Ahora aplicaremos los efectos fade-in y fade-out, que se enclarecer y oscurecer el video. Como es un efecto muy utilizado en la esquina del vídeo seleccionado podemos desplazar una bolita y ya nos aplicará el efecto:
+Ahora aplicaremos los efectos fade-in y fade-out, que escalrece y oscurece el video. Como es un efecto muy utilizado en la esquina del vídeo seleccionado podemos desplazar una bolita y ya nos aplicará el efecto:
 
 ![Fade-in](img/43.png){ width=50% }
 
@@ -437,7 +437,7 @@ Esta parte es la más compleja y que explicaremos más detalladamente más adela
 
 ## Aplicando efectos de forma básica
 
-Vamos a cambiar un poco lo que estábamos haciendo hasta ahora y empezaremos un proyecto nuevo, le recomiendo que siga el videotutorial que tiene colgado en Aulas. Pero hemos cogido una base y una cara. Les arrastramos y soltamos en nuestra bandeja de proyectos:
+Vamos a cambiar un poco lo que estábamos haciendo hasta ahora y empezaremos un proyecto nuevo, le recomiendo que siga el videotutorial que tiene colgado en Aules. Hemos cogido una base y una cara. Las arrastramos y soltamos en nuestra bandeja de proyectos:
 
 ![Arrastrar y soltar](img/48.png){ width=50% }
 
@@ -467,7 +467,7 @@ Si hacemos clic en la "Crear título" nos la bandeja de proyecto nos aparecerá 
 
 ![Crear título](img/55.png){ width=50% }
 
-Como vea, podemos añadir texto, imágenes, etc. Esto nos permitirá crear títulos para nuestra presentación. Si hacemos clic en "Crear título" nos aparecerá un nuevo clip en nuestra bandeja de proyectos. Nosotros hemos generado un texto sencillo y lo hemos puesto en el centro de la pantalla. En background podemos cambiar el color del fondo. Lo añadimos al principio del
+Como veis, podemos añadir texto, imágenes, etc. Esto nos permitirá crear títulos para nuestra presentación. Si hacemos clic en "Crear título" nos aparecerá un nuevo clip en nuestra bandeja de proyectos. Nosotros hemos generado un texto sencillo y lo hemos puesto en el centro de la pantalla. En background podemos cambiar el color del fondo.
 
 ### Generación de vídeo
 
@@ -475,7 +475,7 @@ Por último para renderizar el clip, hacemos clic en Procesar y nos aparecerá l
 
 ![Procesar](img/53.png){ width=50% }
 
-Le decimos dónde queremos guardar el clip y con qué nombre y ya hacemos clic en "Render to file" y ya empezará a procesar el Vídeo. Se trata de un proceso lento que puede tardar mucho dependiendo de los efectos que hayamos añadido al vídeo.
+Le decimos dónde queremos guardar el clip y con qué nombre y ya hacemos clic en "Render to file" y ya empezará a procesar el vídeo. Se trata de un proceso lento que puede tardar mucho dependiendo de los efectos que hayamos añadido al vídeo.
 
 # Guardar proyecto
 
@@ -485,7 +485,7 @@ Para evitar esto puedes "Archivar" el proyecto:
 
 ![Archivar proyecto](img/56.png){ width=50% }
 
-Cuando aparezca esta pantalla pide que te guarde el proyecto en un archivo .zip, de esa amnera ya tendrás el proyecto guardado con todos sus clips en un único archivo .zip. Podrás compartirlo con otros compañeros.
+Cuando aparezca esta pantalla pide que te guarde el proyecto en un archivo .zip, de esa manera ya tendrás el proyecto guardado con todos sus clips en un único archivo .zip. Podrás compartirlo con otros compañeros.
 
 ![Archivar proyecto](img/57.png){ width=50% }
 

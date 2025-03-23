@@ -1,0 +1,89 @@
+::Pregunta 1::
+Què és una escena en OBS Studio?
+{
+=Un conjunt de fonts que es mostren en un moment determinat
+~Un tipus de filtre de vídeo
+~Una configuració del micròfon
+~Un efecte de transició
+}
+
+::Pregunta 2::
+Quin és l'avantatge principal d'utilitzar l'opció "Afegir existents" a l'hora de crear una font de Captura de pantalla?
+{
+~Redueix el consum de memòria
+~Permet utilitzar efectes especials
+=Les propietats queden vinculades entre les fonts
+~Millora la qualitat del vídeo
+}
+
+::Pregunta 3::
+Quan s'utilitza la captura de finestra, què succeeix si la finestra es minimitza?
+{
+~La finestra continua mostrant-se normalment
+=La font es desactiva
+~La finestra es congela en l'última imatge
+~Es mostra una pantalla en negre
+}
+
+::Pregunta 4::
+Quina consideració important cal tindre en compte a l'hora de configurar una càmera web?
+{
+~Només es pot utilitzar en mode estudi
+~Requereix il·luminació professional
+~Ha d'estar connectada per USB 3.0
+=Porta incorporat un micròfon que també es selecciona com a font
+}
+
+::Pregunta 5::
+Per a què serveix el filtre "Background removal"?
+{
+~Per afegir un fons virtual
+=Per eliminar el fons de la càmera web
+~Per millorar la qualitat del vídeo
+~Per ajustar el contrast
+}
+
+::Pregunta 6::
+Quina característica defineix el filtre "Porta anti-soroll"?
+{
+~Elimina completament tot el soroll
+=Només permet l'àudio quan es detecta veu
+~Augmenta el volum del micròfon
+~Afegeix efectes de so
+}
+
+::Pregunta 7::
+Què permet fer el mode Estudi en OBS?
+{
+~Gravar vídeos en millor qualitat
+=Tindre una previsualització abans d'emetre
+~Afegir efectes especials
+~Millorar el rendiment del sistema
+}
+
+::Pregunta 8::
+En relació amb l'ordre de les fonts en una escena, què és correcte?
+{
+~L'ordre no afecta la visualització
+~Les fonts inferiors tenen prioritat
+=Les fonts superiors es veuen per damunt de les inferiors
+~Totes les fonts es mostren al mateix nivell
+}
+
+::Pregunta 9::
+Quina funció compleix el filtre LocalVocal?
+{
+~Millora la qualitat de l'àudio
+=Crea subtítols en directe de la veu
+~Traduïx l'àudio a altres idiomes
+~Elimina sorolls del micròfon
+}
+
+::Pregunta 10::
+Què permet fer una font de tipus "Escena"?
+{
+~Crear transicions personalitzades
+=Afegir una altra escena dins de l'escena actual
+~Modificar la resolució de la transmissió
+~Canviar el format de vídeo
+}
