@@ -19,7 +19,7 @@ toc-title: Contenidos
 
 # Capçaleres i peus
 header-left: 1. Introducción y configuración
-header-right: Curso 2024-2025
+header-right: Curso 2025-2026
 footer-left: DGFP
 footer-right: \thepage/\pageref{LastPage}
 
@@ -81,8 +81,8 @@ Configuració de fonts de vídeo i àudio
 Producció de contingut en temps real i gestió d'escenes<br>
 Mòdul 3: Edició i Publicació
 Importació de material gravat en Kdenlive
-Edició bàsica de vídeo: talls, transicions i efectes
-Exportació de vídeos en diferents formats i publicació en plataformes en línia -->
+Edició bàsica de vídeo: talls, transicions i efectes-->
+
 La creación de videotutoriales es una herramienta necesaria para la realización de cursos en formato semipresencial y muchas veces en presencial también puesto que se quedan como una referencia de lo que realmente se quiere realizar.
 
 En este módulo empezaremos con una introducción de las dos herramientas que vamos a utilizar en este curso: Kdenlive y OBS. Además, veremos cómo instalarlas y configurarlas para empezar a trabajar con ellas. Haremos un repaso de las interfaces y herramientas básicas de cada programa y veremos cómo configurar proyectos y ajustes básicos.
@@ -105,12 +105,14 @@ En el caso de una distribución Linux, simplemente podemos instalarlo desde los 
 ```bash
 sudo apt install obs-studio
 ```
+
 :::note
 Con linux puedes utilizar flathub para instalar OBS Studio. Simplemente debes ejecutar el siguiente pedido:
 
 ```bash
 flatpak install flathub com.obsproject.Studio
 ```
+
 :::
 
 Si dispones de un Mac debes tener en cuenta que en función del procesador que tengas tendrás que descargar una versión u otra.
@@ -124,6 +126,7 @@ Cuando comience el proceso de instalación simplemente debemos seguir los pasos 
 ![Configuración OBS](img/6.png){ width=50% }
 
 ![Configuración OBS](img/7.png){ width=50% }
+
 
 
 # Instalación de Kdenlive
@@ -154,7 +157,7 @@ sudo apt install kdenlive
 La versión portable para linux se llama AppImage. Simplemente debemos descargar el archivo y darle permisos de ejecución:
 
 ```bash
-chmod +x kdenlive-*.appimage
+chmod +x kdenlive-\*.appimage
 ```
 
 Existe la versión flatpak de Kdenlive. Simplemente debemos ejecutar el siguiente pedido:
@@ -196,7 +199,7 @@ En la imagen podemos distinguir varios elementos, los que vamos a utilizar en es
 * [3] Monitor de proyecto: Visualizas el proyecto que estás editando.
 * [4] Composiciones y efectos: Aquí podemos ver las composiciones y efectos que podemos añadir a nuestro proyecto. En su momento veremos qué diferencias existen en cada una de ellas.
 * [5] Línea de tiempo: Aquí es donde realizaremos la mayoría de nuestras tareas. En la línea de tiempo podemos añadir clips, efectos, transiciones, etc.
-* [6] Se trata de una panel donde veremos los efectos y composiciones añadidos a un elemento de nuestro proyecto. Podemos elegir elementos como Audio, efectos/composiciones[7], subtítulos.
+* [6] Se trata de una panel donde veremos los efectos y composiciones añadidos a un elemento de nuestro proyecto. Podemos elegir elementos como Audio, efectos/composiciones\[7], subtítulos.
 * [8] Barra de herramientas de la línea de tiempo: Aquí tenemos las herramientas básicas para editar nuestra línea de tiempo.
 
 El ejemplo mostrado está en inglés, puedes cambiar el interfaz al idioma que desees en el menú de configuración.
@@ -252,6 +255,7 @@ Si dispones del gestor de paquetería flatpak simplemente debes ejecutar el sigu
 ```bash
 flatpak install com.obsproject.Studio.Plugin.BackgroundRemoval
 ```
+
 ### v4l2loopback (Linux)
 
 Si dispones de un sistema operativo Linux necesitarás instalar el paquete v4l2loopback. Este paquete nos permitirá crear dispositivos de vídeo virtuales. Esto nos permitirá utilizar la cámara virtual en OBS.
@@ -271,7 +275,7 @@ sudo pacman -S v4l2loopback-dkms
 LocalVocal es un plugin que nos permitirá realizar la transcripción de texto en directo. Es recomendable si tiene una GPU NVIDIA ya que hace uso de la tecnología CUDA. Para instalarlo simplemente vamos a la página de [descarga](https://obsproject.com/forum/resources/localvocal-local-live-captions-translation-on-the-go.1769/) y descargamos el archivo correspondiente a nuestro sistema operativo. Tiene el enlace en la misma página.
 
 :::note
-OBS dispone de numerosos plugins que pueden ayudarle a realizar tareas concretas. Estos plugins están en constante evolución, si los enlaces no funcionan simplemente busque en la página de [recursos](https://obsproject.com/forum/resources/) de OBS y los bsuque, ya que probablemente los hayan actualizado.
+OBS dispone de numerosos plugins que pueden ayudarle a realizar tareas concretas. Estos plugins están en constante evolución, si los enlaces no funcionan simplemente busque en la página de [recursos](https://obsproject.com/forum/resources/) de OBS y los busque, ya que probablemente los hayan actualizado.
 :::
 
 :::warning
@@ -282,20 +286,20 @@ No se recomienda su instalación si no se dispone de un ordenador verdaderamente
 
 ### Whisper y VOSK
 
-Uno de los elementos a tener en cuenta a la hora de generar videotutoriales es el de la creación de subtítulos, la generación de subtítulos realizados de forma automática nos puede ayudar a la creación de contenido. Para ello haremos uso de dos complementos: Whisper[^1] y VOSK[^2]. Ambos son bastante exactos, pero la diferencia más importante que veo es que en Vosk tienes que descargar un modelo para cada lengua, con Whisper no. Eso sí, el modelo de Whisper es mucho más pesado.
+Uno de los elementos a tener en cuenta a la hora de generar videotutoriales es el de la creación de subtítulos, la generación de subtítulos realizados de forma automática nos puede ayudar a la creación de contenido. Para ello haremos uso de dos complementos: Whisper\[^1] y VOSK\[^2]. Ambos son bastante exactos, pero la diferencia más importante que veo es que en Vosk tienes que descargar un modelo para cada lengua, con Whisper no. Eso sí, el modelo de Whisper es mucho más pesado.
 
-Le recomendamos que instale los dos modelos si es posible, muchas veces por temas de versiones de python, confiugración del ordenador, etc... puede dar problemas. Para instalarlos vamos al siguiente menú:
+Le recomendamos que instale los dos modelos si es posible, muchas veces por temas de versiones de python, confiugración del ordenador, etc... puede dar problemas. Para instalarlos vamos al siguiente menú:  (en la nueva versión la ruta es Secuencia/subtítulos/Reconocimiento de voz)
 
 ![Instalación Whisper](img/11.png){ width=50% }
 
-[^1]: [Whisper](https://openai.com/index/whisper/) es un modelo creado por OpenAI.
-[^2]: [VOSK](https://alphacephei.com/vosk/) es un modelo creado por Alphacephei.
+\[^1]: [Whisper](https://openai.com/index/whisper/) es un modelo creado por OpenAI.
+\[^2]: [VOSK](https://alphacephei.com/vosk/) es un modelo creado por Alphacephei.
 
 Podrás ver la siguiente pantalla:
 
 ![Instalación Whisper](img/12.png){ width=50% }
 
-Y haremos clic en "Configure" y nos parecerá la siguiente pantalla:
+Y haremos clic en "Configure" y nos parecerá la siguiente pantalla: (en la nueva versión la ruta es Preferencias/Configuración Kdenlive-Plugins)
 
 ![Speech-to-text](img/13.png){ width=50% }
 
@@ -310,6 +314,7 @@ Le aparecerá esta pantalla tanto en VOSK como en Whisper donde le pedirá que i
 En el caso de VOSK, el modelo debe configurarlo a mano, dispone de un enlace que se lleva al lugar donde puede descargar el modelo correspondiente a su lengua.
 
 # Practicamos un poco
+
 En este apartado no vamos a realizar ningún proyecto como tal, sino que vamos a practicar algo con el kdenlive y el OBS.
 
 ## Grabamos la pantalla con OBS
@@ -432,7 +437,6 @@ Ahora aplicaremos los efectos fade-in y fade-out, que escalrece y oscurece el vi
 Esta parte es la más compleja y que explicaremos más detalladamente más adelante en el curso, así que no se preocupe si lo ve demasiado complicado.
 
 * Composición: Transformación
-
 * Efecto: Máscara forma alfa
 
 ## Aplicando efectos de forma básica
@@ -506,3 +510,4 @@ Fíjese en las licencias de vídeos. Aunque gran parte son de libre uso, siempre
 
 [Efectos](https://docs.kdenlive.org/en/effects_and_filters/lists/video_effects_list.html)
 [Composiciones](https://docs.kdenlive.org/en/compositing/compositions.html)
+

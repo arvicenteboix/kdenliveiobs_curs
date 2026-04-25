@@ -6,6 +6,9 @@
     <meta name="generator" content="pandoc" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />        <title>1. Introducción y configuración</title>
     <style>
+        /* Default styles provided by pandoc.
+        ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+        */
         code{white-space: pre-wrap;}
         span.smallcaps{font-variant: small-caps;}
         div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -21,70 +24,6 @@
           vertical-align: middle;
         }
         .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-        /* CSS for syntax highlighting */
-        pre > code.sourceCode { white-space: pre; position: relative; }
-        pre > code.sourceCode > span { line-height: 1.25; }
-        pre > code.sourceCode > span:empty { height: 1.2em; }
-        .sourceCode { overflow: visible; }
-        code.sourceCode > span { color: inherit; text-decoration: inherit; }
-        div.sourceCode { margin: 1em 0; }
-        pre.sourceCode { margin: 0; }
-        @media screen {
-        div.sourceCode { overflow: auto; }
-        }
-        @media print {
-        pre > code.sourceCode { white-space: pre-wrap; }
-        pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-        }
-        pre.numberSource code
-          { counter-reset: source-line 0; }
-        pre.numberSource code > span
-          { position: relative; left: -4em; counter-increment: source-line; }
-        pre.numberSource code > span > a:first-child::before
-          { content: counter(source-line);
-            position: relative; left: -1em; text-align: right; vertical-align: baseline;
-            border: none; display: inline-block;
-            -webkit-touch-callout: none; -webkit-user-select: none;
-            -khtml-user-select: none; -moz-user-select: none;
-            -ms-user-select: none; user-select: none;
-            padding: 0 4px; width: 4em;
-            color: #aaaaaa;
-          }
-        pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-        div.sourceCode
-          {   }
-        @media screen {
-        pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-        }
-        code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-        code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-        code span.at { color: #7d9029; } /* Attribute */
-        code span.bn { color: #40a070; } /* BaseN */
-        code span.bu { color: #008000; } /* BuiltIn */
-        code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-        code span.ch { color: #4070a0; } /* Char */
-        code span.cn { color: #880000; } /* Constant */
-        code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-        code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-        code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-        code span.dt { color: #902000; } /* DataType */
-        code span.dv { color: #40a070; } /* DecVal */
-        code span.er { color: #ff0000; font-weight: bold; } /* Error */
-        code span.ex { } /* Extension */
-        code span.fl { color: #40a070; } /* Float */
-        code span.fu { color: #06287e; } /* Function */
-        code span.im { color: #008000; font-weight: bold; } /* Import */
-        code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-        code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-        code span.op { color: #666666; } /* Operator */
-        code span.ot { color: #007020; } /* Other */
-        code span.pp { color: #bc7a00; } /* Preprocessor */
-        code span.sc { color: #4070a0; } /* SpecialChar */
-        code span.ss { color: #bb6688; } /* SpecialString */
-        code span.st { color: #4070a0; } /* String */
-        code span.va { color: #19177c; } /* Variable */
-        code span.vs { color: #4070a0; } /* VerbatimString */
-        code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
     </style>
         <link rel="stylesheet" href="aqua.css" />  
     <!--[if lt IE 9]>
@@ -200,8 +139,7 @@ class="toc-section-number">9</span> Repositorios de vídeos</a></li>
             Producció de contingut en temps real i gestió d'escenes<br>
             Mòdul 3: Edició i Publicació
             Importació de material gravat en Kdenlive
-            Edició bàsica de vídeo: talls, transicions i efectes
-            Exportació de vídeos en diferents formats i publicació en plataformes en línia -->
+            Edició bàsica de vídeo: talls, transicions i efectes-->
             <p>La creación de videotutoriales es una herramienta
             necesaria para la realización de cursos en formato
             semipresencial y muchas veces en presencial también puesto
@@ -253,13 +191,11 @@ class="toc-section-number">9</span> Repositorios de vídeos</a></li>
             instalarlo desde los repositorios de nuestra distribución.
             Por ejemplo, en Ubuntu simplemente debemos ejecutar el
             siguiente pedido:</p>
-            <div class="sourceCode" id="cb1"><pre
-            class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install obs-studio</span></code></pre></div>
+            <pre class="bash"><code>sudo apt install obs-studio</code></pre>
             <div class="note">
             <p>Con linux puedes utilizar flathub para instalar OBS
             Studio. Simplemente debes ejecutar el siguiente pedido:</p>
-            <div class="sourceCode" id="cb2"><pre
-            class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">flatpak</span> install flathub com.obsproject.Studio</span></code></pre></div>
+            <pre class="bash"><code>flatpak install flathub com.obsproject.Studio</code></pre>
             </div>
             <p>Si dispones de un Mac debes tener en cuenta que en
             función del procesador que tengas tendrás que descargar una
@@ -332,17 +268,14 @@ class="toc-section-number">9</span> Repositorios de vídeos</a></li>
             instalarlo desde los repositorios de nuestra distribución.
             Por ejemplo, en Ubuntu simplemente debemos ejecutar el
             siguiente pedido:</p>
-            <div class="sourceCode" id="cb3"><pre
-            class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install kdenlive</span></code></pre></div>
+            <pre class="bash"><code>sudo apt install kdenlive</code></pre>
             <p>La versión portable para linux se llama AppImage.
             Simplemente debemos descargar el archivo y darle permisos de
             ejecución:</p>
-            <div class="sourceCode" id="cb4"><pre
-            class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> +x kdenlive-<span class="pp">*</span>.appimage</span></code></pre></div>
+            <pre class="bash"><code>chmod +x kdenlive-\*.appimage</code></pre>
             <p>Existe la versión flatpak de Kdenlive. Simplemente
             debemos ejecutar el siguiente pedido:</p>
-            <div class="sourceCode" id="cb5"><pre
-            class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">flatpak</span> install flathub org.kde.kdenlive</span></code></pre></div>
+            <pre class="bash"><code>flatpak install flathub org.kde.kdenlive</code></pre>
             <p>O hacer clic en el botón Flatpak.</p>
             <h1 data-number="4" id="interfaz-de-obs"><span
             class="header-section-number">4</span> Interfaz de OBS</h1>
@@ -531,8 +464,7 @@ class="toc-section-number">9</span> Repositorios de vídeos</a></li>
             debes ejecutar el siguiente pedido. Recuerda que en este
             caso debes instalar el paquete de OBS Studio con
             flatpak.</p>
-            <div class="sourceCode" id="cb6"><pre
-            class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">flatpak</span> install com.obsproject.Studio.Plugin.BackgroundRemoval</span></code></pre></div>
+            <pre class="bash"><code>flatpak install com.obsproject.Studio.Plugin.BackgroundRemoval</code></pre>
             <h3 data-number="6.1.2" id="v4l2loopback-linux"><span
             class="header-section-number">6.1.2</span> v4l2loopback
             (Linux)</h3>
@@ -540,13 +472,11 @@ class="toc-section-number">9</span> Repositorios de vídeos</a></li>
             instalar el paquete v4l2loopback. Este paquete nos permitirá
             crear dispositivos de vídeo virtuales. Esto nos permitirá
             utilizar la cámara virtual en OBS.</p>
-            <div class="sourceCode" id="cb7"><pre
-            class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install v4l2loopback-dkms</span></code></pre></div>
+            <pre class="bash"><code>sudo apt install v4l2loopback-dkms</code></pre>
             <p>Si tienes alguna otra distribución simplemente debes
             buscar el paquete en los repositorios de tu distribución,
             por ejemplo en arch:</p>
-            <div class="sourceCode" id="cb8"><pre
-            class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> pacman <span class="at">-S</span> v4l2loopback-dkms</span></code></pre></div>
+            <pre class="bash"><code>sudo pacman -S v4l2loopback-dkms</code></pre>
             <h3 data-number="6.1.3" id="localvocal"><span
             class="header-section-number">6.1.3</span> LocalVocal</h3>
             <p>LocalVocal es un plugin que nos permitirá realizar la
@@ -562,7 +492,7 @@ class="toc-section-number">9</span> Repositorios de vídeos</a></li>
             evolución, si los enlaces no funcionan simplemente busque en
             la página de <a
             href="https://obsproject.com/forum/resources/">recursos</a>
-            de OBS y los bsuque, ya que probablemente los hayan
+            de OBS y los busque, ya que probablemente los hayan
             actualizado.</p>
             </div>
             <div class="warning">
@@ -579,25 +509,27 @@ class="toc-section-number">9</span> Repositorios de vídeos</a></li>
             generar videotutoriales es el de la creación de subtítulos,
             la generación de subtítulos realizados de forma automática
             nos puede ayudar a la creación de contenido. Para ello
-            haremos uso de dos complementos: Whisper<a href="#fn1"
-            class="footnote-ref" id="fnref1"
-            role="doc-noteref"><sup>1</sup></a> y VOSK<a href="#fn2"
-            class="footnote-ref" id="fnref2"
-            role="doc-noteref"><sup>2</sup></a>. Ambos son bastante
-            exactos, pero la diferencia más importante que veo es que en
-            Vosk tienes que descargar un modelo para cada lengua, con
-            Whisper no. Eso sí, el modelo de Whisper es mucho más
-            pesado.</p>
+            haremos uso de dos complementos: Whisper[^1] y VOSK[^2].
+            Ambos son bastante exactos, pero la diferencia más
+            importante que veo es que en Vosk tienes que descargar un
+            modelo para cada lengua, con Whisper no. Eso sí, el modelo
+            de Whisper es mucho más pesado.</p>
             <p>Le recomendamos que instale los dos modelos si es
             posible, muchas veces por temas de versiones de python,
             confiugración del ordenador, etc… puede dar problemas. Para
-            instalarlos vamos al siguiente menú:</p>
+            instalarlos vamos al siguiente menú: (en la nueva versión la
+            ruta es Secuencia/subtítulos/Reconocimiento de voz)</p>
             <figure>
             <img src="img/11.png" style="width:50.0%"
             alt="Instalación Whisper" />
             <figcaption aria-hidden="true">Instalación
             Whisper</figcaption>
             </figure>
+            <p>[^1]: <a
+            href="https://openai.com/index/whisper/">Whisper</a> es un
+            modelo creado por OpenAI. [^2]: <a
+            href="https://alphacephei.com/vosk/">VOSK</a> es un modelo
+            creado por Alphacephei.</p>
             <p>Podrás ver la siguiente pantalla:</p>
             <figure>
             <img src="img/12.png" style="width:50.0%"
@@ -606,7 +538,8 @@ class="toc-section-number">9</span> Repositorios de vídeos</a></li>
             Whisper</figcaption>
             </figure>
             <p>Y haremos clic en “Configure” y nos parecerá la siguiente
-            pantalla:</p>
+            pantalla: (en la nueva versión la ruta es
+            Preferencias/Configuración Kdenlive-Plugins)</p>
             <figure>
             <img src="img/13.png" style="width:50.0%"
             alt="Speech-to-text" />
@@ -879,8 +812,8 @@ class="toc-section-number">9</span> Repositorios de vídeos</a></li>
             detalladamente más adelante en el curso, así que no se
             preocupe si lo ve demasiado complicado.</p>
             <ul>
-            <li><p>Composición: Transformación</p></li>
-            <li><p>Efecto: Máscara forma alfa</p></li>
+            <li>Composición: Transformación</li>
+            <li>Efecto: Máscara forma alfa</li>
             </ul>
             <h2 data-number="7.3"
             id="aplicando-efectos-de-forma-básica"><span
@@ -1022,21 +955,6 @@ class="toc-section-number">9</span> Repositorios de vídeos</a></li>
             href="https://docs.kdenlive.org/en/effects_and_filters/lists/video_effects_list.html">Efectos</a>
             <a
             href="https://docs.kdenlive.org/en/compositing/compositions.html">Composiciones</a></p>
-            <section id="footnotes"
-            class="footnotes footnotes-end-of-document"
-            role="doc-endnotes">
-            <hr />
-            <ol>
-            <li id="fn1"><p><a
-            href="https://openai.com/index/whisper/">Whisper</a> es un
-            modelo creado por OpenAI.<a href="#fnref1"
-            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            <li id="fn2"><p><a
-            href="https://alphacephei.com/vosk/">VOSK</a> es un modelo
-            creado por Alphacephei.<a href="#fnref2"
-            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            </ol>
-            </section>
         </main>
         
 
